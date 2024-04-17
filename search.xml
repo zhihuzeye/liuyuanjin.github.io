@@ -1,6 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Hexo 添加 Disqus 评论系统</title>
+    <url>/2024/04/14/hexo-%E6%B7%BB%E5%8A%A0-Disqus-%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F/</url>
+    <content><![CDATA[<h3 id="登录-Disqus"><a href="#登录-Disqus" class="headerlink" title="登录 Disqus"></a>登录 Disqus</h3><p><img src="https://raw.githubusercontent.com/zhihuzeye/zhihuzeye.github.io/main/images/20240414002939.png" alt="图片" title="disqus登录"></p>
+<h3 id="选择-在我的网站上安装-Disqus"><a href="#选择-在我的网站上安装-Disqus" class="headerlink" title="选择 在我的网站上安装 Disqus"></a>选择 在我的网站上安装 Disqus</h3><p><img src="/images/20240414003055.png" alt="图片" title="disqus登录"></p>
+<h3 id="创建一个新站点"><a href="#创建一个新站点" class="headerlink" title="创建一个新站点"></a>创建一个新站点</h3><p>注意：Website Name 这个字段非常重要，后续需要在 _config.yml 中用到<br>点击 Create Site 按钮即可</p>
+<p><img src="/images/20240414003325.png" alt="图片" title="disqus登录"></p>
+<span id="more"></span>
+
+<h3 id="配置主题-config-yml-文件"><a href="#配置主题-config-yml-文件" class="headerlink" title="配置主题 _config.yml 文件"></a>配置主题 _config.yml 文件</h3><p>网上有很多教程 直接配置，这样是不对的，配置会报错</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">disqus:</span><br><span class="line">  enable: true</span><br><span class="line">  shortname:your Website Name</span><br><span class="line">  count: true</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>踩坑：disqus  shortname 报错 YAMLException: can not read a block mapping entry; a multiline key may not be an implicit key</p>
+<p>shortname 需要换行</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">disqus:</span><br><span class="line">  enable: true</span><br><span class="line">  shortname:</span><br><span class="line">          your Website Name</span><br><span class="line">  count: true</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>Disqus</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>【踩坑】uni.navigateTo 微信小程序 跳转无效问题</title>
     <url>/2024/04/17/%E3%80%90%E8%B8%A9%E5%9D%91%E3%80%91uni-navigateTo-%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F-%E8%B7%B3%E8%BD%AC%E6%97%A0%E6%95%88%E9%97%AE%E9%A2%98/</url>
     <content><![CDATA[<blockquote>
@@ -51,35 +77,12 @@
 <li>站起来喝杯咖啡吧！有时候把事情缓一缓。解决问题的思绪就来了</li>
 </ol>
 ]]></content>
+      <categories>
+        <category>小程序</category>
+      </categories>
       <tags>
         <tag>uni-app</tag>
         <tag>微信小程序</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo 添加 Disqus 评论系统</title>
-    <url>/2024/04/14/hexo-%E6%B7%BB%E5%8A%A0-Disqus-%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F/</url>
-    <content><![CDATA[<h3 id="登录-Disqus"><a href="#登录-Disqus" class="headerlink" title="登录 Disqus"></a>登录 Disqus</h3><p><img src="https://raw.githubusercontent.com/zhihuzeye/zhihuzeye.github.io/main/images/20240414002939.png" alt="图片" title="disqus登录"></p>
-<h3 id="选择-在我的网站上安装-Disqus"><a href="#选择-在我的网站上安装-Disqus" class="headerlink" title="选择 在我的网站上安装 Disqus"></a>选择 在我的网站上安装 Disqus</h3><p><img src="/images/20240414003055.png" alt="图片" title="disqus登录"></p>
-<h3 id="创建一个新站点"><a href="#创建一个新站点" class="headerlink" title="创建一个新站点"></a>创建一个新站点</h3><p>注意：Website Name 这个字段非常重要，后续需要在 _config.yml 中用到<br>点击 Create Site 按钮即可</p>
-<p><img src="/images/20240414003325.png" alt="图片" title="disqus登录"></p>
-<span id="more"></span>
-
-<h3 id="配置主题-config-yml-文件"><a href="#配置主题-config-yml-文件" class="headerlink" title="配置主题 _config.yml 文件"></a>配置主题 _config.yml 文件</h3><p>网上有很多教程 直接配置，这样是不对的，配置会报错</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">disqus:</span><br><span class="line">  enable: true</span><br><span class="line">  shortname:your Website Name</span><br><span class="line">  count: true</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>踩坑：disqus  shortname 报错 YAMLException: can not read a block mapping entry; a multiline key may not be an implicit key</p>
-<p>shortname 需要换行</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">disqus:</span><br><span class="line">  enable: true</span><br><span class="line">  shortname:</span><br><span class="line">          your Website Name</span><br><span class="line">  count: true</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-]]></content>
-      <categories>
-        <category>Hexo</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>Disqus</tag>
       </tags>
   </entry>
 </search>
