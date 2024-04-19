@@ -85,4 +85,30 @@
         <tag>微信小程序</tag>
       </tags>
   </entry>
+  <entry>
+    <title>找不到插件依赖 @tarojs/plugin-platform-h5，请先在项目中安装</title>
+    <url>/2024/04/19/%E6%89%BE%E4%B8%8D%E5%88%B0%E6%8F%92%E4%BB%B6%E4%BE%9D%E8%B5%96-tarojs-plugin-platform-h5%EF%BC%8C%E8%AF%B7%E5%85%88%E5%9C%A8%E9%A1%B9%E7%9B%AE%E4%B8%AD%E5%AE%89%E8%A3%85/</url>
+    <content><![CDATA[<blockquote>
+<p>运行一个 Taro 的项目，安装完相关依赖后执行命令报错</p>
+</blockquote>
+<h1 id="执行步骤"><a href="#执行步骤" class="headerlink" title="执行步骤"></a>执行步骤</h1><ul>
+<li>yarn install </li>
+<li>yarn run start</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">正在执行任务: yarn run start </span><br><span class="line"></span><br><span class="line">yarn run v1.22.19</span><br><span class="line">$ npm run dev:h5</span><br><span class="line"></span><br><span class="line">&gt; renthouse-taro@1.0.0 dev:h5</span><br><span class="line">&gt; npm run build:h5 -- --watch</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&gt; renthouse-taro@1.0.0 build:h5</span><br><span class="line">&gt; taro build --type h5 --watch </span><br><span class="line"></span><br><span class="line">👽 Taro v3.6.25</span><br><span class="line"></span><br><span class="line">找不到插件依赖 &quot;@tarojs/plugin-platform-h5&quot;，请先在项目中安装，项目路径：D:\xxx\xxx\renthouse-taro</span><br><span class="line">error Command failed with exit code 1.</span><br><span class="line">info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.</span><br></pre></td></tr></table></figure>
+
+<h1 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h1><p>因为我之前安装过 Taro 最新版本的 cli , 和现有的 Taro 版本不兼容</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">taro --version</span><br><span class="line">👽 Taro v3.6.25</span><br><span class="line"></span><br><span class="line">3.6.25</span><br></pre></td></tr></table></figure>
+
+
+<h1 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h1><ol>
+<li>npm uninstall -g @tarojs&#x2F;cli  # 卸载 Trao</li>
+<li>npm install -g @tarojs&#x2F;<a href="mailto:&#x63;&#x6c;&#105;&#64;&#x33;&#x2e;&#x30;&#x2e;&#50;&#x39;">&#x63;&#x6c;&#105;&#64;&#x33;&#x2e;&#x30;&#x2e;&#50;&#x39;</a>  # 安装指定版本 Trao</li>
+<li>也有可能 nodejs 版本过低和 taro&#x2F;cli 不兼容，nvm 切换 16.x 以上版本试试</li>
+</ol>
+]]></content>
+      <tags>
+        <tag>Taro</tag>
+      </tags>
+  </entry>
 </search>

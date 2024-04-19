@@ -29,6 +29,15 @@
   </url>
   
   <url>
+    <loc>https://zhihuzeye.github.io/2024/04/19/%E6%89%BE%E4%B8%8D%E5%88%B0%E6%8F%92%E4%BB%B6%E4%BE%9D%E8%B5%96-tarojs-plugin-platform-h5%EF%BC%8C%E8%AF%B7%E5%85%88%E5%9C%A8%E9%A1%B9%E7%9B%AE%E4%B8%AD%E5%AE%89%E8%A3%85/</loc>
+    
+    <lastmod>2024-04-19</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://zhihuzeye.github.io/about/index.html</loc>
     
     <lastmod>2024-04-19</lastmod>
@@ -78,6 +87,13 @@
   
   <url>
     <loc>https://zhihuzeye.github.io/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/</loc>
+    <lastmod>2024-04-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://zhihuzeye.github.io/tags/Taro/</loc>
     <lastmod>2024-04-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
