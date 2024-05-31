@@ -11,7 +11,7 @@
 </li>
 <li><p>项目全屏展示点击右上角全屏按钮或（按 F11）。</p>
 </li>
-<li><p>项目环境：<a href="mailto:&#114;&#x65;&#97;&#99;&#116;&#x40;&#x31;&#56;&#46;&#50;&#46;&#x30;">&#114;&#x65;&#97;&#99;&#116;&#x40;&#x31;&#56;&#46;&#50;&#46;&#x30;</a>、<a href="mailto:&#x74;&#x79;&#x70;&#101;&#x73;&#x63;&#x72;&#x69;&#x70;&#x74;&#x40;&#x35;&#46;&#50;&#x2e;&#x32;">&#x74;&#x79;&#x70;&#101;&#x73;&#x63;&#x72;&#x69;&#x70;&#x74;&#x40;&#x35;&#46;&#50;&#x2e;&#x32;</a>、<a href="mailto:&#x76;&#105;&#x74;&#101;&#64;&#53;&#x2e;&#x32;&#46;&#48;">&#x76;&#105;&#x74;&#101;&#64;&#53;&#x2e;&#x32;&#46;&#48;</a>、<a href="mailto:&#x65;&#99;&#x68;&#97;&#x72;&#116;&#x73;&#64;&#53;&#46;&#x35;&#46;&#x30;">&#x65;&#99;&#x68;&#97;&#x72;&#116;&#x73;&#64;&#53;&#46;&#x35;&#46;&#x30;</a>、<a href="mailto:&#x70;&#110;&#112;&#x6d;&#x40;&#55;&#46;&#x32;&#55;&#46;&#x30;">&#x70;&#110;&#112;&#x6d;&#x40;&#55;&#46;&#x32;&#55;&#46;&#x30;</a>、<a href="mailto:&#x6e;&#111;&#100;&#101;&#x40;&#118;&#49;&#x36;&#x2e;&#49;&#56;&#46;&#x31;">&#x6e;&#111;&#100;&#101;&#x40;&#118;&#49;&#x36;&#x2e;&#49;&#56;&#46;&#x31;</a>。</p>
+<li><p>项目环境：<a href="mailto:&#x72;&#x65;&#x61;&#99;&#x74;&#x40;&#49;&#x38;&#46;&#x32;&#x2e;&#x30;">&#x72;&#x65;&#x61;&#99;&#x74;&#x40;&#49;&#x38;&#46;&#x32;&#x2e;&#x30;</a>、<a href="mailto:&#116;&#x79;&#x70;&#x65;&#x73;&#x63;&#114;&#105;&#112;&#x74;&#64;&#x35;&#46;&#x32;&#46;&#50;">&#116;&#x79;&#x70;&#x65;&#x73;&#x63;&#114;&#105;&#112;&#x74;&#64;&#x35;&#46;&#x32;&#46;&#50;</a>、<a href="mailto:&#118;&#105;&#x74;&#101;&#64;&#x35;&#x2e;&#50;&#x2e;&#48;">&#118;&#105;&#x74;&#101;&#64;&#x35;&#x2e;&#50;&#x2e;&#48;</a>、<a href="mailto:&#101;&#x63;&#104;&#97;&#x72;&#116;&#x73;&#64;&#x35;&#x2e;&#x35;&#46;&#48;">&#101;&#x63;&#104;&#97;&#x72;&#116;&#x73;&#64;&#x35;&#x2e;&#x35;&#46;&#48;</a>、<a href="mailto:&#112;&#110;&#112;&#x6d;&#x40;&#55;&#x2e;&#50;&#55;&#46;&#48;">&#112;&#110;&#112;&#x6d;&#x40;&#55;&#x2e;&#50;&#55;&#46;&#48;</a>、<a href="mailto:&#x6e;&#x6f;&#100;&#101;&#x40;&#118;&#49;&#x36;&#x2e;&#x31;&#x38;&#x2e;&#x31;">&#x6e;&#x6f;&#100;&#101;&#x40;&#118;&#49;&#x36;&#x2e;&#x31;&#x38;&#x2e;&#x31;</a>。</p>
 </li>
 </ul>
 <p>友情链接：</p>
@@ -53,6 +53,473 @@
       </categories>
       <tags>
         <tag>数据可视化大屏</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Java 常量与变量</title>
+    <url>/2024/05/31/Java-%E5%B8%B8%E9%87%8F%E4%B8%8E%E5%8F%98%E9%87%8F/</url>
+    <content><![CDATA[<h2 id="标识符"><a href="#标识符" class="headerlink" title="标识符"></a>标识符</h2><ol>
+<li>如 类 的名字</li>
+<li>标识符命名规则<ul>
+<li>可以由 字母、数字、下划线 ( _ ) 和美元 ( $ ) 符组成，不能以数字开头</li>
+<li>标识符严格区分大小写</li>
+<li>不能是Java的关键字和保留字</li>
+<li>标志符的命名最好能反映出作用</li>
+</ul>
+</li>
+</ol>
+<span id="more"></span>
+<h2 id="关键字"><a href="#关键字" class="headerlink" title="关键字"></a>关键字</h2><table>
+<thead>
+<tr>
+<th>关键字</th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>abstract</td>
+<td>boolean</td>
+<td>break</td>
+<td>byte</td>
+<td>case</td>
+<td>catch</td>
+</tr>
+<tr>
+<td>char</td>
+<td>class</td>
+<td>continue</td>
+<td>default</td>
+<td>do</td>
+<td>double</td>
+</tr>
+<tr>
+<td>else</td>
+<td>extends</td>
+<td>false</td>
+<td>final</td>
+<td>finally</td>
+<td>float</td>
+</tr>
+<tr>
+<td>for</td>
+<td>if</td>
+<td>implements</td>
+<td>import</td>
+<td>native</td>
+<td>int</td>
+</tr>
+<tr>
+<td>interface</td>
+<td>long</td>
+<td>instanceof</td>
+<td>new</td>
+<td>null</td>
+<td>package</td>
+</tr>
+<tr>
+<td>private</td>
+<td>protected</td>
+<td>public</td>
+<td>return</td>
+<td>short</td>
+<td>static</td>
+</tr>
+<tr>
+<td>super</td>
+<td>switch</td>
+<td>synchronized</td>
+<td>this</td>
+<td>throw</td>
+<td>throws</td>
+</tr>
+<tr>
+<td>transient</td>
+<td>true</td>
+<td>try</td>
+<td>void</td>
+<td>volatile</td>
+<td>while</td>
+</tr>
+</tbody></table>
+<h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><ol>
+<li>什么是变量 <ul>
+<li>程序中数据的临时存放场所，解决数据存储的问题，存储到内存中</li>
+<li><strong>变量的三个元素：变量类型、变量名和变量值</strong></li>
+<li>格式：数据类型 变量名;<ul>
+<li>例子：int n; 声明整型 n</li>
+<li>使用 “&#x3D; ” 运算符进行赋值</li>
+</ul>
+</li>
+<li>可以在定义变量的同时给变量赋值，即变量的初始化。</li>
+</ul>
+</li>
+<li>变量的命名规则<ul>
+<li>满足标识符的命名规则</li>
+<li>符合驼峰法命名规范</li>
+<li>尽量简单、做到见名知意</li>
+<li>变量名的长度没有限制</li>
+</ul>
+</li>
+<li>类的命名规则<ul>
+<li>满足 Pascal 命名法规范</li>
+<li>组成类名的 首字母 总是大写</li>
+</ul>
+</li>
+</ol>
+<h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><p>1个字节等于8位，类定义的变量又叫对象</p>
+<ol>
+<li><p>基本数据类型</p>
+<ul>
+<li>数值型<ol>
+<li>整数类型（byte、short、int、long）<ul>
+<li>字节型 1 <ul>
+<li>表示范围：-128 - 127</li>
+<li>占用内存 1 字节（8 bits）</li>
+</ul>
+</li>
+<li>短整型 2<ul>
+<li>表示范围：-32768 - 32767</li>
+<li>占用内存 2 字节</li>
+</ul>
+</li>
+<li>整型 4<ul>
+<li>表示范围：-2,147,483,648 - 2,147,483,647</li>
+<li>占用内存 4 字节</li>
+</ul>
+</li>
+<li>长整型 8 <ul>
+<li><strong>Java 中的整数类型默认为 int。如果需要使用 long 类型,需要在数值后加 L 或 l 来声明</strong> </li>
+<li>最小值：-9,223,372,036,854,775,808  ~ 最大值：9,223,372,036,854,775,807）</li>
+<li>占用内存: 8 字节 (64 bits)</li>
+</ul>
+</li>
+<li>整型字面值<ul>
+<li>Java 有三种表示整数的方法：十进制、八进制、十六进制</li>
+<li>八进制：以 0 开头，包含 0 - 7 的数字，如：037</li>
+<li>十进制：0-9，包含0 和 9</li>
+<li>十六进制表示：以 0x 或 0X 开头，包括 0-9 的数字，及字母 a-f 、A-F , a表示数字10，以此类推。如：0x12，0xabcf</li>
+<li>0x1abcL 长整型的表示方式，后缀 L，大小写均可</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>浮点类型（float、double）<ul>
+<li>单精度浮点型 4</li>
+<li>双精度浮点型 8 <ul>
+<li>表示的范围是最大的</li>
+</ul>
+</li>
+<li>浮点型字面值<ul>
+<li>浮点型字面值默认情况下表示double类型，也可以在值后加上 d 或 D</li>
+<li>如表示 float 类型，则需要在字面值后加 f 或 F</li>
+</ul>
+</li>
+<li>用科学计数法表示浮点型数据  double d &#x3D; 1.23E5</li>
+</ul>
+</li>
+</ol>
+</li>
+<li>字符型（char）2<ul>
+<li>字符型字面值<ul>
+<li>字符型字面值用单引号内的单个字符表示。</li>
+<li>如何定义字符型变量？ char a &#x3D; ‘a’;</li>
+<li>char 表示范围 0 -65535<ul>
+<li>最小值: 0 (对应 Unicode 字符 ‘\u0000’)</li>
+<li>最大值: 65,535 (对应 Unicode 字符 ‘\uFFFF’)</li>
+</ul>
+</li>
+<li><strong>char 类型只能存储单个字符,如果尝试存储多个字符会报错！</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>布尔型（boolean） 1<ul>
+<li>布尔值字面值<ul>
+<li>布尔值只能定义 true 或 false</li>
+<li>例如：boolean b &#x3D; true;</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>字符串字面值<ul>
+<li><strong>字符串不属于基本数据类型，它是类！</strong> </li>
+<li>双引号引起来的0个或多个字符</li>
+<li>例如 String s &#x3D; “”;</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>引用数据类型</p>
+<ul>
+<li>类（class）</li>
+<li>接口（interface）</li>
+<li>数组（Array）</li>
+<li>枚举（Enum）</li>
+<li>字符串（String）</li>
+</ul>
+</li>
+<li><p>按照作用范围分为</p>
+<ul>
+<li>类级</li>
+<li>对象实例级</li>
+<li>方法级 局部变量</li>
+<li>块级</li>
+</ul>
+</li>
+</ol>
+<h2 id="信息编码"><a href="#信息编码" class="headerlink" title="信息编码"></a>信息编码</h2><ol>
+<li>ASCll 码<ul>
+<li>美国标准信息交换代码</li>
+<li>基于拉丁字母的一套电脑编码系统</li>
+<li>主要用于显示现代英语和其他西欧语言（没有中文）</li>
+<li>使用7位或8位二进制数组合来表示128位或256种可能的字符<ul>
+<li>7位二进制组合——标准ASCll 码 （表示 大小写字母、标点符号、美式英语中的控制字符等）</li>
+<li>8位 二进制数组合（后128位）—— 扩展ASCll 码（扩展ASCll 码表示特殊符号，外来语言的字母等）</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Unicode 编码<ul>
+<li>统一码、万国码</li>
+<li>目标是支持世界上所有的字符集</li>
+<li>char c &#x3D; ‘\u005d’</li>
+<li>Unicode 表示法，在值的前面加前缀 \u</li>
+</ul>
+</li>
+</ol>
+<h2 id="类型转换"><a href="#类型转换" class="headerlink" title="类型转换"></a>类型转换</h2><ol>
+<li>类型转换分为自动类型转换和强制类型转换</li>
+<li>自动类型转换（隐式类型转换）<ul>
+<li>转换顺序</li>
+</ul>
+</li>
+<li>强制类型转换<ul>
+<li>强制类型转换，可能引起数据丢失</li>
+<li>如果 A 类型数据表示的范围比 B 类型大，则将 A 类型的值赋值给 B 类型，需要强制类型转换 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">double</span> <span class="variable">d</span>  <span class="operator">=</span> <span class="number">123.4</span>;<span class="type">float</span> <span class="variable">f</span>  <span class="operator">=</span> (<span class="type">float</span>)d;</span><br></pre></td></tr></table></figure></li>
+<li>强制类型转换的格式：（数据类型）数值</li>
+</ul>
+</li>
+</ol>
+<h2 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h2><ul>
+<li>final int n &#x3D; 5;</li>
+<li><strong>用 final 关键字定义常量</strong> </li>
+<li>不能变化的值</li>
+<li><strong>常量名 一般用 大写字母表示，两个单词及以上，用下划线连接</strong></li>
+</ul>
+]]></content>
+      <categories>
+        <category>学习笔记</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Java 开发环境搭建</title>
+    <url>/2024/05/31/Java-%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/</url>
+    <content><![CDATA[<ol>
+<li>安装 JDK </li>
+<li>安装 Navicat 数据库工具</li>
+<li>安装 IntelliJ IDEA 编译器</li>
+<li>安装 Redis <a href="https://blog.csdn.net/antma/article/details/79225084">Redis安装（Windows环境下Redis安装）</a> </li>
+<li>maven3.6.3 安装 <a href="https://blog.csdn.net/kenkao/article/details/128842266">Windows系统Maven3.6.3下载与安装</a><ul>
+<li>apache-maven-3.6.1&#x2F;conf  目录下配置  settingsapplication.xml 文件 <strong>主要用于配置 Maven 的行为和外部依赖</strong></li>
+<li>apache-maven-3.6.1 目录下创建 repo 文件夹</li>
+</ul>
+</li>
+<li>安装 IntelliJ IDEA  插件<br><img src="/images/874811934.png" alt="插件"><br><img src="/images/94823832832.png" alt="插件"></li>
+<li>项目 .idea 目录下 misc.xml 文件配置 Yapi <figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">component</span> <span class="attr">name</span>=<span class="string">&quot;yapi&quot;</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">option</span> <span class="attr">name</span>=<span class="string">&quot;projectToken&quot;</span>&gt;</span>your yapiToken<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">option</span> <span class="attr">name</span>=<span class="string">&quot;projectId&quot;</span>&gt;</span>789<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">option</span> <span class="attr">name</span>=<span class="string">&quot;yapiUrl&quot;</span>&gt;</span>your yapiUrl<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">option</span> <span class="attr">name</span>=<span class="string">&quot;projectType&quot;</span>&gt;</span>api<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">component</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+<li>安装 Xshell </li>
+<li>安装 XFTP</li>
+</ol>
+<p>友情链接：</p>
+<ol>
+<li><a href="https://plugins.jetbrains.com/plugin/index?xmlId=cn.wuzhizhan.plugin.mybatis">Free MyBatis plugin</a></li>
+</ol>
+]]></content>
+      <categories>
+        <category>环境搭建</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Java 运算符</title>
+    <url>/2024/05/31/Java-%E8%BF%90%E7%AE%97%E7%AC%A6/</url>
+    <content><![CDATA[<h2 id="表达式"><a href="#表达式" class="headerlink" title="表达式"></a>表达式</h2><ol>
+<li>表达式由运算符和操作数组成</li>
+<li>如：5、num1、num1 + num2</li>
+</ol>
+<h2 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h2><ol>
+<li>算数运算符<ul>
+<li>算数运算符主要用于进行基本的算数运算，如加法、减法、乘法和除法等。</li>
+<li>加法 +</li>
+<li>减法 - </li>
+<li>乘法 * </li>
+<li>除法 &#x2F;  <strong>在除法运算中，如果除数和被除数都是整数，则做整除运算</strong></li>
+<li>求余数 %</li>
+<li>自增1 ++</li>
+<li>自减1 –</li>
+</ul>
+</li>
+<li>赋值运算符<ul>
+<li>格式：变量 &#x3D; 表达式;</li>
+<li><strong>注意：赋值运算符是从右往左运算！</strong> </li>
+<li><strong>赋值运算符的左边不能是常量，必须是常量</strong></li>
+<li>复合赋值运算符<ul>
+<li>+&#x3D; 代码示例：x+&#x3D;5 , x &#x3D; x + 5</li>
+<li>-&#x3D;</li>
+<li>*&#x3D;</li>
+<li>&#x2F;&#x3D;</li>
+<li>%&#x3D;</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>关系运算符<ul>
+<li>比较运算符用于判断两个数据的大小，如大于</li>
+<li>比较的结果是一个 布尔值</li>
+<li>大于 &gt;<ul>
+<li>‘A’ &gt; ‘’B  结果为 false , 比较的是两个字符的 ASCll 值</li>
+</ul>
+</li>
+<li>小于 &lt;</li>
+<li>大于等于 &gt;&#x3D;</li>
+<li>小于等于 &lt;&#x3D;</li>
+<li>等于 &#x3D;&#x3D;<ul>
+<li>float  f &#x3D; 5.0f; long l &#x3D;5; f&#x3D;&#x3D;l;  结果为true，浮点数与整数进行比较，只要值相等就返回true</li>
+</ul>
+</li>
+<li>不等于 !&#x3D;</li>
+<li>作用与功能<ul>
+<li>数据比较<ul>
+<li>关系运算符主要用于条件和循环语句中的判断条件</li>
+<li>条件结构就是根据不同的条件去执行不同的操作</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>逻辑运算符<ul>
+<li>逻辑运算符是用来连接一个或多个条件，判断这些条件是否成立 </li>
+<li>逻辑运算符的结果是布尔类型</li>
+<li>与<ul>
+<li>&amp;&amp; 或 &amp;<ul>
+<li>&amp;&amp; 运算符又叫短路运算符，如果第一个表达式的值就能决定表达式最后的结果，运算符右边的表达式就不再运算了</li>
+<li>&amp; 不论第一个表达式 true 还是 false，都要执行右边的表达式</li>
+</ul>
+</li>
+<li>operator1 &amp;&amp; operator2</li>
+</ul>
+</li>
+<li>或<ul>
+<li>|| 或 |<ul>
+<li>|| 和  &amp;&amp; 运算符一样</li>
+<li>| 和 &amp; 一样</li>
+</ul>
+</li>
+<li>operator1 || operator2</li>
+</ul>
+</li>
+<li>非<ul>
+<li>!<ul>
+<li>对原条件进行取反</li>
+</ul>
+</li>
+<li>!operator1</li>
+</ul>
+</li>
+<li>注意：<strong>逻辑运算符的操作数都是布尔类型的</strong></li>
+</ul>
+</li>
+<li>条件运算符<ul>
+<li>三元运算符 ? :</li>
+</ul>
+</li>
+<li>Java 中的条件运算符是三目运算符<ul>
+<li>++ 单目运算符</li>
+<li>双目运算符，需要对两个数进行操作 + - * &#x2F; </li>
+<li><strong>语法：布尔表达式 ? 表达式1 : 表达式2</strong></li>
+<li>当布尔表达式的值为 true , 则返回表达式 1 的值，否则 返回表达式 2 的值</li>
+</ul>
+</li>
+<li>位运算符<ul>
+<li>按位与（&amp;）：逐位进行与操作，只有当对应位都为 1 时，结果位才为 1。 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> <span class="variable">a</span> <span class="operator">=</span> <span class="number">5</span>; <span class="comment">// 二进制为 0101</span></span><br><span class="line"><span class="type">int</span> <span class="variable">b</span> <span class="operator">=</span> <span class="number">3</span>; <span class="comment">// 二进制为 0011</span></span><br><span class="line"><span class="type">int</span> <span class="variable">c</span> <span class="operator">=</span> a &amp; b; <span class="comment">// 结果为 1 (二进制为 0001)</span></span><br></pre></td></tr></table></figure></li>
+<li>按位或（|）：逐位进行或操作，只要有一个对应位为 1，结果位就为 1。 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> <span class="variable">a</span> <span class="operator">=</span> <span class="number">5</span>; <span class="comment">// 二进制为 0101</span></span><br><span class="line"><span class="type">int</span> <span class="variable">b</span> <span class="operator">=</span> <span class="number">3</span>; <span class="comment">// 二进制为 0011</span></span><br><span class="line"><span class="type">int</span> <span class="variable">c</span> <span class="operator">=</span> a | b; <span class="comment">// 结果为 7 (二进制为 0111)</span></span><br></pre></td></tr></table></figure></li>
+<li>按位异或（^）：逐位进行异或操作，当对应位不同时，结果位为 1。 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> <span class="variable">a</span> <span class="operator">=</span> <span class="number">5</span>; <span class="comment">// 二进制为 0101</span></span><br><span class="line"><span class="type">int</span> <span class="variable">b</span> <span class="operator">=</span> <span class="number">3</span>; <span class="comment">// 二进制为 0011</span></span><br><span class="line"><span class="type">int</span> <span class="variable">c</span> <span class="operator">=</span> a ^ b; <span class="comment">// 结果为 6 (二进制为 0110)</span></span><br></pre></td></tr></table></figure></li>
+<li>按位取反（~）：逐位进行取反操作，0 变 1，1 变 0。 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> <span class="variable">a</span> <span class="operator">=</span> <span class="number">5</span>; <span class="comment">// 二进制为 0101</span></span><br><span class="line"><span class="type">int</span> <span class="variable">b</span> <span class="operator">=</span> ~a; <span class="comment">// 结果为 -6 (二进制为 1010)</span></span><br></pre></td></tr></table></figure></li>
+<li>左移（&lt;&lt;）：将二进制位向左移动指定的位数，相当于乘以 2 的指定次方。 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> <span class="variable">a</span> <span class="operator">=</span> <span class="number">5</span>; <span class="comment">// 二进制为 0101</span></span><br><span class="line"><span class="type">int</span> <span class="variable">b</span> <span class="operator">=</span> a &lt;&lt; <span class="number">1</span>; <span class="comment">// 结果为 10 (二进制为 1010)</span></span><br></pre></td></tr></table></figure></li>
+<li>右移（&gt;&gt;）：将二进制位向右移动指定的位数，相当于除以 2 的指定次方。 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> <span class="variable">a</span> <span class="operator">=</span> <span class="number">5</span>; <span class="comment">// 二进制为 0101</span></span><br><span class="line"><span class="type">int</span> <span class="variable">b</span> <span class="operator">=</span> a &gt;&gt; <span class="number">1</span>; <span class="comment">// 结果为 2 (二进制为 0010)</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li>运算符优先级<table>
+<thead>
+<tr>
+<th>运算符</th>
+<th>描述</th>
+<th>权重</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>()</td>
+<td>圆括号</td>
+<td>0</td>
+</tr>
+<tr>
+<td>!，++，–</td>
+<td>逻辑非，自增，自减</td>
+<td>1</td>
+</tr>
+<tr>
+<td>*，&#x2F;，%</td>
+<td>乘法，除法，取余</td>
+<td>2</td>
+</tr>
+<tr>
+<td>+，-</td>
+<td>加法，减法</td>
+<td>3</td>
+</tr>
+<tr>
+<td>&lt;，&lt;&#x3D;，&gt;，&gt;&#x3D;</td>
+<td>小于，小于等于，大于，大于等于</td>
+<td>4</td>
+</tr>
+<tr>
+<td>&#x3D;&#x3D;，!&#x3D;</td>
+<td>等于，不等于</td>
+<td>5</td>
+</tr>
+<tr>
+<td>&amp;&amp;</td>
+<td>逻辑与</td>
+<td>6</td>
+</tr>
+<tr>
+<td>||</td>
+<td>逻辑或</td>
+<td>7</td>
+</tr>
+<tr>
+<td>&#x3D;，+&#x3D;，*&#x3D;，&#x2F;&#x3D;，%&#x3D;，-&#x3D;</td>
+<td>赋值运算符，复合赋值运算符</td>
+<td>8</td>
+</tr>
+</tbody></table>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>学习笔记</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
       </tags>
   </entry>
   <entry>
@@ -342,7 +809,7 @@
 
 <h1 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h1><ol>
 <li>npm uninstall -g @tarojs&#x2F;cli  # 卸载 Trao</li>
-<li>npm install -g @tarojs&#x2F;<a href="mailto:&#x63;&#x6c;&#x69;&#64;&#x33;&#x2e;&#48;&#46;&#50;&#x39;">&#x63;&#x6c;&#x69;&#64;&#x33;&#x2e;&#48;&#46;&#50;&#x39;</a>  # 安装指定版本 Trao</li>
+<li>npm install -g @tarojs&#x2F;<a href="mailto:&#99;&#x6c;&#105;&#64;&#x33;&#x2e;&#48;&#x2e;&#50;&#57;">&#99;&#x6c;&#105;&#64;&#x33;&#x2e;&#48;&#x2e;&#50;&#57;</a>  # 安装指定版本 Trao</li>
 <li>也有可能 nodejs 版本过低和 taro&#x2F;cli 不兼容，nvm 切换 16.x 以上版本试试</li>
 </ol>
 ]]></content>
