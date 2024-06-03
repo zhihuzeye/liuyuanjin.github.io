@@ -19,28 +19,28 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"zhihuzeye.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.20.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="流程控制语句 三大流程控制语句：顺序、选择、循环 顺序结构，从上往下依次执行 选择结构，根据条件执行对应的内容 循环结构，循环执行，反复执行    选择结构 if 结构 ，if - else 结构 多重 if  嵌套 if  switch 结构 if 和 switch 的区别 if 结构 判断条件是布尔类型 判断条件是一个范围   switch 结构 判断条件是常量值JDK 7.0 以后表达式的值">
+    <meta name="description" content="继承 概念 一种类与类之间的关系 使用已存在的类定义作为基础建立新类 新类的定义可以增加新的数据或新的功能，也可以用父类的功能，但 不能选择性地继承父类 满足 “A is a B”的关系就可以形成继承关系 子类可以访问父类非私有成员 父类不可以访问子类特有成员   方法重写 语法规则 在子类中定义，去重写父类的方法 方法名相同，参数列表相同（参数顺序、个数、类型） 方法名、参数列表都要与父类继承的">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Java 选择结构">
-<meta property="og:url" content="https://zhihuzeye.github.io/2024/06/02/Java-%E9%80%89%E6%8B%A9%E7%BB%93%E6%9E%84/index.html">
+<meta property="og:title" content="Java 面向对象2">
+<meta property="og:url" content="https://zhihuzeye.github.io/2024/06/03/Java-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A12/index.html">
 <meta property="og:site_name" content="泽野之乡">
-<meta property="og:description" content="流程控制语句 三大流程控制语句：顺序、选择、循环 顺序结构，从上往下依次执行 选择结构，根据条件执行对应的内容 循环结构，循环执行，反复执行    选择结构 if 结构 ，if - else 结构 多重 if  嵌套 if  switch 结构 if 和 switch 的区别 if 结构 判断条件是布尔类型 判断条件是一个范围   switch 结构 判断条件是常量值JDK 7.0 以后表达式的值">
+<meta property="og:description" content="继承 概念 一种类与类之间的关系 使用已存在的类定义作为基础建立新类 新类的定义可以增加新的数据或新的功能，也可以用父类的功能，但 不能选择性地继承父类 满足 “A is a B”的关系就可以形成继承关系 子类可以访问父类非私有成员 父类不可以访问子类特有成员   方法重写 语法规则 在子类中定义，去重写父类的方法 方法名相同，参数列表相同（参数顺序、个数、类型） 方法名、参数列表都要与父类继承的">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-06-02T13:55:01.000Z">
+<meta property="article:published_time" content="2024-06-03T13:51:29.000Z">
 <meta property="article:modified_time" content="2024-06-03T14:43:31.391Z">
 <meta property="article:author" content="之乎泽野">
 <meta property="article:tag" content="Java">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://zhihuzeye.github.io/2024/06/02/Java-%E9%80%89%E6%8B%A9%E7%BB%93%E6%9E%84/">
+<link rel="canonical" href="https://zhihuzeye.github.io/2024/06/03/Java-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A12/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://zhihuzeye.github.io/2024/06/02/Java-%E9%80%89%E6%8B%A9%E7%BB%93%E6%9E%84/","path":"2024/06/02/Java-选择结构/","title":"Java 选择结构"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://zhihuzeye.github.io/2024/06/03/Java-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A12/","path":"2024/06/03/Java-面向对象2/","title":"Java 面向对象2"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>Java 选择结构 | 泽野之乡</title>
+<title>Java 面向对象2 | 泽野之乡</title>
   
 
 
@@ -140,7 +140,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6%E8%AF%AD%E5%8F%A5"><span class="nav-number">1.</span> <span class="nav-text">流程控制语句</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%80%89%E6%8B%A9%E7%BB%93%E6%9E%84"><span class="nav-number">2.</span> <span class="nav-text">选择结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BE%AA%E7%8E%AF%E7%BB%93%E6%9E%84"><span class="nav-number">3.</span> <span class="nav-text">循环结构</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%A7%E6%89%BF"><span class="nav-number">1.</span> <span class="nav-text">继承</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%BF%E9%97%AE%E4%BF%AE%E9%A5%B0%E7%AC%A6"><span class="nav-number">2.</span> <span class="nav-text">访问修饰符</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -201,7 +201,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://zhihuzeye.github.io/2024/06/02/Java-%E9%80%89%E6%8B%A9%E7%BB%93%E6%9E%84/">
+    <link itemprop="mainEntityOfPage" href="https://zhihuzeye.github.io/2024/06/03/Java-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A12/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/face1.png">
@@ -214,12 +214,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="Java 选择结构 | 泽野之乡">
+      <meta itemprop="name" content="Java 面向对象2 | 泽野之乡">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Java 选择结构
+          Java 面向对象2
         </h1>
 
         <div class="post-meta-container">
@@ -229,15 +229,9 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
+      
 
-      <time title="创建时间：2024-06-02 21:55:01" itemprop="dateCreated datePublished" datetime="2024-06-02T21:55:01+08:00">2024-06-02</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-06-03 22:43:31" itemprop="dateModified" datetime="2024-06-03T22:43:31+08:00">2024-06-03</time>
+      <time title="创建时间：2024-06-03 21:51:29 / 修改时间：22:43:31" itemprop="dateCreated datePublished" datetime="2024-06-03T21:51:29+08:00">2024-06-03</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -258,66 +252,199 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><h2 id="流程控制语句"><a href="#流程控制语句" class="headerlink" title="流程控制语句"></a>流程控制语句</h2><ol>
-<li>三大流程控制语句：顺序、选择、循环<ul>
-<li>顺序结构，从上往下依次执行</li>
-<li>选择结构，根据条件执行对应的内容</li>
-<li>循环结构，循环执行，反复执行</li>
+    <div class="post-body" itemprop="articleBody"><h2 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h2><ol>
+<li>概念<ul>
+<li>一种类与类之间的关系</li>
+<li>使用已存在的类定义作为基础建立新类</li>
+<li>新类的定义可以增加新的数据或新的功能，也可以用父类的功能，但 <em><strong>不能选择性地继承父类</strong></em></li>
+<li><strong>满足 “A is a B”的关系就可以形成继承关系</strong></li>
+<li>子类可以访问父类非私有成员</li>
+<li>父类不可以访问子类特有成员</li>
+</ul>
+</li>
+<li>方法重写<ul>
+<li>语法规则<ul>
+<li>在子类中定义，去重写父类的方法</li>
+<li>方法名相同，参数列表相同（参数顺序、个数、类型）<ul>
+<li><strong>方法名、参数列表都要与父类继承的方法相同</strong></li>
+</ul>
+</li>
+<li>访问修饰符<ul>
+<li>允许改变，但是访问范围需要大于等于父类的访问范围</li>
+</ul>
+</li>
+<li><strong>与方法的参数名无关</strong></li>
+<li>方法返回值<ul>
+<li>当方法返回值是void 或基本数据类型时，必须相同；当返回值是引用类型时，可以是父类或其子类</li>
+</ul>
+</li>
+<li><em><strong>方法的返回值和访问修饰符是可以允许有变化的（有条件的）</strong></em></li>
+</ul>
+</li>
+<li>当子类重写父类方法后，子类对象调用的是重写后的方法。</li>
+<li>super：父类对象的引用  super.父类方法名()</li>
+<li>父类的构造不允许被继承；不允许被重写，但是会影响子类的实例化过程</li>
+</ul>
+</li>
+<li>特点<ul>
+<li>利于代码复用</li>
+<li>缩短开发周期</li>
+</ul>
+</li>
+<li>语法<ul>
+<li>使用 extends 实现封装</li>
+<li>单一继承，只能有一个父类</li>
+<li>名词解释<ul>
+<li>父类（基类）</li>
+<li>子类（派生类）</li>
+</ul>
+</li>
+<li>继承后的初始化顺序<ul>
+<li><em><strong>父类静态成员 -&gt; 子类静态成员 -&gt; 父类对象构造 -&gt; 子类对象构造</strong></em></li>
+<li>访问修饰符不影响成员加载顺序，跟书写位置有关</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>super</strong><ul>
+<li>代表父类引用<ul>
+<li>访问父类成员方法<ul>
+<li>super.print();</li>
+</ul>
+</li>
+<li>访问父类属性<ul>
+<li>super.name;</li>
+</ul>
+</li>
+<li>访问父类构造方法<ul>
+<li>super()</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>子类的构造的过程中必须调用其父类的构造方法</li>
+<li>如果子类的构造方法中没有显式标注，则系统默认调用父类无参的构造方法</li>
+<li>如果子类构造方法中既没有显式标注，且父类中没有无参的构造方法，则编译错误。</li>
+<li>子类构造默认调用父类无参构造方法，可以通过 super() 调用父类的允许被访问的其他构造方法，super() 必须放在子类构造函数有效代码的第一行。</li>
+<li>构造方法调用时，super 和 this 不能同时出现</li>
+</ul>
+</li>
+<li>Object 类<ul>
+<li>概念<ul>
+<li>Object 类是所有类的父类</li>
+<li>一个类没有使用 extends 关键字明确标识继承关系，则默认继承 Object 类（包括数组）</li>
+<li>Java 中的每个类都可以使用 Object 中定义的方法</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>final 关键字<ul>
+<li>final class<ul>
+<li>该类没有子类</li>
+<li>public final class | final public class 写法都行</li>
+</ul>
+</li>
+<li>final 方法<ul>
+<li>该方法不允许被子类重写，但是可以正常被子类继承使用</li>
+</ul>
+</li>
+<li>final 变量<ul>
+<li>方法内局部变量<ul>
+<li>只要在具体使用之前进行赋值即可，一旦赋值不允许修改</li>
+</ul>
+</li>
+<li>类中成员属性<ul>
+<li>赋值过程<ul>
+<li>定义的时候直接初始化</li>
+<li>构造方法中</li>
+<li>构造代码块</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>基本数据类型的变量<ul>
+<li>初始赋值之后不能更改</li>
+</ul>
+</li>
+<li>引用类型的变量<ul>
+<li>初始化之后不能再指向另一个对象，但对象的内容是可变的</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>final +  static 定义后，在程序运行中不允许二次修改。<ul>
+<li>可以修饰方法和变量</li>
+<li>修饰配置信息 public static final String URL &#x3D; “<a target="_blank" rel="noopener" href="http://www.xxx.com/">www.xxx.com</a>“</li>
+</ul>
+</li>
+<li>final 不允许加载构造方法前面</li>
+<li>使用 final 修饰可以提高性能，但会降低可扩展性</li>
+</ul>
+</li>
+<li>注解<ul>
+<li>JDK1.5 版本引入的一个特性</li>
+<li>可以声明在包、类、属性、方法、局部变量、方法参数等的前面，用来对这些元素进行说明、注释</li>
+<li>一种特殊的标记</li>
+<li>常用注解<ul>
+<li>@Override 针对父类方法进行重写的形式</li>
+</ul>
+</li>
+<li>分类<ul>
+<li>按照运行机制分<ul>
+<li>源码注解<ul>
+<li>注解只在源码阶段保留，在编译阶段会被丢弃。例如：@Overide</li>
+</ul>
+</li>
+<li>编译时注解<ul>
+<li>注解会在编译时期保留，在加载 class 文件时会被丢弃。例如：@NotNull</li>
+</ul>
+</li>
+<li>运行时注解<ul>
+<li>在运行阶段还起作用，甚至会影响运行逻辑的注解。@Autowired</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>按照来源分<ul>
+<li>来自 JDK 的注解<ul>
+<li>@Override</li>
+</ul>
+</li>
+<li>来自第三方的注解<ul>
+<li>框架的注解</li>
+</ul>
+</li>
+<li>我们自定义的注解</li>
+</ul>
+</li>
+<li>元注解<ul>
+<li>对注解进行注解<ul>
+<li>对注解进行标注</li>
+</ul>
+</li>
+<li>@Target 限定注解可以用在什么地方</li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 </ol>
-<h2 id="选择结构"><a href="#选择结构" class="headerlink" title="选择结构"></a>选择结构</h2><ol>
-<li>if 结构 ，if - else 结构</li>
-<li>多重 if </li>
-<li>嵌套 if </li>
-<li>switch 结构</li>
-<li>if 和 switch 的区别<ul>
-<li>if 结构<ul>
-<li>判断条件是布尔类型</li>
-<li>判断条件是一个范围</li>
+<h2 id="访问修饰符"><a href="#访问修饰符" class="headerlink" title="访问修饰符"></a>访问修饰符</h2><ol>
+<li>公有的 ：public<ul>
+<li>允许在任意位置访问</li>
 </ul>
 </li>
-<li>switch 结构<ul>
-<li>判断条件是常量值<br>JDK 7.0 以后表达式的值可以是基本数据类型的，byte，short，int，char，以及 String 类型。</li>
+<li>私有的：private<ul>
+<li>只允许在本类中进行访问</li>
 </ul>
 </li>
+<li>受保护的：protected<ul>
+<li>允许在当前类、同包子类&#x2F;非子类、跨包子类调用、跨包非子类不允许</li>
 </ul>
 </li>
-</ol>
-<h2 id="循环结构"><a href="#循环结构" class="headerlink" title="循环结构"></a>循环结构</h2><ol>
-<li>while<ul>
-<li>如果循环体只有一条语句，大括号可以省略</li>
-<li>为避免死循环，小括号后面不要加分号</li>
-<li>语法格式  while(条件){ &lt;语句&gt; }</li>
-</ul>
-</li>
-<li>do-while<ul>
-<li>注意事项<ul>
-<li>do-while 循环至少执行一次</li>
-<li>循环条件后的分号不能丢</li>
-<li>局部变量使用前必须初始化</li>
-</ul>
-</li>
-<li>语法格式  do{ &lt;语句&gt;} while(循环条件);</li>
-<li>Math.random() 得到 [0,1) 之间的随机数</li>
-</ul>
-</li>
-<li>for<ul>
-<li>语法格式：for(表达式1;表达式2;表达式3){ &lt;语句&gt;}</li>
-<li>注意事项：break 语句表示跳出当前循环</li>
-</ul>
-</li>
-<li>循环嵌套</li>
-<li>break 语句<ul>
-<li>break 语句可以结束当前循环的执行</li>
-<li>执行完 break 语句后，循环体中位于 break 语句后面的语句就不会被执行</li>
-<li>在多重循环中，break 语句只向外跳一层</li>
-<li>注意：<strong>break 跳出当前循环</strong></li>
-</ul>
-</li>
-<li>continue 语句<ul>
-<li>continue 语句只能用在循环里</li>
-<li>continue 语句可以结束当前循环的执行，但是要继续执行下一次循环的执行</li>
+<li>默认<ul>
+<li>允许在当前类、同包子类&#x2F;非子类调用；跨包子类&#x2F;非子类不允许调用</li>
 </ul>
 </li>
 </ol>
@@ -338,7 +465,7 @@
   </li>
   <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="https://zhihuzeye.github.io/2024/06/02/Java-%E9%80%89%E6%8B%A9%E7%BB%93%E6%9E%84/" title="Java 选择结构">https://zhihuzeye.github.io/2024/06/02/Java-选择结构/</a>
+      <a href="https://zhihuzeye.github.io/2024/06/03/Java-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A12/" title="Java 面向对象2">https://zhihuzeye.github.io/2024/06/03/Java-面向对象2/</a>
   </li>
   <li class="post-copyright-license">
       <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -354,13 +481,13 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2024/05/31/Java-%E8%BF%90%E7%AE%97%E7%AC%A6/" rel="prev" title="Java 运算符">
-                  <i class="fa fa-angle-left"></i> Java 运算符
+                <a href="/2024/06/02/Java-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A11/" rel="prev" title="Java 面向对象1">
+                  <i class="fa fa-angle-left"></i> Java 面向对象1
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2024/06/02/Java-%E6%95%B0%E7%BB%84/" rel="next" title="Java 数组">
-                  Java 数组 <i class="fa fa-angle-right"></i>
+                <a href="/2024/06/03/Java-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A13/" rel="next" title="Java 面向对象3">
+                  Java 面向对象3 <i class="fa fa-angle-right"></i>
                 </a>
             </div>
           </div>
