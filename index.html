@@ -151,7 +151,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">17</span>
+          <span class="site-state-item-count">20</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -162,7 +162,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-count">10</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -196,7 +196,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://zhihuzeye.github.io/2024/06/03/%E6%89%BE%E4%B8%8D%E5%88%B0%E6%8F%92%E4%BB%B6%E4%BE%9D%E8%B5%96-tarojs-plugin-platform-h5%EF%BC%8C%E8%AF%B7%E5%85%88%E5%9C%A8%E9%A1%B9%E7%9B%AE%E4%B8%AD%E5%AE%89%E8%A3%85/">
+    <link itemprop="mainEntityOfPage" href="https://zhihuzeye.github.io/2024/06/04/CSS3%E9%80%89%E6%8B%A9%E5%99%A8/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/face1.png">
@@ -214,7 +214,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2024/06/03/%E6%89%BE%E4%B8%8D%E5%88%B0%E6%8F%92%E4%BB%B6%E4%BE%9D%E8%B5%96-tarojs-plugin-platform-h5%EF%BC%8C%E8%AF%B7%E5%85%88%E5%9C%A8%E9%A1%B9%E7%9B%AE%E4%B8%AD%E5%AE%89%E8%A3%85/" class="post-title-link" itemprop="url">找不到插件依赖 @tarojs/plugin-platform-h5，请先在项目中安装</a>
+          <a href="/2024/06/04/CSS3%E9%80%89%E6%8B%A9%E5%99%A8/" class="post-title-link" itemprop="url">CSS3选择器</a>
         </h2>
 
         <div class="post-meta-container">
@@ -224,8 +224,18 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
+      
 
-      <time title="创建时间：2024-06-03 22:43:31" itemprop="dateCreated datePublished" datetime="2024-06-03T22:43:31+08:00">2024-06-03</time>
+      <time title="创建时间：2024-06-04 20:54:27 / 修改时间：21:19:51" itemprop="dateCreated datePublished" datetime="2024-06-04T20:54:27+08:00">2024-06-04</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">学习笔记</span></a>
+        </span>
     </span>
 
   
@@ -238,23 +248,468 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <blockquote>
-<p>运行一个 Taro 的项目，安装完相关依赖后执行命令报错</p>
-</blockquote>
-<h1 id="执行步骤"><a href="#执行步骤" class="headerlink" title="执行步骤"></a>执行步骤</h1><ul>
-<li>yarn install </li>
-<li>yarn run start</li>
+          <h2 id="释义"><a href="#释义" class="headerlink" title="释义"></a>释义</h2><ul>
+<li>（caseading style sheet、层叠式样式表）</li>
 </ul>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">正在执行任务: yarn run start </span><br><span class="line"></span><br><span class="line">yarn run v1.22.19</span><br><span class="line">$ npm run dev:h5</span><br><span class="line"></span><br><span class="line">&gt; renthouse-taro@1.0.0 dev:h5</span><br><span class="line">&gt; npm run build:h5 -- --watch</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&gt; renthouse-taro@1.0.0 build:h5</span><br><span class="line">&gt; taro build --type h5 --watch </span><br><span class="line"></span><br><span class="line">👽 Taro v3.6.25</span><br><span class="line"></span><br><span class="line">找不到插件依赖 &quot;@tarojs/plugin-platform-h5&quot;，请先在项目中安装，项目路径：D:\xxx\xxx\renthouse-taro</span><br><span class="line">error Command failed with exit code 1.</span><br><span class="line">info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.</span><br></pre></td></tr></table></figure>
+<h2 id="前端三层"><a href="#前端三层" class="headerlink" title="前端三层"></a>前端三层</h2><ol>
+<li>结构层 HTML<ul>
+<li>搭建结构、放置部件、描述语义</li>
+</ul>
+</li>
+<li>样式层 CSS<ul>
+<li>美化页面、实现布局</li>
+</ul>
+</li>
+<li>行为层 Javascript<ul>
+<li>实现交互效果、数据收发、表单验证等</li>
+</ul>
+</li>
+</ol>
+<h2 id="选择器（CSS2-1）"><a href="#选择器（CSS2-1）" class="headerlink" title="选择器（CSS2.1）"></a>选择器（CSS2.1）</h2><ol>
+<li>类选择器<ul>
+<li>.类名称</li>
+</ul>
+</li>
+<li>id选择器<ul>
+<li>#id名称</li>
+<li>命名：只能有字母、数字、下划线、短横构成、且不能以数字开字母区分大小写，但习惯小写字母开头</li>
+</ul>
+</li>
+<li>元素选择器（标签选择器)<ul>
+<li>元素名称</li>
+<li>通常用于标签样式的初始化</li>
+</ul>
+</li>
+<li>说明<ul>
+<li><em><strong>选择器的优先级：内联样式&gt;id选择器&gt;类选择器&gt;元素选择器</strong></em></li>
+</ul>
+</li>
+</ol>
+<h2 id="复合选择器（CSS2-1）"><a href="#复合选择器（CSS2-1）" class="headerlink" title="复合选择器（CSS2.1）"></a>复合选择器（CSS2.1）</h2><ol>
+<li>后代选择器<ul>
+<li>.box .spec 选择.box 内部类名为.spec的标签</li>
+</ul>
+</li>
+<li>交集选择器<ul>
+<li>li.spec 选择既是li标签，名字也叫spec类的标签</li>
+</ul>
+</li>
+<li>并集选择器<ul>
+<li>ul,ol 选择所有ul和ol的标签</li>
+</ul>
+</li>
+<li>题目：请根据样式属性，写出文档结构<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">    div.box li p.spec em&#123;</span><br><span class="line">        color: red;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;box&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;spec&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">em</span>&gt;</span>哈哈哈哈<span class="tag">&lt;/<span class="name">em</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+<h2 id="属性选择器（CSS3）-IE9"><a href="#属性选择器（CSS3）-IE9" class="headerlink" title="属性选择器（CSS3） &gt;&#x3D; IE9"></a>属性选择器（CSS3） &gt;&#x3D; IE9</h2><ol>
+<li>img[alt]<ul>
+<li>选择有alt属性的img标签</li>
+</ul>
+</li>
+<li>img[alt&#x3D;”故宫”]<ul>
+<li>选择alt 属性是故宫的img标签</li>
+</ul>
+</li>
+<li>img[alt^&#x3D;”故宫”]<ul>
+<li>选择alt属性以北京开头的img标签</li>
+</ul>
+</li>
+<li>img[alt$&#x3D;”夜景”]<ul>
+<li>选择alt属性以夜景结尾的img标签</li>
+</ul>
+</li>
+<li>img[alt*&#x3D;”美”]<ul>
+<li>选择alt属性包含美字的img标签</li>
+</ul>
+</li>
+<li>img[alt~&#x3D;”手机拍摄”]<ul>
+<li>选择有alt属性有空格隔开的手机拍摄字样的img标签</li>
+</ul>
+</li>
+<li>img[alt|&#x3D;”参赛作品”]<ul>
+<li>选择有alt属性以“参赛作品-”开头的img标签</li>
+</ul>
+</li>
+</ol>
+<h2 id="元素关系选择器（CSS3）"><a href="#元素关系选择器（CSS3）" class="headerlink" title="元素关系选择器（CSS3）"></a>元素关系选择器（CSS3）</h2><ol>
+<li>子选择器&gt;&#x3D;IE7<ul>
+<li>div&gt;p  div的子标签p</li>
+</ul>
+</li>
+<li>相邻兄弟选择器<ul>
+<li>img+p 图片后面紧跟着的段落将被选中</li>
+</ul>
+</li>
+<li>通用兄弟选择器<ul>
+<li>p~span  <em><strong>p元素之后的所有同层级span元素</strong></em></li>
+</ul>
+</li>
+</ol>
+<h2 id="序号选择器（CSS3）"><a href="#序号选择器（CSS3）" class="headerlink" title="序号选择器（CSS3）"></a>序号选择器（CSS3）</h2><ol>
+<li>:first-child &gt;&#x3D;IE7<ul>
+<li>第一个子元素</li>
+</ul>
+</li>
+<li>:last-child<ul>
+<li>最后一个子元素</li>
+</ul>
+</li>
+<li>:nth-child(3)<ul>
+<li>第三个子元素</li>
+<li>:nth-child(3n+2)  从第二个开始，每三个选一个</li>
+<li>2n+1 等价于 odd ，表示奇数</li>
+<li>2n 等价于 even ，b表示偶数</li>
+</ul>
+</li>
+<li>:nth-of-type(3)<ul>
+<li>第三个某类型的子元素，将选择同种标签指定序号的子元素</li>
+</ul>
+</li>
+<li>:nth-last-child(3)<ul>
+<li>倒数第三个子元素</li>
+</ul>
+</li>
+<li>:nth-last-of-type(3)<ul>
+<li>倒数第三个某类型的子元素</li>
+</ul>
+</li>
+</ol>
+<h2 id="原子类"><a href="#原子类" class="headerlink" title="原子类"></a>原子类</h2><ol>
+<li>在做网页项目前，可以将所有的常用字号、文字颜色、行高、外边距、内边距等设置为单独的类<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"> 例如:</span><br><span class="line">.fs12&#123; font-size:12px &#125;</span><br><span class="line">.color-red &#123; color:red &#125;</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h2 id="伪类"><a href="#伪类" class="headerlink" title="伪类"></a>伪类</h2><ol>
+<li>伪类是添加到选择器的描述性词语，指定要选择的元素的特殊状态，超级链接有4个特殊状态<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">a</span><span class="selector-pseudo">:link</span>  没有被访问过的超级链接</span><br><span class="line"><span class="selector-tag">a</span><span class="selector-pseudo">:visited</span> 已经被访问过的超级链接</span><br><span class="line"><span class="selector-tag">a</span><span class="selector-pseudo">:hover</span> 正被鼠标悬停的超级链接</span><br><span class="line"><span class="selector-tag">a</span><span class="selector-pseudo">:active</span> 正被激活的超级链接（按下按键但是还没有松开按键）</span><br></pre></td></tr></table></figure></li>
+<li>“爱恨准则” LOVE HATE<ul>
+<li>:link -&gt; :visited -&gt; :hover -&gt; :active </li>
+<li><em><strong>a 标签伪类必须按照这个写法，否则伪类不生效</strong></em></li>
+</ul>
+</li>
+</ol>
+<h2 id="伪元素（CSS3）"><a href="#伪元素（CSS3）" class="headerlink" title="伪元素（CSS3）"></a>伪元素（CSS3）</h2><ol>
+<li>::before<ul>
+<li>在元素之前创建</li>
+</ul>
+</li>
+<li>::after<ul>
+<li>在元素之后创建</li>
+</ul>
+</li>
+<li>::selection<ul>
+<li>用于文档中被用户高亮的部分（使用鼠标圈选的部分）</li>
+</ul>
+</li>
+<li>::first-letter <ul>
+<li>选中某元素中（必须是块级元素）第一行的第一个字母</li>
+</ul>
+</li>
+<li>::first-line<ul>
+<li>选中某元素中（必须是块级元素）第一行的全部文字</li>
+</ul>
+</li>
+</ol>
+<h2 id="层叠性和选择器权重计算"><a href="#层叠性和选择器权重计算" class="headerlink" title="*层叠性和选择器权重计算"></a>*<em><strong>层叠性和选择器权重计算</strong></em></h2><ol>
+<li><em><strong>选择器的优先级：内联样式&gt;id选择器&gt;类选择器&gt;元素选择器</strong></em></li>
+<li><em><strong>复杂选择器可以通过（id的个数，class的个数，标签的个数）的形式，计算权重</strong></em><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;box1&quot;</span> <span class="attr">class</span>=<span class="string">&quot;box1&quot;</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;box2&quot;</span> <span class="attr">class</span>=<span class="string">&quot;box2&quot;</span>&gt;</span></span><br><span class="line">         <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;box3&quot;</span> <span class="attr">class</span>=<span class="string">&quot;box3&quot;</span>&gt;</span></span><br><span class="line">             <span class="tag">&lt;<span class="name">p</span>&gt;</span>我是段落<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">         <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"> #box1 #box2 p &#123;</span><br><span class="line">     color: red;</span><br><span class="line"> &#125;</span><br><span class="line"> #box1 div.box2 #box3 p &#123;</span><br><span class="line">     color: green;</span><br><span class="line"> &#125;</span><br><span class="line"> .box1 .box2 .box3 p &#123;</span><br><span class="line">     color: blue;</span><br><span class="line"> &#125;</span><br><span class="line"> 2,0,1</span><br><span class="line"> 2,1,2</span><br><span class="line"> 0,3,1</span><br><span class="line"></span><br><span class="line"> <span class="comment">&lt;!-- id选择器个数，类选择器个数，元素选择器个数 --&gt;</span></span><br></pre></td></tr></table></figure></li>
+<li>!important 权重提升   <ul>
+<li>很多公司不允许使用 important ，因为这会带来不经意的样式冲突</li>
+</ul>
+</li>
+</ol>
 
-<h1 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h1><p>因为我之前安装过 Taro 最新版本的 cli , 和现有的 Taro 版本不兼容</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">taro --version</span><br><span class="line">👽 Taro v3.6.25</span><br><span class="line"></span><br><span class="line">3.6.25</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
 
 
-<h1 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h1><ol>
-<li>npm uninstall -g @tarojs&#x2F;cli  # 卸载 Trao</li>
-<li>npm install -g @tarojs&#x2F;<a href="mailto:&#x63;&#108;&#x69;&#x40;&#51;&#x2e;&#x30;&#46;&#x32;&#57;">&#x63;&#108;&#x69;&#x40;&#51;&#x2e;&#x30;&#46;&#x32;&#57;</a>  # 安装指定版本 Trao</li>
-<li>也有可能 nodejs 版本过低和 taro&#x2F;cli 不兼容，nvm 切换 16.x 以上版本试试</li>
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://zhihuzeye.github.io/2024/06/04/CSS3%E6%B5%AE%E5%8A%A8%E5%AE%9A%E4%BD%8D%E4%B8%8E%E8%83%8C%E6%99%AF%E6%A0%B7%E5%BC%8F/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/face1.png">
+      <meta itemprop="name" content="之乎泽野">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="泽野之乡">
+      <meta itemprop="description" content="积跬步，至千里">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 泽野之乡">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2024/06/04/CSS3%E6%B5%AE%E5%8A%A8%E5%AE%9A%E4%BD%8D%E4%B8%8E%E8%83%8C%E6%99%AF%E6%A0%B7%E5%BC%8F/" class="post-title-link" itemprop="url">CSS3浮动定位与背景样式</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2024-06-04 20:44:32 / 修改时间：21:19:51" itemprop="dateCreated datePublished" datetime="2024-06-04T20:44:32+08:00">2024-06-04</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">学习笔记</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="浮动"><a href="#浮动" class="headerlink" title="浮动"></a>浮动</h2><ol>
+<li>浮动的基本概念<ul>
+<li><em><strong>垂直显示的浮动，不要设置浮动，只有并排显示的盒子才要设置浮动！</strong></em></li>
+<li>“大盒子带着小盒子跑”，一个大盒子中，又是一个小天地，内部可以继续使用浮动</li>
+<li>超市售卖的塑料袋0.3元一个，div是免费的！不要节约盒子</li>
+<li><strong>本质</strong><ul>
+<li>浮动的最本质的功能：实现并排</li>
+<li>浮动的要点：要浮动，并排的盒子都要设置浮动</li>
+<li>父盒子要有足够的宽度，否则子盒子会掉下去</li>
+<li>浮动的顺序贴靠特性<ul>
+<li><strong>子盒子会按顺序贴靠，如果没有足够的空间，则会寻找再前一个兄弟元素</strong></li>
+</ul>
+</li>
+<li>浮动的元素一定能设置宽高<ul>
+<li>浮动元素不在区分块级元素、行内元素，已经脱离了标准的文档流，一律能够设置宽度和高度，即使它是span标签或者标签等</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>使用浮动实现网页布局</li>
+<li>BFC规范和浏览器差异<ul>
+<li>BFC（ Box formatting Context）块级格式化上下文 是页面上的一个隔离的独立容器，容器里面的子元素不会影响到外面的元素，反之亦然</li>
+<li>从一个现象开始说起<ul>
+<li><strong>一个盒子不设置height，当内容的子元素都浮动时，无法撑起自身</strong></li>
+<li>这个盒子没有形成BFC</li>
+<li><em><strong>如何形成BFC</strong></em><ul>
+<li>1、float的值不是none</li>
+<li>2、position的值不是static或者relative</li>
+<li>3、display的值是inline-block、flex或者inline-flex</li>
+<li>4、overflow:hidden<ul>
+<li>溢出隐藏，溢出盒子边框会隐藏</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>BFC的其他作用<ul>
+<li>BFC可以取消盒子的margin塌陷</li>
+<li>BFC可以阻止元素被浮动的元素覆盖</li>
+</ul>
+</li>
+<li>浏览器差异<ul>
+<li>IE6、IE7浏览器使用haslayout机制，和BFC规范略有差异，比如IE浏览器可以使用zoom:1属性，“让壳子拥有layout”</li>
+<li>如果要兼容IE6、IE7网页时，尽量让网页设计的简单。内部有浮动的盒子要设置height属性，规范编程，不要“玩杂技”</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>清除浮动<ul>
+<li>clear: both;</li>
+<li>overflow:hidden</li>
+</ul>
+</li>
+</ol>
+<h2 id="定位"><a href="#定位" class="headerlink" title="定位"></a>定位</h2><ol>
+<li>相对定位<ul>
+<li>相对定位：盒子可以相对自己原来的位置进行调整，称为”相对定位“</li>
+<li><strong>position: relative;</strong></li>
+<li>值可以是负数，即往相反的位置移动</li>
+<li>相对定位的元素，会在“老家留坑”，本质上任然是在原来的位置，只不过渲染在新的地方而已，渲染的图形可以比如成“影子”，不会对其他元素产生任何影响</li>
+<li>相对定位的用途：用来微调元素位置。可以当做绝对定位的参考盒子。</li>
+</ul>
+</li>
+<li>绝对定位<ul>
+<li>盒子可以在浏览器中，以坐标进行位置精准描述，拥有自己的绝对位置</li>
+<li><strong>position: absolute;</strong></li>
+<li>left 到左边的距离，right 到右边的距离，top 到上边的距离，bottom到下边的距离</li>
+<li>绝对定位元素脱离标准文档流，将释放自己的位置，对其他元素不会产生任何干扰，而是对它进行压盖</li>
+<li><em><strong>脱离标准文档流的方法：浮动、绝对定位、固定定位</strong></em></li>
+<li>绝对定位的参考盒子：绝对定位的盒子会以自己祖先元素中，离自己最近的拥有定位属性的盒子，当做基准点，这个盒子通常是相对定位的，所以这个性质也叫作 <strong>“子绝父相”</strong></li>
+<li>绝对定位的盒子并不是永远以浏览器作为基点</li>
+<li><strong>绝对定位的盒子垂直居中</strong><ul>
+<li>position:absolute; top:50%; margin-top:-自己高度的一半</li>
+</ul>
+</li>
+<li>堆叠顺序 z-index<ul>
+<li>没有单位，数值大的就能压盖住小的</li>
+</ul>
+</li>
+<li>绝对定位用途：“压盖”、“遮罩”效果，结合JS实现动画效果，“雪碧图”</li>
+</ul>
+</li>
+<li>固定定位<ul>
+<li>position: fixed;</li>
+<li>固定定位只能以页面为参考点，没有“子固父相”这个性质</li>
+<li>固定定位脱离标准文档流</li>
+<li>用途：返回顶部，楼层导航等</li>
+</ul>
+</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://zhihuzeye.github.io/2024/06/04/2D%E5%92%8C3D%E7%9A%84%E8%BD%AC%E6%8D%A2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/face1.png">
+      <meta itemprop="name" content="之乎泽野">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="泽野之乡">
+      <meta itemprop="description" content="积跬步，至千里">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 泽野之乡">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2024/06/04/2D%E5%92%8C3D%E7%9A%84%E8%BD%AC%E6%8D%A2/" class="post-title-link" itemprop="url">2D和3D的转换</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2024-06-04 20:37:48 / 修改时间：21:19:51" itemprop="dateCreated datePublished" datetime="2024-06-04T20:37:48+08:00">2024-06-04</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">学习笔记</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="3D变形"><a href="#3D变形" class="headerlink" title="3D变形"></a>3D变形</h2><ol>
+<li>3D旋转<ul>
+<li>将transform的属性设置为rotateX()或者rotateY()，即可实现绕横轴、纵轴旋转</li>
+</ul>
+</li>
+<li>空间移动<ul>
+<li>当元素进行3D旋转后，即可继续添加translateX()、translateY()、translateZ()属性让元素在空间进行移动</li>
+</ul>
+</li>
+<li>perspective（景深）<ul>
+<li>该属性用来定义透视强度，可以理解为“人眼到舞台的距离”，单位是px<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;box1&quot;</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"> <span class="comment">&lt;!-- div 是舞台，必须设置perperctive属性，p是演员，设置transform属性 --&gt;</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li>transform-style（指定嵌套元素是怎样在三维空间中呈现。）<ul>
+<li>preserve-3d 表示所有子元素在3D空间中呈现。</li>
+<li>flat 表示所有子元素在2D平面呈现。<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br></pre></td><td class="code"><pre><span class="line">   <span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css">        * &#123;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">margin</span>: <span class="number">0</span>;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">padding</span>: <span class="number">0</span>;</span></span><br><span class="line"><span class="language-css">        &#125;</span></span><br><span class="line"><span class="language-css">       <span class="selector-tag">section</span> &#123;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">width</span>: <span class="number">200px</span>;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">height</span>: <span class="number">200px</span>;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">margin</span>: <span class="number">100px</span> auto;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">perspective</span>: <span class="number">10000px</span>;</span></span><br><span class="line"><span class="language-css">        &#125;</span></span><br><span class="line"><span class="language-css">        <span class="selector-class">.box</span> &#123;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">width</span>: <span class="number">200px</span>;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">height</span>: <span class="number">200px</span>;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">perspective</span>: <span class="number">10000px</span>;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">position</span>: relative;</span></span><br><span class="line"><span class="language-css">            <span class="comment">/* 设置变形类型，保留它内部的3D效果 */</span></span></span><br><span class="line"><span class="language-css">            <span class="comment">/* 这个盒子又是舞台，又是演员，这个box整体带着里面的p旋转 */</span></span></span><br><span class="line"><span class="language-css">            <span class="attribute">transform-style</span>: preserve-<span class="number">3</span>d;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">transition</span>:all <span class="number">10s</span> ease <span class="number">0s</span>;</span></span><br><span class="line"><span class="language-css">        &#125;</span></span><br><span class="line"><span class="language-css"></span></span><br><span class="line"><span class="language-css">        <span class="selector-tag">section</span><span class="selector-pseudo">:hover</span> <span class="selector-class">.box</span> &#123;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">transform</span>: <span class="built_in">rotateX</span>(<span class="number">360deg</span>) <span class="built_in">rotateY</span>(<span class="number">360deg</span>);</span></span><br><span class="line"><span class="language-css">        &#125;</span></span><br><span class="line"><span class="language-css"></span></span><br><span class="line"><span class="language-css">        <span class="selector-class">.box</span> <span class="selector-tag">p</span> &#123;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">position</span>: absolute;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">top</span>: <span class="number">0</span>;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">left</span>: <span class="number">0</span>;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">width</span>: <span class="number">200px</span>;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">height</span>: <span class="number">200px</span>;</span></span><br><span class="line"><span class="language-css">        &#125;</span></span><br><span class="line"><span class="language-css"></span></span><br><span class="line"><span class="language-css">        <span class="selector-class">.box</span> <span class="selector-tag">p</span><span class="selector-pseudo">:nth-child</span>(<span class="number">1</span>) &#123;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">background-color</span>: <span class="built_in">rgba</span>(<span class="number">219</span>, <span class="number">56</span>, <span class="number">211</span>, <span class="number">0.486</span>);</span></span><br><span class="line"><span class="language-css">            <span class="comment">/* 前面 */</span></span></span><br><span class="line"><span class="language-css">            <span class="attribute">transform</span>: <span class="built_in">translateZ</span>(<span class="number">100px</span>);</span></span><br><span class="line"><span class="language-css">        &#125;</span></span><br><span class="line"><span class="language-css"></span></span><br><span class="line"><span class="language-css">        <span class="selector-class">.box</span> <span class="selector-tag">p</span><span class="selector-pseudo">:nth-child</span>(<span class="number">2</span>) &#123;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">background-color</span>: <span class="built_in">rgba</span>(<span class="number">42</span>, <span class="number">128</span>, <span class="number">199</span>, <span class="number">0.486</span>);</span></span><br><span class="line"><span class="language-css">            <span class="comment">/* 顶面 */</span></span></span><br><span class="line"><span class="language-css">            <span class="attribute">transform</span>: <span class="built_in">rotateX</span>(<span class="number">90deg</span>) <span class="built_in">translateZ</span>(<span class="number">100px</span>);</span></span><br><span class="line"><span class="language-css">        &#125;</span></span><br><span class="line"><span class="language-css"></span></span><br><span class="line"><span class="language-css">        <span class="selector-class">.box</span> <span class="selector-tag">p</span><span class="selector-pseudo">:nth-child</span>(<span class="number">3</span>) &#123;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">background-color</span>: <span class="built_in">rgba</span>(<span class="number">56</span>, <span class="number">219</span>, <span class="number">83</span>, <span class="number">0.486</span>);</span></span><br><span class="line"><span class="language-css">            <span class="comment">/* 背面 */</span></span></span><br><span class="line"><span class="language-css">            <span class="attribute">transform</span>: <span class="built_in">rotateX</span>(<span class="number">180deg</span>) <span class="built_in">translateZ</span>(<span class="number">100px</span>);</span></span><br><span class="line"><span class="language-css">        &#125;</span></span><br><span class="line"><span class="language-css"></span></span><br><span class="line"><span class="language-css">        <span class="selector-class">.box</span> <span class="selector-tag">p</span><span class="selector-pseudo">:nth-child</span>(<span class="number">4</span>) &#123;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">background-color</span>: <span class="built_in">rgba</span>(<span class="number">213</span>, <span class="number">216</span>, <span class="number">32</span>, <span class="number">0.486</span>);</span></span><br><span class="line"><span class="language-css">            <span class="comment">/* 底面 */</span></span></span><br><span class="line"><span class="language-css">            <span class="attribute">transform</span>: <span class="built_in">rotateX</span>(-<span class="number">90deg</span>) <span class="built_in">translateZ</span>(<span class="number">100px</span>);</span></span><br><span class="line"><span class="language-css">        &#125;</span></span><br><span class="line"><span class="language-css"></span></span><br><span class="line"><span class="language-css">        <span class="selector-class">.box</span> <span class="selector-tag">p</span><span class="selector-pseudo">:nth-child</span>(<span class="number">5</span>) &#123;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">background-color</span>: <span class="built_in">rgba</span>(<span class="number">236</span>, <span class="number">82</span>, <span class="number">102</span>, <span class="number">0.486</span>);</span></span><br><span class="line"><span class="language-css">            <span class="comment">/* 侧面 */</span></span></span><br><span class="line"><span class="language-css">            <span class="attribute">transform</span>: <span class="built_in">rotateY</span>(<span class="number">90deg</span>) <span class="built_in">translateZ</span>(<span class="number">100px</span>);</span></span><br><span class="line"><span class="language-css">        &#125;</span></span><br><span class="line"><span class="language-css"></span></span><br><span class="line"><span class="language-css">        <span class="selector-class">.box</span> <span class="selector-tag">p</span><span class="selector-pseudo">:nth-child</span>(<span class="number">6</span>) &#123;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">background-color</span>: <span class="built_in">rgba</span>(<span class="number">119</span>, <span class="number">17</span>, <span class="number">236</span>, <span class="number">0.486</span>);</span></span><br><span class="line"><span class="language-css">            <span class="comment">/* 侧面 */</span></span></span><br><span class="line"><span class="language-css">            <span class="attribute">transform</span>: <span class="built_in">rotateY</span>(-<span class="number">90deg</span>) <span class="built_in">translateZ</span>(<span class="number">100px</span>);</span></span><br><span class="line"><span class="language-css">        &#125;</span></span><br><span class="line"><span class="language-css">    </span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">section</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;box&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">section</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ol>
+<h2 id="2D变形"><a href="#2D变形" class="headerlink" title="2D变形"></a>2D变形</h2><ol>
+<li>旋转变形<ul>
+<li>transform: rotate(45deg);</li>
+<li>若角度为正，就是顺时针，否则就是逆时针</li>
+<li>transform-origin 属性设置自己的自定义变换原点<ul>
+<li>transform-origin: 50px 40px;</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>缩放变形<ul>
+<li>transform: scale(3);</li>
+<li>以中心点为原点缩放</li>
+</ul>
+</li>
+<li>斜切变形<ul>
+<li>transform: skew(10deg,20deg); 即可实现斜切变形</li>
+<li>x的斜切角度，y的斜切角度</li>
+</ul>
+</li>
+<li>位移变形IE9<ul>
+<li>将 transform 属性设置为 translate ，即可实现位移变形<ul>
+<li>transform: translate(200px,400px);</li>
+</ul>
+</li>
+<li>和相对定位非常像，位移变形也会“老家留坑”，形影分离。</li>
+</ul>
+</li>
 </ol>
 
       
@@ -310,9 +765,15 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2024-06-03 22:31:55 / 修改时间：22:43:31" itemprop="dateCreated datePublished" datetime="2024-06-03T22:31:55+08:00">2024-06-03</time>
+      <time title="创建时间：2024-06-03 22:31:55" itemprop="dateCreated datePublished" datetime="2024-06-03T22:31:55+08:00">2024-06-03</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2024-06-04 21:19:51" itemprop="dateModified" datetime="2024-06-04T21:19:51+08:00">2024-06-04</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -527,9 +988,15 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2024-06-03 22:15:42 / 修改时间：22:43:31" itemprop="dateCreated datePublished" datetime="2024-06-03T22:15:42+08:00">2024-06-03</time>
+      <time title="创建时间：2024-06-03 22:15:42" itemprop="dateCreated datePublished" datetime="2024-06-03T22:15:42+08:00">2024-06-03</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2024-06-04 21:19:51" itemprop="dateModified" datetime="2024-06-04T21:19:51+08:00">2024-06-04</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -753,9 +1220,15 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2024-06-03 21:51:29 / 修改时间：22:43:31" itemprop="dateCreated datePublished" datetime="2024-06-03T21:51:29+08:00">2024-06-03</time>
+      <time title="创建时间：2024-06-03 21:51:29" itemprop="dateCreated datePublished" datetime="2024-06-03T21:51:29+08:00">2024-06-03</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2024-06-04 21:19:51" itemprop="dateModified" datetime="2024-06-04T21:19:51+08:00">2024-06-04</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1035,7 +1508,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-06-03 22:43:31" itemprop="dateModified" datetime="2024-06-03T22:43:31+08:00">2024-06-03</time>
+      <time title="修改时间：2024-06-04 21:19:51" itemprop="dateModified" datetime="2024-06-04T21:19:51+08:00">2024-06-04</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1368,7 +1841,7 @@ default void defaultMethod() &#123;
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-06-03 22:43:31" itemprop="dateModified" datetime="2024-06-03T22:43:31+08:00">2024-06-03</time>
+      <time title="修改时间：2024-06-04 21:19:51" itemprop="dateModified" datetime="2024-06-04T21:19:51+08:00">2024-06-04</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1546,7 +2019,7 @@ default void defaultMethod() &#123;
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-06-03 22:43:31" itemprop="dateModified" datetime="2024-06-03T22:43:31+08:00">2024-06-03</time>
+      <time title="修改时间：2024-06-04 21:19:51" itemprop="dateModified" datetime="2024-06-04T21:19:51+08:00">2024-06-04</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1725,7 +2198,7 @@ default void defaultMethod() &#123;
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-06-03 22:43:31" itemprop="dateModified" datetime="2024-06-03T22:43:31+08:00">2024-06-03</time>
+      <time title="修改时间：2024-06-04 21:19:51" itemprop="dateModified" datetime="2024-06-04T21:19:51+08:00">2024-06-04</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1809,356 +2282,6 @@ default void defaultMethod() &#123;
 <li>continue 语句可以结束当前循环的执行，但是要继续执行下一次循环的执行</li>
 </ul>
 </li>
-</ol>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://zhihuzeye.github.io/2024/05/31/Java-%E8%BF%90%E7%AE%97%E7%AC%A6/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/face1.png">
-      <meta itemprop="name" content="之乎泽野">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="泽野之乡">
-      <meta itemprop="description" content="积跬步，至千里">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 泽野之乡">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2024/05/31/Java-%E8%BF%90%E7%AE%97%E7%AC%A6/" class="post-title-link" itemprop="url">Java 运算符</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2024-05-31 23:17:31" itemprop="dateCreated datePublished" datetime="2024-05-31T23:17:31+08:00">2024-05-31</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-06-03 22:43:31" itemprop="dateModified" datetime="2024-06-03T22:43:31+08:00">2024-06-03</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">学习笔记</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="表达式"><a href="#表达式" class="headerlink" title="表达式"></a>表达式</h2><ol>
-<li>表达式由运算符和操作数组成</li>
-<li>如：5、num1、num1 + num2</li>
-</ol>
-<h2 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h2><ol>
-<li>算数运算符<ul>
-<li>算数运算符主要用于进行基本的算数运算，如加法、减法、乘法和除法等。</li>
-<li>加法 +</li>
-<li>减法 - </li>
-<li>乘法 * </li>
-<li>除法 &#x2F;  <strong>在除法运算中，如果除数和被除数都是整数，则做整除运算</strong></li>
-<li>求余数 %</li>
-<li>自增1 ++</li>
-<li>自减1 –</li>
-</ul>
-</li>
-<li>赋值运算符<ul>
-<li>格式：变量 &#x3D; 表达式;</li>
-<li><strong>注意：赋值运算符是从右往左运算！</strong> </li>
-<li><strong>赋值运算符的左边不能是常量，必须是常量</strong></li>
-<li>复合赋值运算符<ul>
-<li>+&#x3D; 代码示例：x+&#x3D;5 , x &#x3D; x + 5</li>
-<li>-&#x3D;</li>
-<li>*&#x3D;</li>
-<li>&#x2F;&#x3D;</li>
-<li>%&#x3D;</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>关系运算符<ul>
-<li>比较运算符用于判断两个数据的大小，如大于</li>
-<li>比较的结果是一个 布尔值</li>
-<li>大于 &gt;<ul>
-<li>‘A’ &gt; ‘’B  结果为 false , 比较的是两个字符的 ASCll 值</li>
-</ul>
-</li>
-<li>小于 &lt;</li>
-<li>大于等于 &gt;&#x3D;</li>
-<li>小于等于 &lt;&#x3D;</li>
-<li>等于 &#x3D;&#x3D;<ul>
-<li>float  f &#x3D; 5.0f; long l &#x3D;5; f&#x3D;&#x3D;l;  结果为true，浮点数与整数进行比较，只要值相等就返回true</li>
-</ul>
-</li>
-<li>不等于 !&#x3D;</li>
-<li>作用与功能<ul>
-<li>数据比较<ul>
-<li>关系运算符主要用于条件和循环语句中的判断条件</li>
-<li>条件结构就是根据不同的条件去执行不同的操作</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>逻辑运算符<ul>
-<li>逻辑运算符是用来连接一个或多个条件，判断这些条件是否成立 </li>
-<li>逻辑运算符的结果是布尔类型</li>
-<li>与<ul>
-<li>&amp;&amp; 或 &amp;<ul>
-<li>&amp;&amp; 运算符又叫短路运算符，如果第一个表达式的值就能决定表达式最后的结果，运算符右边的表达式就不再运算了</li>
-<li>&amp; 不论第一个表达式 true 还是 false，都要执行右边的表达式</li>
-</ul>
-</li>
-<li>operator1 &amp;&amp; operator2</li>
-</ul>
-</li>
-<li>或<ul>
-<li>|| 或 |<ul>
-<li>|| 和  &amp;&amp; 运算符一样</li>
-<li>| 和 &amp; 一样</li>
-</ul>
-</li>
-<li>operator1 || operator2</li>
-</ul>
-</li>
-<li>非<ul>
-<li>!<ul>
-<li>对原条件进行取反</li>
-</ul>
-</li>
-<li>!operator1</li>
-</ul>
-</li>
-<li>注意：<strong>逻辑运算符的操作数都是布尔类型的</strong></li>
-</ul>
-</li>
-<li>条件运算符<ul>
-<li>三元运算符 ? :</li>
-</ul>
-</li>
-<li>Java 中的条件运算符是三目运算符<ul>
-<li>++ 单目运算符</li>
-<li>双目运算符，需要对两个数进行操作 + - * &#x2F; </li>
-<li><strong>语法：布尔表达式 ? 表达式1 : 表达式2</strong></li>
-<li>当布尔表达式的值为 true , 则返回表达式 1 的值，否则 返回表达式 2 的值</li>
-</ul>
-</li>
-<li>位运算符<ul>
-<li>按位与（&amp;）：逐位进行与操作，只有当对应位都为 1 时，结果位才为 1。 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="variable">a</span> <span class="operator">=</span> <span class="number">5</span>; <span class="comment">// 二进制为 0101</span></span><br><span class="line"><span class="type">int</span> <span class="variable">b</span> <span class="operator">=</span> <span class="number">3</span>; <span class="comment">// 二进制为 0011</span></span><br><span class="line"><span class="type">int</span> <span class="variable">c</span> <span class="operator">=</span> a &amp; b; <span class="comment">// 结果为 1 (二进制为 0001)</span></span><br></pre></td></tr></table></figure></li>
-<li>按位或（|）：逐位进行或操作，只要有一个对应位为 1，结果位就为 1。 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="variable">a</span> <span class="operator">=</span> <span class="number">5</span>; <span class="comment">// 二进制为 0101</span></span><br><span class="line"><span class="type">int</span> <span class="variable">b</span> <span class="operator">=</span> <span class="number">3</span>; <span class="comment">// 二进制为 0011</span></span><br><span class="line"><span class="type">int</span> <span class="variable">c</span> <span class="operator">=</span> a | b; <span class="comment">// 结果为 7 (二进制为 0111)</span></span><br></pre></td></tr></table></figure></li>
-<li>按位异或（^）：逐位进行异或操作，当对应位不同时，结果位为 1。 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="variable">a</span> <span class="operator">=</span> <span class="number">5</span>; <span class="comment">// 二进制为 0101</span></span><br><span class="line"><span class="type">int</span> <span class="variable">b</span> <span class="operator">=</span> <span class="number">3</span>; <span class="comment">// 二进制为 0011</span></span><br><span class="line"><span class="type">int</span> <span class="variable">c</span> <span class="operator">=</span> a ^ b; <span class="comment">// 结果为 6 (二进制为 0110)</span></span><br></pre></td></tr></table></figure></li>
-<li>按位取反（~）：逐位进行取反操作，0 变 1，1 变 0。 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="variable">a</span> <span class="operator">=</span> <span class="number">5</span>; <span class="comment">// 二进制为 0101</span></span><br><span class="line"><span class="type">int</span> <span class="variable">b</span> <span class="operator">=</span> ~a; <span class="comment">// 结果为 -6 (二进制为 1010)</span></span><br></pre></td></tr></table></figure></li>
-<li>左移（&lt;&lt;）：将二进制位向左移动指定的位数，相当于乘以 2 的指定次方。 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="variable">a</span> <span class="operator">=</span> <span class="number">5</span>; <span class="comment">// 二进制为 0101</span></span><br><span class="line"><span class="type">int</span> <span class="variable">b</span> <span class="operator">=</span> a &lt;&lt; <span class="number">1</span>; <span class="comment">// 结果为 10 (二进制为 1010)</span></span><br></pre></td></tr></table></figure></li>
-<li>右移（&gt;&gt;）：将二进制位向右移动指定的位数，相当于除以 2 的指定次方。 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="variable">a</span> <span class="operator">=</span> <span class="number">5</span>; <span class="comment">// 二进制为 0101</span></span><br><span class="line"><span class="type">int</span> <span class="variable">b</span> <span class="operator">=</span> a &gt;&gt; <span class="number">1</span>; <span class="comment">// 结果为 2 (二进制为 0010)</span></span><br></pre></td></tr></table></figure></li>
-</ul>
-</li>
-<li>运算符优先级<table>
-<thead>
-<tr>
-<th>运算符</th>
-<th>描述</th>
-<th>权重</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>()</td>
-<td>圆括号</td>
-<td>0</td>
-</tr>
-<tr>
-<td>!，++，–</td>
-<td>逻辑非，自增，自减</td>
-<td>1</td>
-</tr>
-<tr>
-<td>*，&#x2F;，%</td>
-<td>乘法，除法，取余</td>
-<td>2</td>
-</tr>
-<tr>
-<td>+，-</td>
-<td>加法，减法</td>
-<td>3</td>
-</tr>
-<tr>
-<td>&lt;，&lt;&#x3D;，&gt;，&gt;&#x3D;</td>
-<td>小于，小于等于，大于，大于等于</td>
-<td>4</td>
-</tr>
-<tr>
-<td>&#x3D;&#x3D;，!&#x3D;</td>
-<td>等于，不等于</td>
-<td>5</td>
-</tr>
-<tr>
-<td>&amp;&amp;</td>
-<td>逻辑与</td>
-<td>6</td>
-</tr>
-<tr>
-<td>||</td>
-<td>逻辑或</td>
-<td>7</td>
-</tr>
-<tr>
-<td>&#x3D;，+&#x3D;，*&#x3D;，&#x2F;&#x3D;，%&#x3D;，-&#x3D;</td>
-<td>赋值运算符，复合赋值运算符</td>
-<td>8</td>
-</tr>
-</tbody></table>
-</li>
-</ol>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://zhihuzeye.github.io/2024/05/31/Java-%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/face1.png">
-      <meta itemprop="name" content="之乎泽野">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="泽野之乡">
-      <meta itemprop="description" content="积跬步，至千里">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 泽野之乡">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2024/05/31/Java-%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" class="post-title-link" itemprop="url">Java 开发环境搭建</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2024-05-31 22:37:32" itemprop="dateCreated datePublished" datetime="2024-05-31T22:37:32+08:00">2024-05-31</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-06-03 22:43:31" itemprop="dateModified" datetime="2024-06-03T22:43:31+08:00">2024-06-03</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" itemprop="url" rel="index"><span itemprop="name">环境搭建</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <ol>
-<li>安装 JDK </li>
-<li>安装 Navicat 数据库工具</li>
-<li>安装 IntelliJ IDEA 编译器</li>
-<li>安装 Redis <a target="_blank" rel="noopener" href="https://blog.csdn.net/antma/article/details/79225084">Redis安装（Windows环境下Redis安装）</a> </li>
-<li>maven3.6.3 安装 <a target="_blank" rel="noopener" href="https://blog.csdn.net/kenkao/article/details/128842266">Windows系统Maven3.6.3下载与安装</a><ul>
-<li>apache-maven-3.6.1&#x2F;conf  目录下配置  settingsapplication.xml 文件 <strong>主要用于配置 Maven 的行为和外部依赖</strong></li>
-<li>apache-maven-3.6.1 目录下创建 repo 文件夹</li>
-</ul>
-</li>
-<li>安装 IntelliJ IDEA  插件<br><img src="/images/874811934.png" alt="插件"><br><img src="/images/94823832832.png" alt="插件"></li>
-<li>项目 .idea 目录下 misc.xml 文件配置 Yapi <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">component</span> <span class="attr">name</span>=<span class="string">&quot;yapi&quot;</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">option</span> <span class="attr">name</span>=<span class="string">&quot;projectToken&quot;</span>&gt;</span>your yapiToken<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">option</span> <span class="attr">name</span>=<span class="string">&quot;projectId&quot;</span>&gt;</span>789<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">option</span> <span class="attr">name</span>=<span class="string">&quot;yapiUrl&quot;</span>&gt;</span>your yapiUrl<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">option</span> <span class="attr">name</span>=<span class="string">&quot;projectType&quot;</span>&gt;</span>api<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">component</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
-<li>安装 Xshell </li>
-<li>安装 XFTP</li>
-</ol>
-<p>友情链接：</p>
-<ol>
-<li><a target="_blank" rel="noopener" href="https://plugins.jetbrains.com/plugin/index?xmlId=cn.wuzhizhan.plugin.mybatis">Free MyBatis plugin</a></li>
 </ol>
 
       
