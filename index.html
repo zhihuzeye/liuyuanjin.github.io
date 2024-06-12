@@ -151,7 +151,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">25</span>
+          <span class="site-state-item-count">31</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -162,7 +162,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-count">12</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -187,6 +187,943 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://zhihuzeye.github.io/2024/06/12/BOM%E5%9F%BA%E7%A1%80/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/face1.png">
+      <meta itemprop="name" content="之乎泽野">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="泽野之乡">
+      <meta itemprop="description" content="积跬步，至千里">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 泽野之乡">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2024/06/12/BOM%E5%9F%BA%E7%A1%80/" class="post-title-link" itemprop="url">BOM基础</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2024-06-12 22:37:14 / 修改时间：23:00:10" itemprop="dateCreated datePublished" datetime="2024-06-12T22:37:14+08:00">2024-06-12</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">学习笔记</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="BOM是什么"><a href="#BOM是什么" class="headerlink" title="BOM是什么"></a>BOM是什么</h2><ol>
+<li>一些与浏览器改变尺寸，滚动条滚动的特效，都要借助BOM技术</li>
+<li>BOM(Browser Object Model, 浏览器对象模型) 是JS与浏览器窗口交互的接口</li>
+</ol>
+<h2 id="BOM常用对象"><a href="#BOM常用对象" class="headerlink" title="BOM常用对象"></a>BOM常用对象</h2><ol>
+<li>Window 对象<ul>
+<li>window 对象是当前JS脚本运行所处的窗口，而这个窗口中包含DOM结构，window.document属性就是document对象</li>
+<li>在有标签页功能的浏览器中，每个标签都拥有自己的window 对象；也就是说，同一个窗口的标签页之间不会共享一个window对象</li>
+<li>全局变量是window变量的属性<ul>
+<li><code>var a = 1;window.a == a   // true</code></li>
+</ul>
+</li>
+<li>内置函数普遍是window的方法<ul>
+<li><code>如setInterval、alert </code></li>
+<li><code>window.alert ==alert // true</code></li>
+<li><code>window.hasOwnProperty(&#39;alert&#39;) // true</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Navigator 对象<ul>
+<li>window.navgator 属性可以检索navigator对象，它内部含有用户此次活动的浏览器的相关属性和标识<ul>
+<li>appName 浏览器官方名称</li>
+<li>appVersion 浏览器版本</li>
+<li>userAgent 浏览器用户代理（含有内核信息和封装壳信息）</li>
+<li>platform 用户操作系统</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>History 对象<ul>
+<li>window.history 对象提供了操作浏览器会话历史的接口</li>
+<li>常用的操作就是模拟浏览器的回退按钮</li>
+<li><code>history.back() history.go(-1)</code></li>
+</ul>
+</li>
+<li>History 对象<ul>
+<li>window.location 标识当前所在网址，可以通过给这个属性赋值命令浏览器进行页面跳转</li>
+<li>重新加载当前页面</li>
+<li>可以调用location的reload方法以重新加载当前页面，参数true标识强制从服务器加载</li>
+<li>GET请求查询参数<ul>
+<li>window.location.search 属性即为当前浏览器的GET请求查询参数</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>窗口尺寸相关属性<ul>
+<li>innerHeight<ul>
+<li>浏览器窗口的内容区域的高度，包含水平滚动条（如果有的话）</li>
+</ul>
+</li>
+<li>innerWidth<ul>
+<li>浏览器窗口的内容区域宽度，包含垂直滚动条（如果有的话）</li>
+</ul>
+</li>
+<li>outerHeight<ul>
+<li>浏览器窗口的外部高度</li>
+</ul>
+</li>
+<li>outerWidth<ul>
+<li>浏览器窗口的外部宽度</li>
+</ul>
+</li>
+<li>获得不包含滚动条的窗口宽度，要用 document.documentElement.clientWidth</li>
+<li>resize 事件<ul>
+<li>在窗口大小改变以后，就会触发resize事件，可以使用window.onresize或者window.addEventListener(‘resize’) 来绑定事件处理函数</li>
+</ul>
+</li>
+<li>已卷动高度<ul>
+<li>window.scrollY 属性表示在垂直方向已滚动的像素值</li>
+</ul>
+</li>
+<li>已动高度<ul>
+<li>document.documentElement.scrollTop 属性也表示窗口卷动高度</li>
+<li>document.documentElement.scrollTop 不是只读的，window.scrollY 属性是只读的</li>
+</ul>
+</li>
+<li>scroll事件<ul>
+<li>在窗口被卷动之后，就会触发scroll事件，可以使用 window.onscroll 或者 window.addEventListener(‘scroll’) 来绑定事件处理函数</li>
+</ul>
+</li>
+<li>DOM元素都有offsetTop属性，表示此元素定位到祖先元素的垂直距离<ul>
+<li>定位祖先元素：在祖先中，离自己最近的且拥有定位属性的元素</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://zhihuzeye.github.io/2024/06/12/%E6%96%87%E6%9C%AC%E4%B8%8E%E5%AD%97%E4%BD%93%E5%B1%9E%E6%80%A7/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/face1.png">
+      <meta itemprop="name" content="之乎泽野">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="泽野之乡">
+      <meta itemprop="description" content="积跬步，至千里">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 泽野之乡">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2024/06/12/%E6%96%87%E6%9C%AC%E4%B8%8E%E5%AD%97%E4%BD%93%E5%B1%9E%E6%80%A7/" class="post-title-link" itemprop="url">文本与字体属性</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2024-06-12 22:26:19 / 修改时间：23:00:10" itemprop="dateCreated datePublished" datetime="2024-06-12T22:26:19+08:00">2024-06-12</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">学习笔记</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="常用文本样式属性"><a href="#常用文本样式属性" class="headerlink" title="常用文本样式属性"></a>常用文本样式属性</h2><ol>
+<li>color<ul>
+<li>设置文本内容的前景色<ul>
+<li>RGBA ，最后一个表示透明度，0表示纯透明，1表示纯实心</li>
+</ul>
+</li>
+<li>16进制，RGB，RGBA</li>
+<li><strong>如果颜色值是#aabbcc的形式，可以简写为#abc</strong><ul>
+<li>#ff0000 -&gt; #f00</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>font-size<ul>
+<li>设置字号，单位通常px</li>
+</ul>
+</li>
+<li>font-weight<ul>
+<li>normal  正常粗细，与400等值</li>
+<li>bold  加粗，与700等值</li>
+<li>lighter  更细，大多数中文字体不支持</li>
+<li>bolder  更粗，大多数中文字体不支持</li>
+</ul>
+</li>
+<li>font-style<ul>
+<li>normal  取消倾斜，比如把天生倾斜的i、em等标签设置为不倾斜</li>
+<li>italic  设置为倾斜字体（常用）</li>
+<li>oblique  设置为倾斜字体（用常规字体模拟，不常用）</li>
+</ul>
+</li>
+<li>text-decoration<ul>
+<li>none  没有修饰线</li>
+<li>underline  下划线</li>
+<li>line-through  删除线</li>
+</ul>
+</li>
+</ol>
+<h2 id="继承性"><a href="#继承性" class="headerlink" title="继承性"></a>继承性</h2><ol>
+<li>color</li>
+<li>font-开头的</li>
+<li>list-开头的</li>
+<li>text-开头的</li>
+<li>line-开头的</li>
+<li><em><strong>因为文字相关属性有继承性，所以通常会设置body标签的字号、颜色、行高等，这样就能当做整个网页的默认样式了</strong></em></li>
+<li><em><strong>在继承的情况下，选择器权重计算失效，而是“就近原则”，继承的不如元素选中的权重大</strong></em></li>
+</ol>
+<h2 id="字体属性详解"><a href="#字体属性详解" class="headerlink" title="字体属性详解"></a>字体属性详解</h2><ol>
+<li>font-family<ul>
+<li>字体可以是列表形式，一般英语字体放前面，后面的字体是前面字体的“后备”字体</li>
+<li>font-family: serif, “Times New Roman”, “微软雅黑”;</li>
+<li>字体名称中有空格，必须用引号包裹</li>
+<li>中文字体可以称呼它们的英语名字<ul>
+<li>“Microsoft Yahei”  等同于 “微软雅黑”</li>
+<li>“SimSun” 等价于 “宋体”</li>
+</ul>
+</li>
+<li><strong>字体通常必须是用户计算机中已经安装好的字体</strong></li>
+<li>定义新字体，需要我们有新字体  @font-face</li>
+</ul>
+</li>
+</ol>
+<h2 id="段落和行相关属性"><a href="#段落和行相关属性" class="headerlink" title="段落和行相关属性"></a>段落和行相关属性</h2><ol>
+<li>text-indent 属性<ul>
+<li>定义文本内容首行缩进量</li>
+</ul>
+</li>
+<li>line-height<ul>
+<li>定义行高</li>
+<li>line-height:30px</li>
+<li>line-height:1.5  字号的倍数</li>
+<li>line-height:150%   字号的倍数</li>
+</ul>
+</li>
+<li>单行文本垂直居中<ul>
+<li>行高&#x3D;盒子高度，即可实现单行文本的垂直居中</li>
+</ul>
+</li>
+<li>text-align:center<ul>
+<li>文字水平居中</li>
+</ul>
+</li>
+<li>font 合写属性<ul>
+<li>font: italic bold 20px&#x2F;1.5 “阿里妈妈刀隶体 Regular”;</li>
+</ul>
+</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://zhihuzeye.github.io/2024/06/12/%E7%9B%92%E6%A8%A1%E5%9E%8B/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/face1.png">
+      <meta itemprop="name" content="之乎泽野">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="泽野之乡">
+      <meta itemprop="description" content="积跬步，至千里">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 泽野之乡">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2024/06/12/%E7%9B%92%E6%A8%A1%E5%9E%8B/" class="post-title-link" itemprop="url">盒模型</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2024-06-12 22:11:47 / 修改时间：23:00:10" itemprop="dateCreated datePublished" datetime="2024-06-12T22:11:47+08:00">2024-06-12</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">学习笔记</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="认识盒模型"><a href="#认识盒模型" class="headerlink" title="认识盒模型"></a>认识盒模型</h2><ol>
+<li>行内元素</li>
+<li>块级元素</li>
+<li>所有HTML标签都可以看成矩形盒子，由width、height、padding、border构成，称为“盒模型”</li>
+</ol>
+<h2 id="width和height属性详解"><a href="#width和height属性详解" class="headerlink" title="width和height属性详解"></a>width和height属性详解</h2><ol>
+<li>width<ul>
+<li>盒子内容的宽度</li>
+<li>width属性通常是px，移动端开发会涉及百分数，rem等单位</li>
+<li>当块级元素（div、h系列、li等）没有设置width属性是，它将自动撑满，但这并不意味着width可以继承</li>
+</ul>
+</li>
+<li>height<ul>
+<li>表示内容的高度</li>
+<li>width属性通常是px，移动端开发会涉及百分数，rem等单位</li>
+<li>盒子的height属性如果不设置，它将被内容被自动撑开，如果没有内容，则height默认是0</li>
+<li>高度省略掉，内容能被自动撑开</li>
+</ul>
+</li>
+</ol>
+<h2 id="padding属性详解"><a href="#padding属性详解" class="headerlink" title="padding属性详解"></a>padding属性详解</h2><ol>
+<li>padding 是盒子的内边距，即盒子边框内壁到文字的距离</li>
+<li>padding 是四个方向的<ul>
+<li>padding-top</li>
+<li>padding-left</li>
+<li>padding-right</li>
+<li>padding-bottom</li>
+</ul>
+</li>
+<li>padding 四数值写法<ul>
+<li>padding:10px 20px 10px 20px 上右下左</li>
+</ul>
+</li>
+<li>padding 三数值写法 <ul>
+<li><em><strong>padding:10px 20px 30px  上 左右 下</strong></em></li>
+</ul>
+</li>
+<li>padding 二数值写法<ul>
+<li>padding:10px 20px 上下，左右</li>
+</ul>
+</li>
+<li>padding 一数值写法<ul>
+<li>padding:10px  四个方向都是10px</li>
+</ul>
+</li>
+</ol>
+<h2 id="margin属性详解"><a href="#margin属性详解" class="headerlink" title="margin属性详解"></a>margin属性详解</h2><ol>
+<li>margin是盒子的外边距，盒子和其它盒子之间的距离</li>
+<li>margin 是四个方向的<ul>
+<li>margin-top</li>
+<li>margin-left</li>
+<li>margin-right</li>
+<li>margin-bottom</li>
+</ul>
+</li>
+<li>margin 四个方向<ul>
+<li>margin:10px 20px 10px 20px 上右下左</li>
+</ul>
+</li>
+<li>margin 三数值写法 <ul>
+<li><em><strong>margin:10px 20px 30px  上 左右 下</strong></em></li>
+</ul>
+</li>
+<li>margin 二数值写法<ul>
+<li>margin:10px 20px 上下，左右</li>
+</ul>
+</li>
+<li>margin 一数值写法<ul>
+<li>margin:10px  四个方向都是10px</li>
+</ul>
+</li>
+<li>margin 的塌陷<ul>
+<li>垂直方向的margin有塌陷现象：小的margin 会塌陷到大的margin 中，从而margin不叠加，只以大的值为准<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"> <span class="selector-class">.box5</span>&#123;</span><br><span class="line">        <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">        <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">        <span class="attribute">background-color</span>: aqua;</span><br><span class="line">        <span class="attribute">margin-bottom</span>: <span class="number">24px</span>;</span><br><span class="line">    &#125;   </span><br><span class="line"> <span class="selector-class">.box6</span>&#123;</span><br><span class="line">        <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">        <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">        <span class="attribute">background-color</span>: <span class="built_in">rgb</span>(<span class="number">28</span>, <span class="number">206</span>, <span class="number">108</span>);</span><br><span class="line">        <span class="attribute">margin-top</span>: <span class="number">32px</span>;</span><br><span class="line">    &#125;</span><br><span class="line">以<span class="attribute">margin-top</span> <span class="number">32px</span> 为准</span><br></pre></td></tr></table></figure></li>
+<li>左右方向不会发生塌陷现象</li>
+</ul>
+</li>
+<li>一些元素有默认的margin<ul>
+<li>比如（body、ul、p) 等，在开始制作网页的时候，要将它们清除<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"> *&#123;</span><br><span class="line">        <span class="attribute">margin</span>: <span class="number">0</span>;</span><br><span class="line">        <span class="attribute">padding</span>: <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="selector-tag">body</span>,</span><br><span class="line">    <span class="selector-tag">ul</span>,</span><br><span class="line">    <span class="selector-tag">p</span> &#123;</span><br><span class="line">        <span class="attribute">margin</span>: <span class="number">0</span>;</span><br><span class="line">        <span class="attribute">padding</span>: <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">* 通配符有效率问题</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li>盒子的水平居中<ul>
+<li>将盒子左右两边的margin都设置为auto，盒水平居中 </li>
+<li>margin:0 auto</li>
+<li>文本居中 text-align:center 和盒子水平居中是两个概念</li>
+</ul>
+</li>
+</ol>
+<h2 id="盒模型计算"><a href="#盒模型计算" class="headerlink" title="盒模型计算"></a>盒模型计算</h2><ol>
+<li>盒子的总宽度 &#x3D; width + 左右border + 左右padding</li>
+<li>盒子的总高度 &#x3D; height + 上下border + 上下padding</li>
+</ol>
+<h2 id="box-sizing属性"><a href="#box-sizing属性" class="headerlink" title="box-sizing属性"></a>box-sizing属性</h2><ol>
+<li>将盒子添加 box-sizing:border-box 之后，padding、border 变为内缩，不再外扩</li>
+</ol>
+<h2 id="display"><a href="#display" class="headerlink" title="display"></a>display</h2><ol>
+<li>行内元素<ul>
+<li>能并排显示</li>
+<li>不能设置宽高</li>
+<li>width自动收缩</li>
+<li>a、span、em、b、u、i 等</li>
+</ul>
+</li>
+<li>块级元素<ul>
+<li>不能并排显示</li>
+<li>能设置宽高</li>
+<li>width自动撑满</li>
+<li>div、section、header、h系列、li、ul等</li>
+</ul>
+</li>
+<li>行内块元素<ul>
+<li>img、input等</li>
+<li>既能并排显示、又能设置宽高</li>
+</ul>
+</li>
+<li>行内元素和块级元素的互相转换<ul>
+<li>display:block<ul>
+<li>转换为块级元素</li>
+</ul>
+</li>
+<li>display:inline <ul>
+<li>转为行内元素</li>
+</ul>
+</li>
+<li>disaplay:inline-block <ul>
+<li>即将元素转为行内块</li>
+</ul>
+</li>
+<li>display:none<ul>
+<li>可以将元素隐藏，元素将彻底放弃位置，如同没有写标签一样</li>
+</ul>
+</li>
+<li>visibility:hidden<ul>
+<li>也可以将元素隐藏，但是元素不放弃自己的位置</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://zhihuzeye.github.io/2024/06/12/%E8%BF%87%E6%B8%A1%E4%B8%8E%E5%8A%A8%E7%94%BB/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/face1.png">
+      <meta itemprop="name" content="之乎泽野">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="泽野之乡">
+      <meta itemprop="description" content="积跬步，至千里">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 泽野之乡">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2024/06/12/%E8%BF%87%E6%B8%A1%E4%B8%8E%E5%8A%A8%E7%94%BB/" class="post-title-link" itemprop="url">过渡与动画</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2024-06-12 21:52:21 / 修改时间：23:00:10" itemprop="dateCreated datePublished" datetime="2024-06-12T21:52:21+08:00">2024-06-12</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">学习笔记</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="过渡（最低支持-IE10）"><a href="#过渡（最低支持-IE10）" class="headerlink" title="过渡（最低支持 IE10）"></a>过渡（最低支持 IE10）</h2><ol>
+<li>过渡的基本使用<ul>
+<li>transition 过渡属性是CSS3浓墨重彩的特性，过渡可以为一个元素在不同的样式之间变化自动添加“补间动画”</li>
+<li>优点：动画更细腻，内存开销小</li>
+<li>transition: width 1s linear 0s;<ul>
+<li>如果所有属性要参与过渡，可以写 all</li>
+</ul>
+</li>
+<li><em><strong>参数说明：什么属性需要过渡，动画时长，变化速度曲线，延迟时间</strong></em><br>  过渡的四个小属性<ul>
+<li>transition-duration 动画时间</li>
+<li>transition-property 哪些属性要过渡</li>
+<li>transition-timing-function 动画变化曲线（缓动效果）<ul>
+<li>ease</li>
+<li>linear</li>
+<li>ease-in</li>
+<li>ease-out</li>
+<li>ease-in-out</li>
+<li>贝塞尔曲线<ul>
+<li>可以通过 <a target="_blank" rel="noopener" href="https://cubic-bezier.com/">https://cubic-bezier.com/</a> 这个网址自定义动画缓动参数</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>transition-delay 延迟时间</li>
+</ul>
+</li>
+<li>哪些属性可以参与过渡？<ul>
+<li>所有数值属性都可以参与过渡，比如<ul>
+<li>width</li>
+<li>height</li>
+<li>left</li>
+<li>top</li>
+<li>border-radius</li>
+</ul>
+</li>
+<li>背景颜色和文字颜色都可以被过渡</li>
+<li>所有变形（包括2D和3D）都能被过渡</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>过渡的缓动效果（参考 transition-timing-function 属性）</li>
+</ol>
+<h2 id="动画"><a href="#动画" class="headerlink" title="动画"></a>动画</h2><ol>
+<li>动画的定义和调用<ul>
+<li><p>可以使用 @keyframes 来定义动画，keyframes 表示“关键帧”，在项目上线前，要补上@-webkit-这样的私有前缀</p>
+</li>
+<li><p>定义动画后，就可以用 animation 属性调用动画</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"> <span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>动画的定义<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css">      <span class="keyword">@keyframes</span> r&#123;</span></span><br><span class="line"><span class="language-css">          <span class="selector-tag">from</span> &#123;</span></span><br><span class="line"><span class="language-css">              <span class="attribute">transform</span>: <span class="built_in">rotate</span>(<span class="number">0</span>);</span></span><br><span class="line"><span class="language-css">          &#125;</span></span><br><span class="line"><span class="language-css">          <span class="selector-tag">to</span> &#123;</span></span><br><span class="line"><span class="language-css">              <span class="attribute">transform</span>: <span class="built_in">rotate</span>(<span class="number">360deg</span>);</span></span><br><span class="line"><span class="language-css">          &#125;</span></span><br><span class="line"><span class="language-css">      &#125;</span></span><br><span class="line"><span class="language-css">      <span class="selector-class">.box1</span> &#123;</span></span><br><span class="line"><span class="language-css">          <span class="attribute">width</span>: <span class="number">200px</span>;</span></span><br><span class="line"><span class="language-css">          <span class="attribute">height</span>: <span class="number">200px</span>;</span></span><br><span class="line"><span class="language-css">          <span class="attribute">border</span>: <span class="number">1px</span> solid <span class="number">#333</span>;</span></span><br><span class="line"><span class="language-css">          <span class="attribute">animation</span>: r <span class="number">1s</span> linear <span class="number">0s</span>;</span></span><br><span class="line"><span class="language-css">      &#125;</span></span><br><span class="line"><span class="language-css">  </span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;box1&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>animation: r 1s ease 3s 3; </code></p>
+<ul>
+<li>动画的参数：动画的名称，执行的时间，动画效果，延迟时间，执行次数</li>
+<li>如果想永远设置执行就是 infinite 属性</li>
+<li>如果想让动画的第2、4、6…..（偶数次）自动逆向执行，那么要加上 alternate 参数即可</li>
+<li>如果想让动画停止在最后结束状态，那么要加上 forwards</li>
+</ul>
+</li>
+<li><p>多关键帧动画</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@keyframes</span> changeColor &#123;</span><br><span class="line">     <span class="number">0%</span> &#123;</span><br><span class="line">         <span class="attribute">background-color</span>: red;</span><br><span class="line">     &#125;</span><br><span class="line"></span><br><span class="line">     <span class="number">50%</span> &#123;</span><br><span class="line">         <span class="attribute">background-color</span>: yellow;</span><br><span class="line">     &#125;</span><br><span class="line"></span><br><span class="line">     <span class="number">100%</span> &#123;</span><br><span class="line">         <span class="attribute">background-color</span>: aqua;</span><br><span class="line">     &#125;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://zhihuzeye.github.io/2024/06/12/%E5%A4%9A%E5%AA%92%E4%BD%93%E4%B8%8E%E8%AF%AD%E4%B9%89%E5%8C%96%E6%A0%87%E7%AD%BE/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/face1.png">
+      <meta itemprop="name" content="之乎泽野">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="泽野之乡">
+      <meta itemprop="description" content="积跬步，至千里">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 泽野之乡">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2024/06/12/%E5%A4%9A%E5%AA%92%E4%BD%93%E4%B8%8E%E8%AF%AD%E4%B9%89%E5%8C%96%E6%A0%87%E7%AD%BE/" class="post-title-link" itemprop="url">多媒体与语义化标签</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2024-06-12 21:37:30 / 修改时间：23:00:10" itemprop="dateCreated datePublished" datetime="2024-06-12T21:37:30+08:00">2024-06-12</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">学习笔记</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="audio标签（兼容到IE9）"><a href="#audio标签（兼容到IE9）" class="headerlink" title="audio标签（兼容到IE9）"></a>audio标签（兼容到IE9）</h2><ol>
+<li>属性<ul>
+<li>autoplay（某些浏览器不支持自动播放、本地自动播放是可以的）</li>
+<li>loop （重复播放）</li>
+</ul>
+</li>
+</ol>
+<h2 id="video-标签（兼容到IE9）"><a href="#video-标签（兼容到IE9）" class="headerlink" title="video 标签（兼容到IE9）"></a>video 标签（兼容到IE9）</h2><ol>
+<li>属性<ul>
+<li>同 audio 标签</li>
+<li>width 视频播放器宽度</li>
+</ul>
+</li>
+</ol>
+<h2 id="大纲标签（区块标签）"><a href="#大纲标签（区块标签）" class="headerlink" title="大纲标签（区块标签）"></a>大纲标签（区块标签）</h2><ol>
+<li>section 文档的区域，语义比div大</li>
+<li>article 文档的核心文章内容，会被搜索引擎主要抓取</li>
+<li>nav 导航条</li>
+<li>footer 页脚</li>
+<li>aside 文档的非必要相关内容，比如广告等</li>
+<li>main 网页核心部分</li>
+<li>header 页头</li>
+</ol>
+<h2 id="语义化标签"><a href="#语义化标签" class="headerlink" title="语义化标签"></a>语义化标签</h2><ol>
+<li>span 文本中的区块标签</li>
+<li>b 加粗标签</li>
+<li>i 斜体标签</li>
+<li>u 下划线标签</li>
+<li>strong 加粗标签</li>
+<li>em 斜体标签</li>
+<li>mark 标记标签</li>
+<li>figure-figcaption 用于表示图片和图片的标题</li>
+</ol>
+<h2 id="常用标签"><a href="#常用标签" class="headerlink" title="常用标签"></a>常用标签</h2><ol>
+<li>a 标签<ul>
+<li>1、a 标签 anchor 锚 的首字母<br>2、hypertext reference 超文本引用<br>3、title 用于设置鼠标的悬停文本</li>
+<li>属性<ul>
+<li>href 超文本引用</li>
+<li>target<ul>
+<li>_blank 在新窗口或新标签页中打开链接。</li>
+<li>_self 在父级框架中打开链接。</li>
+<li>_top 在当前窗口中打开链接（默认值）。</li>
+<li>_parent 在顶级框架中打开链接。</li>
+</ul>
+</li>
+<li>title 用于设置鼠标的悬停文本</li>
+</ul>
+</li>
+<li>说明<ul>
+<li>mailto:me.test.com 邮件</li>
+<li>tel:135555555555 拨打电话</li>
+<li>#top 回到顶部</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>img 标签<ul>
+<li>src</li>
+<li>width、height</li>
+<li>alt  alternate 替代品的缩写，它是图像的描述，不是强制性的(有利于搜索引擎优化)</li>
+<li>title 鼠标悬停时候显示</li>
+<li>class、style 设置样式用</li>
+<li>loading  指定图像加载方式，可选值有”eager”（立即加载）和”lazy”（延迟加载）。</li>
+<li>decoding  指定图像解码方式，可选值有”async”（异步解码）和”sync”（同步解码）。</li>
+</ul>
+</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://zhihuzeye.github.io/2024/06/12/%E8%A1%A8%E6%A0%BC%E6%A0%87%E7%AD%BE/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/face1.png">
+      <meta itemprop="name" content="之乎泽野">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="泽野之乡">
+      <meta itemprop="description" content="积跬步，至千里">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 泽野之乡">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2024/06/12/%E8%A1%A8%E6%A0%BC%E6%A0%87%E7%AD%BE/" class="post-title-link" itemprop="url">表格标签</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2024-06-12 21:34:38 / 修改时间：23:00:10" itemprop="dateCreated datePublished" datetime="2024-06-12T21:34:38+08:00">2024-06-12</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">学习笔记</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="table"><a href="#table" class="headerlink" title="table"></a>table</h2><ol>
+<li>tr</li>
+<li>td<ul>
+<li>colspan 用来设置 td 或者 th 的列跨度</li>
+<li>rowspan 用来设置 td 或者 th 的行跨度</li>
+</ul>
+</li>
+<li>thead&#x2F;th<ul>
+<li>标题小格（td 和 th 是同一级别的）</li>
+<li>colspan  用来设置 td 或者 th 的列跨度</li>
+<li>rowspan  用来设置 td 或者 th 的行跨度</li>
+</ul>
+</li>
+<li>tbody</li>
+<li>tfooter</li>
+<li>caption<ul>
+<li>表格的标题</li>
+</ul>
+</li>
+</ol>
+<h2 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h2><ol>
+<li>border <ul>
+<li>1</li>
+<li>2</li>
+</ul>
+</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -224,9 +1161,15 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2024-06-06 13:57:01 / 修改时间：14:04:09" itemprop="dateCreated datePublished" datetime="2024-06-06T13:57:01+08:00">2024-06-06</time>
+      <time title="创建时间：2024-06-06 13:57:01" itemprop="dateCreated datePublished" datetime="2024-06-06T13:57:01+08:00">2024-06-06</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2024-06-12 23:00:10" itemprop="dateModified" datetime="2024-06-12T23:00:10+08:00">2024-06-12</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -362,9 +1305,15 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2024-06-06 13:52:45 / 修改时间：14:04:09" itemprop="dateCreated datePublished" datetime="2024-06-06T13:52:45+08:00">2024-06-06</time>
+      <time title="创建时间：2024-06-06 13:52:45" itemprop="dateCreated datePublished" datetime="2024-06-06T13:52:45+08:00">2024-06-06</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2024-06-12 23:00:10" itemprop="dateModified" datetime="2024-06-12T23:00:10+08:00">2024-06-12</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -470,9 +1419,15 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2024-06-06 13:42:30 / 修改时间：14:04:09" itemprop="dateCreated datePublished" datetime="2024-06-06T13:42:30+08:00">2024-06-06</time>
+      <time title="创建时间：2024-06-06 13:42:30" itemprop="dateCreated datePublished" datetime="2024-06-06T13:42:30+08:00">2024-06-06</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2024-06-12 23:00:10" itemprop="dateModified" datetime="2024-06-12T23:00:10+08:00">2024-06-12</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -637,9 +1592,15 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2024-06-06 11:30:30 / 修改时间：14:04:09" itemprop="dateCreated datePublished" datetime="2024-06-06T11:30:30+08:00">2024-06-06</time>
+      <time title="创建时间：2024-06-06 11:30:30" itemprop="dateCreated datePublished" datetime="2024-06-06T11:30:30+08:00">2024-06-06</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2024-06-12 23:00:10" itemprop="dateModified" datetime="2024-06-12T23:00:10+08:00">2024-06-12</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -836,1117 +1797,8 @@
 
 
 
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://zhihuzeye.github.io/2024/06/06/Java-%E5%8C%85%E8%A3%85%E7%B1%BB/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/face1.png">
-      <meta itemprop="name" content="之乎泽野">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="泽野之乡">
-      <meta itemprop="description" content="积跬步，至千里">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 泽野之乡">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2024/06/06/Java-%E5%8C%85%E8%A3%85%E7%B1%BB/" class="post-title-link" itemprop="url">Java 包装类</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2024-06-06 11:26:11 / 修改时间：14:04:09" itemprop="dateCreated datePublished" datetime="2024-06-06T11:26:11+08:00">2024-06-06</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">学习笔记</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="什么是包装类"><a href="#什么是包装类" class="headerlink" title="什么是包装类"></a>什么是包装类</h2><ol>
-<li><em><strong>基本数据类型不具有对象特征，没有属性和方法，无法对象化交互，包装类的产生就是为了解决这样的问题，通过包装类，让基本数据类型拥有属性、方法，可以对象化交互</strong></em></li>
-<li>包装类不允许被继承，没有子类</li>
-</ol>
-<h2 id="包装类与基本数据类型之间的对应关系"><a href="#包装类与基本数据类型之间的对应关系" class="headerlink" title="包装类与基本数据类型之间的对应关系"></a>包装类与基本数据类型之间的对应关系</h2><p>包装类与基本数据类型</p>
-<ul>
-<li>byte -&gt; Byte</li>
-<li>short -&gt; Short</li>
-<li><strong>int -&gt; Integer</strong></li>
-<li>long -&gt; Long</li>
-<li>float -&gt; Float</li>
-<li>double -&gt; Double</li>
-<li><strong>char -&gt; Character</strong></li>
-<li>boolean -&gt; Boolean</li>
-<li>除了 double、float 都可以应用对象常量池的概念</li>
-</ul>
-<h2 id="包装类的常用方法"><a href="#包装类的常用方法" class="headerlink" title="包装类的常用方法"></a>包装类的常用方法</h2><p> <a target="_blank" rel="noopener" href="https://docs.oracle.com/javase/8/docs/api/">Java 文档手册</a></p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://zhihuzeye.github.io/2024/06/04/CSS3%E9%80%89%E6%8B%A9%E5%99%A8/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/face1.png">
-      <meta itemprop="name" content="之乎泽野">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="泽野之乡">
-      <meta itemprop="description" content="积跬步，至千里">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 泽野之乡">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2024/06/04/CSS3%E9%80%89%E6%8B%A9%E5%99%A8/" class="post-title-link" itemprop="url">CSS3选择器</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2024-06-04 20:54:27" itemprop="dateCreated datePublished" datetime="2024-06-04T20:54:27+08:00">2024-06-04</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-06-06 14:04:09" itemprop="dateModified" datetime="2024-06-06T14:04:09+08:00">2024-06-06</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">学习笔记</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="释义"><a href="#释义" class="headerlink" title="释义"></a>释义</h2><ul>
-<li>（caseading style sheet、层叠式样式表）</li>
-</ul>
-<h2 id="前端三层"><a href="#前端三层" class="headerlink" title="前端三层"></a>前端三层</h2><ol>
-<li>结构层 HTML<ul>
-<li>搭建结构、放置部件、描述语义</li>
-</ul>
-</li>
-<li>样式层 CSS<ul>
-<li>美化页面、实现布局</li>
-</ul>
-</li>
-<li>行为层 Javascript<ul>
-<li>实现交互效果、数据收发、表单验证等</li>
-</ul>
-</li>
-</ol>
-<h2 id="选择器（CSS2-1）"><a href="#选择器（CSS2-1）" class="headerlink" title="选择器（CSS2.1）"></a>选择器（CSS2.1）</h2><ol>
-<li>类选择器<ul>
-<li>.类名称</li>
-</ul>
-</li>
-<li>id选择器<ul>
-<li>#id名称</li>
-<li>命名：只能有字母、数字、下划线、短横构成、且不能以数字开字母区分大小写，但习惯小写字母开头</li>
-</ul>
-</li>
-<li>元素选择器（标签选择器)<ul>
-<li>元素名称</li>
-<li>通常用于标签样式的初始化</li>
-</ul>
-</li>
-<li>说明<ul>
-<li><em><strong>选择器的优先级：内联样式&gt;id选择器&gt;类选择器&gt;元素选择器</strong></em></li>
-</ul>
-</li>
-</ol>
-<h2 id="复合选择器（CSS2-1）"><a href="#复合选择器（CSS2-1）" class="headerlink" title="复合选择器（CSS2.1）"></a>复合选择器（CSS2.1）</h2><ol>
-<li>后代选择器<ul>
-<li>.box .spec 选择.box 内部类名为.spec的标签</li>
-</ul>
-</li>
-<li>交集选择器<ul>
-<li>li.spec 选择既是li标签，名字也叫spec类的标签</li>
-</ul>
-</li>
-<li>并集选择器<ul>
-<li>ul,ol 选择所有ul和ol的标签</li>
-</ul>
-</li>
-<li>题目：请根据样式属性，写出文档结构<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">    div.box li p.spec em&#123;</span><br><span class="line">        color: red;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;box&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;spec&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">em</span>&gt;</span>哈哈哈哈<span class="tag">&lt;/<span class="name">em</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
-</ol>
-<h2 id="属性选择器（CSS3）-IE9"><a href="#属性选择器（CSS3）-IE9" class="headerlink" title="属性选择器（CSS3） &gt;&#x3D; IE9"></a>属性选择器（CSS3） &gt;&#x3D; IE9</h2><ol>
-<li>img[alt]<ul>
-<li>选择有alt属性的img标签</li>
-</ul>
-</li>
-<li>img[alt&#x3D;”故宫”]<ul>
-<li>选择alt 属性是故宫的img标签</li>
-</ul>
-</li>
-<li>img[alt^&#x3D;”故宫”]<ul>
-<li>选择alt属性以北京开头的img标签</li>
-</ul>
-</li>
-<li>img[alt$&#x3D;”夜景”]<ul>
-<li>选择alt属性以夜景结尾的img标签</li>
-</ul>
-</li>
-<li>img[alt*&#x3D;”美”]<ul>
-<li>选择alt属性包含美字的img标签</li>
-</ul>
-</li>
-<li>img[alt~&#x3D;”手机拍摄”]<ul>
-<li>选择有alt属性有空格隔开的手机拍摄字样的img标签</li>
-</ul>
-</li>
-<li>img[alt|&#x3D;”参赛作品”]<ul>
-<li>选择有alt属性以“参赛作品-”开头的img标签</li>
-</ul>
-</li>
-</ol>
-<h2 id="元素关系选择器（CSS3）"><a href="#元素关系选择器（CSS3）" class="headerlink" title="元素关系选择器（CSS3）"></a>元素关系选择器（CSS3）</h2><ol>
-<li>子选择器&gt;&#x3D;IE7<ul>
-<li>div&gt;p  div的子标签p</li>
-</ul>
-</li>
-<li>相邻兄弟选择器<ul>
-<li>img+p 图片后面紧跟着的段落将被选中</li>
-</ul>
-</li>
-<li>通用兄弟选择器<ul>
-<li>p~span  <em><strong>p元素之后的所有同层级span元素</strong></em></li>
-</ul>
-</li>
-</ol>
-<h2 id="序号选择器（CSS3）"><a href="#序号选择器（CSS3）" class="headerlink" title="序号选择器（CSS3）"></a>序号选择器（CSS3）</h2><ol>
-<li>:first-child &gt;&#x3D;IE7<ul>
-<li>第一个子元素</li>
-</ul>
-</li>
-<li>:last-child<ul>
-<li>最后一个子元素</li>
-</ul>
-</li>
-<li>:nth-child(3)<ul>
-<li>第三个子元素</li>
-<li>:nth-child(3n+2)  从第二个开始，每三个选一个</li>
-<li>2n+1 等价于 odd ，表示奇数</li>
-<li>2n 等价于 even ，b表示偶数</li>
-</ul>
-</li>
-<li>:nth-of-type(3)<ul>
-<li>第三个某类型的子元素，将选择同种标签指定序号的子元素</li>
-</ul>
-</li>
-<li>:nth-last-child(3)<ul>
-<li>倒数第三个子元素</li>
-</ul>
-</li>
-<li>:nth-last-of-type(3)<ul>
-<li>倒数第三个某类型的子元素</li>
-</ul>
-</li>
-</ol>
-<h2 id="原子类"><a href="#原子类" class="headerlink" title="原子类"></a>原子类</h2><ol>
-<li>在做网页项目前，可以将所有的常用字号、文字颜色、行高、外边距、内边距等设置为单独的类<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"> 例如:</span><br><span class="line">.fs12&#123; font-size:12px &#125;</span><br><span class="line">.color-red &#123; color:red &#125;</span><br></pre></td></tr></table></figure></li>
-</ol>
-<h2 id="伪类"><a href="#伪类" class="headerlink" title="伪类"></a>伪类</h2><ol>
-<li>伪类是添加到选择器的描述性词语，指定要选择的元素的特殊状态，超级链接有4个特殊状态<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">a</span><span class="selector-pseudo">:link</span>  没有被访问过的超级链接</span><br><span class="line"><span class="selector-tag">a</span><span class="selector-pseudo">:visited</span> 已经被访问过的超级链接</span><br><span class="line"><span class="selector-tag">a</span><span class="selector-pseudo">:hover</span> 正被鼠标悬停的超级链接</span><br><span class="line"><span class="selector-tag">a</span><span class="selector-pseudo">:active</span> 正被激活的超级链接（按下按键但是还没有松开按键）</span><br></pre></td></tr></table></figure></li>
-<li>“爱恨准则” LOVE HATE<ul>
-<li>:link -&gt; :visited -&gt; :hover -&gt; :active </li>
-<li><em><strong>a 标签伪类必须按照这个写法，否则伪类不生效</strong></em></li>
-</ul>
-</li>
-</ol>
-<h2 id="伪元素（CSS3）"><a href="#伪元素（CSS3）" class="headerlink" title="伪元素（CSS3）"></a>伪元素（CSS3）</h2><ol>
-<li>::before<ul>
-<li>在元素之前创建</li>
-</ul>
-</li>
-<li>::after<ul>
-<li>在元素之后创建</li>
-</ul>
-</li>
-<li>::selection<ul>
-<li>用于文档中被用户高亮的部分（使用鼠标圈选的部分）</li>
-</ul>
-</li>
-<li>::first-letter <ul>
-<li>选中某元素中（必须是块级元素）第一行的第一个字母</li>
-</ul>
-</li>
-<li>::first-line<ul>
-<li>选中某元素中（必须是块级元素）第一行的全部文字</li>
-</ul>
-</li>
-</ol>
-<h2 id="层叠性和选择器权重计算"><a href="#层叠性和选择器权重计算" class="headerlink" title="*层叠性和选择器权重计算"></a>*<em><strong>层叠性和选择器权重计算</strong></em></h2><ol>
-<li><em><strong>选择器的优先级：内联样式&gt;id选择器&gt;类选择器&gt;元素选择器</strong></em></li>
-<li><em><strong>复杂选择器可以通过（id的个数，class的个数，标签的个数）的形式，计算权重</strong></em><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;box1&quot;</span> <span class="attr">class</span>=<span class="string">&quot;box1&quot;</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;box2&quot;</span> <span class="attr">class</span>=<span class="string">&quot;box2&quot;</span>&gt;</span></span><br><span class="line">         <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;box3&quot;</span> <span class="attr">class</span>=<span class="string">&quot;box3&quot;</span>&gt;</span></span><br><span class="line">             <span class="tag">&lt;<span class="name">p</span>&gt;</span>我是段落<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">         <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"> #box1 #box2 p &#123;</span><br><span class="line">     color: red;</span><br><span class="line"> &#125;</span><br><span class="line"> #box1 div.box2 #box3 p &#123;</span><br><span class="line">     color: green;</span><br><span class="line"> &#125;</span><br><span class="line"> .box1 .box2 .box3 p &#123;</span><br><span class="line">     color: blue;</span><br><span class="line"> &#125;</span><br><span class="line"> 2,0,1</span><br><span class="line"> 2,1,2</span><br><span class="line"> 0,3,1</span><br><span class="line"></span><br><span class="line"> <span class="comment">&lt;!-- id选择器个数，类选择器个数，元素选择器个数 --&gt;</span></span><br></pre></td></tr></table></figure></li>
-<li>!important 权重提升   <ul>
-<li>很多公司不允许使用 important ，因为这会带来不经意的样式冲突</li>
-</ul>
-</li>
-</ol>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://zhihuzeye.github.io/2024/06/04/CSS3%E6%B5%AE%E5%8A%A8%E5%AE%9A%E4%BD%8D%E4%B8%8E%E8%83%8C%E6%99%AF%E6%A0%B7%E5%BC%8F/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/face1.png">
-      <meta itemprop="name" content="之乎泽野">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="泽野之乡">
-      <meta itemprop="description" content="积跬步，至千里">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 泽野之乡">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2024/06/04/CSS3%E6%B5%AE%E5%8A%A8%E5%AE%9A%E4%BD%8D%E4%B8%8E%E8%83%8C%E6%99%AF%E6%A0%B7%E5%BC%8F/" class="post-title-link" itemprop="url">CSS3浮动定位与背景样式</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2024-06-04 20:44:32" itemprop="dateCreated datePublished" datetime="2024-06-04T20:44:32+08:00">2024-06-04</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-06-06 14:04:09" itemprop="dateModified" datetime="2024-06-06T14:04:09+08:00">2024-06-06</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">学习笔记</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="浮动"><a href="#浮动" class="headerlink" title="浮动"></a>浮动</h2><ol>
-<li>浮动的基本概念<ul>
-<li><em><strong>垂直显示的浮动，不要设置浮动，只有并排显示的盒子才要设置浮动！</strong></em></li>
-<li>“大盒子带着小盒子跑”，一个大盒子中，又是一个小天地，内部可以继续使用浮动</li>
-<li>超市售卖的塑料袋0.3元一个，div是免费的！不要节约盒子</li>
-<li><strong>本质</strong><ul>
-<li>浮动的最本质的功能：实现并排</li>
-<li>浮动的要点：要浮动，并排的盒子都要设置浮动</li>
-<li>父盒子要有足够的宽度，否则子盒子会掉下去</li>
-<li>浮动的顺序贴靠特性<ul>
-<li><strong>子盒子会按顺序贴靠，如果没有足够的空间，则会寻找再前一个兄弟元素</strong></li>
-</ul>
-</li>
-<li>浮动的元素一定能设置宽高<ul>
-<li>浮动元素不在区分块级元素、行内元素，已经脱离了标准的文档流，一律能够设置宽度和高度，即使它是span标签或者标签等</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>使用浮动实现网页布局</li>
-<li>BFC规范和浏览器差异<ul>
-<li>BFC（ Box formatting Context）块级格式化上下文 是页面上的一个隔离的独立容器，容器里面的子元素不会影响到外面的元素，反之亦然</li>
-<li>从一个现象开始说起<ul>
-<li><strong>一个盒子不设置height，当内容的子元素都浮动时，无法撑起自身</strong></li>
-<li>这个盒子没有形成BFC</li>
-<li><em><strong>如何形成BFC</strong></em><ul>
-<li>1、float的值不是none</li>
-<li>2、position的值不是static或者relative</li>
-<li>3、display的值是inline-block、flex或者inline-flex</li>
-<li>4、overflow:hidden<ul>
-<li>溢出隐藏，溢出盒子边框会隐藏</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>BFC的其他作用<ul>
-<li>BFC可以取消盒子的margin塌陷</li>
-<li>BFC可以阻止元素被浮动的元素覆盖</li>
-</ul>
-</li>
-<li>浏览器差异<ul>
-<li>IE6、IE7浏览器使用haslayout机制，和BFC规范略有差异，比如IE浏览器可以使用zoom:1属性，“让壳子拥有layout”</li>
-<li>如果要兼容IE6、IE7网页时，尽量让网页设计的简单。内部有浮动的盒子要设置height属性，规范编程，不要“玩杂技”</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>清除浮动<ul>
-<li>clear: both;</li>
-<li>overflow:hidden</li>
-</ul>
-</li>
-</ol>
-<h2 id="定位"><a href="#定位" class="headerlink" title="定位"></a>定位</h2><ol>
-<li>相对定位<ul>
-<li>相对定位：盒子可以相对自己原来的位置进行调整，称为”相对定位“</li>
-<li><strong>position: relative;</strong></li>
-<li>值可以是负数，即往相反的位置移动</li>
-<li>相对定位的元素，会在“老家留坑”，本质上任然是在原来的位置，只不过渲染在新的地方而已，渲染的图形可以比如成“影子”，不会对其他元素产生任何影响</li>
-<li>相对定位的用途：用来微调元素位置。可以当做绝对定位的参考盒子。</li>
-</ul>
-</li>
-<li>绝对定位<ul>
-<li>盒子可以在浏览器中，以坐标进行位置精准描述，拥有自己的绝对位置</li>
-<li><strong>position: absolute;</strong></li>
-<li>left 到左边的距离，right 到右边的距离，top 到上边的距离，bottom到下边的距离</li>
-<li>绝对定位元素脱离标准文档流，将释放自己的位置，对其他元素不会产生任何干扰，而是对它进行压盖</li>
-<li><em><strong>脱离标准文档流的方法：浮动、绝对定位、固定定位</strong></em></li>
-<li>绝对定位的参考盒子：绝对定位的盒子会以自己祖先元素中，离自己最近的拥有定位属性的盒子，当做基准点，这个盒子通常是相对定位的，所以这个性质也叫作 <strong>“子绝父相”</strong></li>
-<li>绝对定位的盒子并不是永远以浏览器作为基点</li>
-<li><strong>绝对定位的盒子垂直居中</strong><ul>
-<li>position:absolute; top:50%; margin-top:-自己高度的一半</li>
-</ul>
-</li>
-<li>堆叠顺序 z-index<ul>
-<li>没有单位，数值大的就能压盖住小的</li>
-</ul>
-</li>
-<li>绝对定位用途：“压盖”、“遮罩”效果，结合JS实现动画效果，“雪碧图”</li>
-</ul>
-</li>
-<li>固定定位<ul>
-<li>position: fixed;</li>
-<li>固定定位只能以页面为参考点，没有“子固父相”这个性质</li>
-<li>固定定位脱离标准文档流</li>
-<li>用途：返回顶部，楼层导航等</li>
-</ul>
-</li>
-</ol>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://zhihuzeye.github.io/2024/06/04/2D%E5%92%8C3D%E7%9A%84%E8%BD%AC%E6%8D%A2/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/face1.png">
-      <meta itemprop="name" content="之乎泽野">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="泽野之乡">
-      <meta itemprop="description" content="积跬步，至千里">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 泽野之乡">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2024/06/04/2D%E5%92%8C3D%E7%9A%84%E8%BD%AC%E6%8D%A2/" class="post-title-link" itemprop="url">2D和3D的转换</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2024-06-04 20:37:48" itemprop="dateCreated datePublished" datetime="2024-06-04T20:37:48+08:00">2024-06-04</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-06-06 14:04:09" itemprop="dateModified" datetime="2024-06-06T14:04:09+08:00">2024-06-06</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">学习笔记</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="3D变形"><a href="#3D变形" class="headerlink" title="3D变形"></a>3D变形</h2><ol>
-<li>3D旋转<ul>
-<li>将transform的属性设置为rotateX()或者rotateY()，即可实现绕横轴、纵轴旋转</li>
-</ul>
-</li>
-<li>空间移动<ul>
-<li>当元素进行3D旋转后，即可继续添加translateX()、translateY()、translateZ()属性让元素在空间进行移动</li>
-</ul>
-</li>
-<li>perspective（景深）<ul>
-<li>该属性用来定义透视强度，可以理解为“人眼到舞台的距离”，单位是px<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;box1&quot;</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"> <span class="comment">&lt;!-- div 是舞台，必须设置perperctive属性，p是演员，设置transform属性 --&gt;</span></span><br></pre></td></tr></table></figure></li>
-</ul>
-</li>
-<li>transform-style（指定嵌套元素是怎样在三维空间中呈现。）<ul>
-<li>preserve-3d 表示所有子元素在3D空间中呈现。</li>
-<li>flat 表示所有子元素在2D平面呈现。<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br></pre></td><td class="code"><pre><span class="line">   <span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css">        * &#123;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">margin</span>: <span class="number">0</span>;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">padding</span>: <span class="number">0</span>;</span></span><br><span class="line"><span class="language-css">        &#125;</span></span><br><span class="line"><span class="language-css">       <span class="selector-tag">section</span> &#123;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">width</span>: <span class="number">200px</span>;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">height</span>: <span class="number">200px</span>;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">margin</span>: <span class="number">100px</span> auto;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">perspective</span>: <span class="number">10000px</span>;</span></span><br><span class="line"><span class="language-css">        &#125;</span></span><br><span class="line"><span class="language-css">        <span class="selector-class">.box</span> &#123;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">width</span>: <span class="number">200px</span>;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">height</span>: <span class="number">200px</span>;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">perspective</span>: <span class="number">10000px</span>;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">position</span>: relative;</span></span><br><span class="line"><span class="language-css">            <span class="comment">/* 设置变形类型，保留它内部的3D效果 */</span></span></span><br><span class="line"><span class="language-css">            <span class="comment">/* 这个盒子又是舞台，又是演员，这个box整体带着里面的p旋转 */</span></span></span><br><span class="line"><span class="language-css">            <span class="attribute">transform-style</span>: preserve-<span class="number">3</span>d;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">transition</span>:all <span class="number">10s</span> ease <span class="number">0s</span>;</span></span><br><span class="line"><span class="language-css">        &#125;</span></span><br><span class="line"><span class="language-css"></span></span><br><span class="line"><span class="language-css">        <span class="selector-tag">section</span><span class="selector-pseudo">:hover</span> <span class="selector-class">.box</span> &#123;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">transform</span>: <span class="built_in">rotateX</span>(<span class="number">360deg</span>) <span class="built_in">rotateY</span>(<span class="number">360deg</span>);</span></span><br><span class="line"><span class="language-css">        &#125;</span></span><br><span class="line"><span class="language-css"></span></span><br><span class="line"><span class="language-css">        <span class="selector-class">.box</span> <span class="selector-tag">p</span> &#123;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">position</span>: absolute;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">top</span>: <span class="number">0</span>;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">left</span>: <span class="number">0</span>;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">width</span>: <span class="number">200px</span>;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">height</span>: <span class="number">200px</span>;</span></span><br><span class="line"><span class="language-css">        &#125;</span></span><br><span class="line"><span class="language-css"></span></span><br><span class="line"><span class="language-css">        <span class="selector-class">.box</span> <span class="selector-tag">p</span><span class="selector-pseudo">:nth-child</span>(<span class="number">1</span>) &#123;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">background-color</span>: <span class="built_in">rgba</span>(<span class="number">219</span>, <span class="number">56</span>, <span class="number">211</span>, <span class="number">0.486</span>);</span></span><br><span class="line"><span class="language-css">            <span class="comment">/* 前面 */</span></span></span><br><span class="line"><span class="language-css">            <span class="attribute">transform</span>: <span class="built_in">translateZ</span>(<span class="number">100px</span>);</span></span><br><span class="line"><span class="language-css">        &#125;</span></span><br><span class="line"><span class="language-css"></span></span><br><span class="line"><span class="language-css">        <span class="selector-class">.box</span> <span class="selector-tag">p</span><span class="selector-pseudo">:nth-child</span>(<span class="number">2</span>) &#123;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">background-color</span>: <span class="built_in">rgba</span>(<span class="number">42</span>, <span class="number">128</span>, <span class="number">199</span>, <span class="number">0.486</span>);</span></span><br><span class="line"><span class="language-css">            <span class="comment">/* 顶面 */</span></span></span><br><span class="line"><span class="language-css">            <span class="attribute">transform</span>: <span class="built_in">rotateX</span>(<span class="number">90deg</span>) <span class="built_in">translateZ</span>(<span class="number">100px</span>);</span></span><br><span class="line"><span class="language-css">        &#125;</span></span><br><span class="line"><span class="language-css"></span></span><br><span class="line"><span class="language-css">        <span class="selector-class">.box</span> <span class="selector-tag">p</span><span class="selector-pseudo">:nth-child</span>(<span class="number">3</span>) &#123;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">background-color</span>: <span class="built_in">rgba</span>(<span class="number">56</span>, <span class="number">219</span>, <span class="number">83</span>, <span class="number">0.486</span>);</span></span><br><span class="line"><span class="language-css">            <span class="comment">/* 背面 */</span></span></span><br><span class="line"><span class="language-css">            <span class="attribute">transform</span>: <span class="built_in">rotateX</span>(<span class="number">180deg</span>) <span class="built_in">translateZ</span>(<span class="number">100px</span>);</span></span><br><span class="line"><span class="language-css">        &#125;</span></span><br><span class="line"><span class="language-css"></span></span><br><span class="line"><span class="language-css">        <span class="selector-class">.box</span> <span class="selector-tag">p</span><span class="selector-pseudo">:nth-child</span>(<span class="number">4</span>) &#123;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">background-color</span>: <span class="built_in">rgba</span>(<span class="number">213</span>, <span class="number">216</span>, <span class="number">32</span>, <span class="number">0.486</span>);</span></span><br><span class="line"><span class="language-css">            <span class="comment">/* 底面 */</span></span></span><br><span class="line"><span class="language-css">            <span class="attribute">transform</span>: <span class="built_in">rotateX</span>(-<span class="number">90deg</span>) <span class="built_in">translateZ</span>(<span class="number">100px</span>);</span></span><br><span class="line"><span class="language-css">        &#125;</span></span><br><span class="line"><span class="language-css"></span></span><br><span class="line"><span class="language-css">        <span class="selector-class">.box</span> <span class="selector-tag">p</span><span class="selector-pseudo">:nth-child</span>(<span class="number">5</span>) &#123;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">background-color</span>: <span class="built_in">rgba</span>(<span class="number">236</span>, <span class="number">82</span>, <span class="number">102</span>, <span class="number">0.486</span>);</span></span><br><span class="line"><span class="language-css">            <span class="comment">/* 侧面 */</span></span></span><br><span class="line"><span class="language-css">            <span class="attribute">transform</span>: <span class="built_in">rotateY</span>(<span class="number">90deg</span>) <span class="built_in">translateZ</span>(<span class="number">100px</span>);</span></span><br><span class="line"><span class="language-css">        &#125;</span></span><br><span class="line"><span class="language-css"></span></span><br><span class="line"><span class="language-css">        <span class="selector-class">.box</span> <span class="selector-tag">p</span><span class="selector-pseudo">:nth-child</span>(<span class="number">6</span>) &#123;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">background-color</span>: <span class="built_in">rgba</span>(<span class="number">119</span>, <span class="number">17</span>, <span class="number">236</span>, <span class="number">0.486</span>);</span></span><br><span class="line"><span class="language-css">            <span class="comment">/* 侧面 */</span></span></span><br><span class="line"><span class="language-css">            <span class="attribute">transform</span>: <span class="built_in">rotateY</span>(-<span class="number">90deg</span>) <span class="built_in">translateZ</span>(<span class="number">100px</span>);</span></span><br><span class="line"><span class="language-css">        &#125;</span></span><br><span class="line"><span class="language-css">    </span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">section</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;box&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">section</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
-</ul>
-</li>
-</ol>
-<h2 id="2D变形"><a href="#2D变形" class="headerlink" title="2D变形"></a>2D变形</h2><ol>
-<li>旋转变形<ul>
-<li>transform: rotate(45deg);</li>
-<li>若角度为正，就是顺时针，否则就是逆时针</li>
-<li>transform-origin 属性设置自己的自定义变换原点<ul>
-<li>transform-origin: 50px 40px;</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>缩放变形<ul>
-<li>transform: scale(3);</li>
-<li>以中心点为原点缩放</li>
-</ul>
-</li>
-<li>斜切变形<ul>
-<li>transform: skew(10deg,20deg); 即可实现斜切变形</li>
-<li>x的斜切角度，y的斜切角度</li>
-</ul>
-</li>
-<li>位移变形IE9<ul>
-<li>将 transform 属性设置为 translate ，即可实现位移变形<ul>
-<li>transform: translate(200px,400px);</li>
-</ul>
-</li>
-<li>和相对定位非常像，位移变形也会“老家留坑”，形影分离。</li>
-</ul>
-</li>
-</ol>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://zhihuzeye.github.io/2024/06/03/Java-%E5%BC%82%E5%B8%B8/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/face1.png">
-      <meta itemprop="name" content="之乎泽野">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="泽野之乡">
-      <meta itemprop="description" content="积跬步，至千里">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 泽野之乡">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2024/06/03/Java-%E5%BC%82%E5%B8%B8/" class="post-title-link" itemprop="url">Java 异常</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2024-06-03 22:31:55" itemprop="dateCreated datePublished" datetime="2024-06-03T22:31:55+08:00">2024-06-03</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-06-06 14:04:09" itemprop="dateModified" datetime="2024-06-06T14:04:09+08:00">2024-06-06</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">学习笔记</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="什么是异常"><a href="#什么是异常" class="headerlink" title="什么是异常"></a>什么是异常</h2><ol>
-<li>异常本质上是程序上的错误。</li>
-<li>错误在我们编写程序的过程中会经常发生，包括编译期间和运行期间的错误。</li>
-<li>在程序运行过程中，意外发生的情况，背离我们程序本身的意图的表现，都可以理解为异常。</li>
-</ol>
-<h2 id="Throwable（异常的根类）"><a href="#Throwable（异常的根类）" class="headerlink" title="Throwable（异常的根类）"></a>Throwable（异常的根类）</h2><ol>
-<li>Error（Java 虚拟机出现问题）<ul>
-<li>Error 是程序无法处理的错误，表示运行应用程序中比较严重的问题。</li>
-<li>它们在应用程序的控制和处理能力之外，而且绝大多数是程序运行时不允许出现的状况。</li>
-<li>对于设计的合理的应用程序来说，即使确实发生了错误，本质上也不应该试图去处理它所引起的异常状况。</li>
-<li>常见错误<ul>
-<li>虚拟机错误 VirtualMachineError</li>
-<li>内存溢出 OutOfMemoryError</li>
-<li>线程死锁 ThreadDeath</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Exception<ul>
-<li>Exception 是程序本身可以处理的异常。异常处理通常指针对这种类型异常的处理。</li>
-<li>检查异常 Checked Exception<ul>
-<li>编译器要求必须处置的异常。（编码阶段）</li>
-<li>除了 RuntimeException 及相关子类，其它异常都属于 Checked Exception<ul>
-<li>IO 异常 IOException</li>
-<li>SQL 异常 SQLException</li>
-<li>等等</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>非检查异常 Unchecked Exception<ul>
-<li>编译器不要求强制处置的异常（运行阶段）</li>
-<li>包含 RuntimeException 及相关子类<ul>
-<li>空指针异常 NullPointerException</li>
-<li>数组下标越界异常 ArrayIndexOutOfBoundsException</li>
-<li>算数异常 ArithmeticException</li>
-<li>类型转换异常 ClassCastException</li>
-<li>等等…</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>System.exit(1); 终止程序运行</li>
-</ul>
-</li>
-</ol>
-<h2 id="throw-throws"><a href="#throw-throws" class="headerlink" title="throw &amp; throws"></a>throw &amp; throws</h2><ol>
-<li>throws<ul>
-<li>可以通过 throws 声明将要抛出何种类型的异常，通过 throw 将产生的异常抛出。</li>
-<li>如果一个方法可能出现异常，但没有能力处理这种异常，可以在方法声明处用 throws 子句来声明抛出异常。</li>
-<li>throws 语句用在方法定义时声明该方法要抛出的异常类型。</li>
-<li>当方法抛出异常列表中的异常时，方法将不对这些类型及其子类类型的异常做处理，而抛向调用该方法的方法，由他去处理。</li>
-</ul>
-</li>
-<li>throw<ul>
-<li>throw 用来抛出一个异常。<ul>
-<li>例如：throw new IOException():</li>
-</ul>
-</li>
-<li>thorw 抛出的只能够是可抛出类 Throwable 或者其子类的实例对象。<ul>
-<li>例如：throw new String(“出错了”); 是错误的<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">method</span><span class="params">()</span>&#123;</span><br><span class="line">  <span class="keyword">try</span>&#123;</span><br><span class="line">     <span class="comment">// 代码段1</span></span><br><span class="line">     <span class="keyword">throw</span> <span class="keyword">new</span> 异常类型();</span><br><span class="line">   &#125;<span class="keyword">catch</span>(异常类型 ex)&#123;</span><br><span class="line">      <span class="comment">// 对异常处理的代码段2</span></span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">method</span><span class="params">()</span>  <span class="keyword">throws</span> 异常类型&#123;</span><br><span class="line">   <span class="comment">// 代码段1</span></span><br><span class="line">    <span class="keyword">throw</span> <span class="keyword">new</span> 异常类型();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-</ul>
-</li>
-<li>作用<ul>
-<li><em><strong>规避可能出现的风险</strong></em></li>
-<li><em><strong>完成一些程序的逻辑</strong></em></li>
-</ul>
-</li>
-<li>throw 抛出异常对象的处理方案<ul>
-<li>通过 try…catch 包含 throw 语句 —— 自己抛出自己处理</li>
-<li>通过 throws 在方法声明抛出异常类型 —— 谁调用谁处理 —— 调用者可以自己处理，也可以继续上抛。此时可以抛出与 throw 对象相同类型或者其父类</li>
-<li><strong>当子类重写父类抛出异常方法时，声明的异常必须是父类方法所声明异常的同类或子类。</strong></li>
-</ul>
-</li>
-</ul>
-</li>
-</ol>
-<h2 id="自定义异常"><a href="#自定义异常" class="headerlink" title="自定义异常"></a>自定义异常</h2><ol>
-<li>基本概念<ul>
-<li>使用 Java 内置的异常类可以描述在编程时出现的大部分异常情况。</li>
-<li>也可以通过自定义异常描述特定业务产生的异常类型。</li>
-<li>所谓自定义异常，就是定义一个类，去继承 Throwable 类或者它的子类<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">TestException</span> <span class="keyword">extends</span> <span class="title class_">Exception</span>&#123;</span><br><span class="line">     <span class="keyword">public</span> <span class="title function_">TestException</span><span class="params">()</span>&#123;</span><br><span class="line">         <span class="built_in">super</span>(<span class="string">&quot;向父类抛的异常消息&quot;</span>);</span><br><span class="line">     &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">test</span><span class="params">()</span> <span class="keyword">throw</span> TestException&#123;</span><br><span class="line">       &lt;代码块&gt;</span><br><span class="line">       <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">TestException</span>();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-</ul>
-</li>
-</ol>
-<h2 id="异常链"><a href="#异常链" class="headerlink" title="异常链"></a>异常链</h2><ol>
-<li>基本概念<ul>
-<li>有时候我们会捕获一个异常后在抛出另一个异常</li>
-<li>顾名思义就是：将异常发生的原因一个传一个串起来，即把底层的异常信息传个上层，这样逐层抛出。</li>
-</ul>
-</li>
-<li>Exception e1 &#x3D; new Exception(“异常消息”); e1.initCause(e);</li>
-</ol>
-<h2 id="如何处理异常"><a href="#如何处理异常" class="headerlink" title="如何处理异常"></a>如何处理异常</h2><ol>
-<li>在 Java 应用程序中，异常处理机制为<ul>
-<li>抛出异常（先抛出，才能被捕获）</li>
-<li>捕获异常</li>
-</ul>
-</li>
-<li>对于运行时异常，错误或可检查异常，Java 技术所要求的异常处理方式有所不同。<ul>
-<li>1、对于可查异常必须捕捉、或者声明抛出</li>
-<li>2、允许忽略不可查的 RuntimeException（含子类）和 Error（含子类）</li>
-</ul>
-</li>
-<li>通过 5 个关键字来实现<ul>
-<li>捕获异常<ul>
-<li>try（执行可能产生异常的代码）</li>
-<li>catch（捕获异常）</li>
-<li>finally（无论是否发生异常 代码总能执行）</li>
-</ul>
-</li>
-<li>声明异常<ul>
-<li>throws（声明可能要抛出的异常）</li>
-</ul>
-</li>
-<li>抛出异常<ul>
-<li>throw （手动抛出异常）</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>规则说明<ul>
-<li>try-catch-finally <ul>
-<li>try 块后可接零个或多个catch块，如果没有 catch 块，则必须跟一个finally块。</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>自定义异常</li>
-<li>异常链</li>
-</ol>
-<h2 id="实际应用总结"><a href="#实际应用总结" class="headerlink" title="实际应用总结"></a>实际应用总结</h2><ol>
-<li>处理运行异常时，采用逻辑去合理规避同时辅助 try-catch 处理</li>
-<li>在多重 catch 块后面，可以加一个 catch（Exception） 来处理可能被遗漏的异常</li>
-<li>对于不确定的代码，也可以加上 try-catch，处理潜在的异常</li>
-<li>尽量去处理异常，切忌知识简单的调用 printStackTrace() 去打印输出</li>
-<li>具体如何处理异常，要根据不同的业务需求和异常类型去决定</li>
-<li>尽量添加 finally 语句块去释放占用的资源（关闭文件、关闭 sql 链接）等</li>
-</ol>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://zhihuzeye.github.io/2024/06/03/Java-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A13/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/face1.png">
-      <meta itemprop="name" content="之乎泽野">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="泽野之乡">
-      <meta itemprop="description" content="积跬步，至千里">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 泽野之乡">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2024/06/03/Java-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A13/" class="post-title-link" itemprop="url">Java 面向对象3</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2024-06-03 22:15:42" itemprop="dateCreated datePublished" datetime="2024-06-03T22:15:42+08:00">2024-06-03</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-06-06 14:04:09" itemprop="dateModified" datetime="2024-06-06T14:04:09+08:00">2024-06-06</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">学习笔记</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="多态"><a href="#多态" class="headerlink" title="多态"></a>多态</h2><ol>
-<li>基本概念<ul>
-<li>同一种行为，在不同的对象上，会产生不同的显示结果。</li>
-<li>允许不同类的对象对同一消息做出不同的响应</li>
-<li><strong>编译时多态</strong><ul>
-<li>设计时多态 方法重载</li>
-</ul>
-</li>
-<li><em><strong>运行时多态（通常说的这个）</strong></em><ul>
-<li>程序运行时动态决定调用哪个方法</li>
-</ul>
-</li>
-<li>必要条件<ul>
-<li>满足继承关系</li>
-<li>父类引用指向子类对象</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>使用<ul>
-<li>父类引用子类实例 <ul>
-<li>向上转型、隐式转型、自动转型</li>
-<li>父类引用指向子类实例，可以调用子类重写父类的方法以及父类派生的方法，无法调用子类独有方法。</li>
-<li>小类转型大类</li>
-<li>父类 static 方法，不允许子类重写</li>
-<li>向上转型后，只能调用到父类原有的静态方法</li>
-</ul>
-</li>
-<li>子类引用指向父类实例<ul>
-<li>向下转型、强制类型转换</li>
-<li>子类引用指向父类对象，此时必须进行强转，可以调用子类独有方法</li>
-<li>必须满足转换条件才能进行强转<ul>
-<li><em><strong>对象 instanceof 类</strong></em></li>
-<li>判断对象是否是类的实例<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">Animal</span>  <span class="variable">one</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Cat</span>();</span><br><span class="line"><span class="type">Cat</span> <span class="variable">temp</span> <span class="operator">=</span> (Cat)one</span><br></pre></td></tr></table></figure></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>抽象类（abstract）<ul>
-<li><strong>Java 中使用抽象类，限制实例化</strong><ul>
-<li>通过 abstract 修饰的类，就是抽象类</li>
-<li>不允许实例化，可以通过向上转型，指向子类实例</li>
-</ul>
-</li>
-<li>通过abstract 修饰的方法，就是抽象方法<ul>
-<li>public abstract void eat(); </li>
-<li><em><strong>子类必须实现这个方法！</strong></em></li>
-</ul>
-</li>
-<li>应用场景<ul>
-<li>某个父类只是知道其子类应该包含怎样的方法，但无法准确知道这些子类如何实现这些方法。</li>
-<li><em><strong>避免设计随意性，无意义父类实例化</strong></em></li>
-</ul>
-</li>
-<li>使用规则<ul>
-<li>1、abstract 定义抽象类</li>
-<li>2、抽象类不能直接实例化，只能被继承，可以通过向上转型完成对象实例</li>
-<li>3、abstract 定义抽象方法，不需要具体实现</li>
-<li>4、包含抽象方法的类是抽象类</li>
-<li>5、抽象类中可以没有抽象方法</li>
-<li>6、static final  private 不能与 abstract 并存</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>接口（interface）<ul>
-<li>基本概念<ul>
-<li>接口定义了某一批类所需要遵守的规范</li>
-<li>接口不关心这些类的内部数据，也不关心这些类里的方法的实现细节，它只规定这些类里必须提供某些方法</li>
-</ul>
-</li>
-<li>语法：<ul>
-<li>[修饰符] interface 接口名 [extends 付接口1, 父接口2…]<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">   零个到多个常量定义...</span><br><span class="line">   零个到多个抽象方法定义...</span><br><span class="line">   零个到多个默认方法的定义.... (jdk1<span class="number">.8</span>新增)</span><br><span class="line">   零个到多个静态方法的定义... (jdk <span class="number">1.8</span>新增)</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure></li>
-</ul>
-</li>
-<li>使用注意：<ul>
-<li>一个类可以实现多个接口，通过逗号分割。 implements</li>
-<li>接口的实现要放在继承后面，一个类只能继承唯一父类，但可以实现若干个接口。实现接口的时候要去重写接口待重写的方法。否则通过 abstract 定义抽象类</li>
-<li>接口也可以实现继承关系，并且可以继承多个父接口，用逗号分开</li>
-<li>如果继承多个接口有多个重名的方法，子类不知道该实现哪个接口的方法，可以重写重名的方法。<ul>
-<li>如果继承父类的同时，也继承方法。它们都有同名的方法，默认继承父类方法。</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>代码示例<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">    <span class="keyword">package</span> com.zzz.tel;</span><br><span class="line">   <span class="comment">// 接口访问修饰符：public 默认</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">interface</span> <span class="title class_">INet</span> &#123;</span><br><span class="line"> <span class="comment">/*接口中抽象方法可以不写abstract关键字</span></span><br><span class="line"><span class="comment">   /*访问修饰符默认public</span></span><br><span class="line"><span class="comment">    * 当类实现接口时，需要去实现接口中的所有抽象方法，否则需要将该类设置为抽象类</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line"><span class="keyword">void</span> <span class="title function_">network</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//接口中可以包含常量，默认public static final</span></span><br><span class="line"><span class="type">int</span> TEMP=<span class="number">20</span>;</span><br><span class="line"></span><br><span class="line">   <span class="comment">//default：默认方法 可以带方法体 jdk1.8后新增</span></span><br><span class="line"><span class="comment">//可以在实现类中重写，并可以通过接口的引用调用</span></span><br><span class="line"><span class="keyword">default</span> <span class="keyword">void</span> <span class="title function_">connection</span><span class="params">()</span>&#123;</span><br><span class="line">	System.out.println(<span class="string">&quot;我是接口中的默认链接&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//static:静态方法 可以带方法体 jdk1.8后新增</span></span><br><span class="line"><span class="comment">//不可以在实现类中重写，可以同接口名调用</span></span><br><span class="line"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">stop</span><span class="params">()</span>&#123;</span><br><span class="line">	System.out.println(<span class="string">&quot;我是接口中的静态方法&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure></li>
-</ul>
-</li>
-<li>内部类<ul>
-<li>在 Java 中，可以将一个类定义在另一个类里面或者一个方法里面，这样的类称为内部类。</li>
-<li>与之对应，包含内部类的类被称为外部类</li>
-<li>内部类隐藏在外部类之内，更好的实现了信息的隐藏。不允许其它类随意的访问。</li>
-<li>内部类分类<ul>
-<li>1、成员内部类<ul>
-<li>内部类中最常见的就是成员内部类，也称普通内部类</li>
-<li>1、内部类在外部使用时，无法直接实例化，需要借由外部类的信息才能完成实例化</li>
-<li>2、内部类的访问修饰符，可以任意，但是访问范围会受到影响</li>
-<li>3、内部类可以直接访问外部类的成员，如果出现同名属性，优先访问内部类中定义的</li>
-<li>4、可以使用 外部类.this.成员 的方式，访问外部类中同名的信息</li>
-<li>5、外部类访问内部类信息，需要通过内部类实例，无法直接访问</li>
-<li>6、内部类编译后 .class 文件命名：外部类$内部类.class</li>
-<li>内部类的获取方式<ul>
-<li>1、new 外部类.new 内部类</li>
-<li>2、外部类对象.new 内部类</li>
-<li>3、外部类对象.获取方法</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>2、静态内部类<ul>
-<li>【成员共享】静态内部类对象可以不依赖于外部类对象，直接创建</li>
-<li>1、静态内部类中，只能直接访问外部类的静态成员，如果需要调用非静态成员，可以通过对象实例</li>
-<li>2、静态内部类对象实例时，可以不依赖于外部类对象</li>
-<li>3、可以通过  外部类.内部类.静态成员  的方式，访问内部类中的静态成员</li>
-<li>4、当内部类属性与外部类属性同名时，默认直接调用内部类中的成员；如果需要访问外部类中的静态属性，则可以通过 外部类.属性 的方式；如果需要访问外部类中的非静态属性，则可以通过 new 外部类().属性 的方式；</li>
-</ul>
-</li>
-<li>3、方法内部类<ul>
-<li>定义在外部类方法中的内部类，也称局部类。</li>
-<li>1、定义在方法内，作用范围也在方法内</li>
-<li>2、和方法内部成员使用规则一样，class 前面不可以添加 public、private、protected、static</li>
-<li>3、类中不能包含静态成员</li>
-<li>4、类中可以包含 final、abstract 修饰的成员</li>
-</ul>
-</li>
-<li>4、匿名内部类<ul>
-<li>将类的定义与类的创建，放到一起完成</li>
-<li>1、匿名内部类没有类型名称、实例对象名称</li>
-<li>2、编译后的文件命名：外部类$数字.class</li>
-<li>3、无法使用 private、public、protected、abstract、static 修饰</li>
-<li>4、无法编写构造方法，可以添加代码块</li>
-<li>5、不能出现静态成员</li>
-<li>6、匿名内部类可以实现接口也可以继承父类，但是不可兼得</li>
-<li>适用场景<ul>
-<li>1、只有到类的一个实例</li>
-<li>2、类在定义后马上用到</li>
-<li>3、给类命名并不会导致代码更容易被理解</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ol>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" title="下一页" aria-label="下一页" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" title="下一页" aria-label="下一页" href="/page/2/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 </div>

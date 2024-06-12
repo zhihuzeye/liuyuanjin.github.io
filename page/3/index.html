@@ -151,7 +151,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">25</span>
+          <span class="site-state-item-count">31</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -162,7 +162,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-count">12</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -187,6 +187,824 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://zhihuzeye.github.io/2024/06/02/Java-%E9%80%89%E6%8B%A9%E7%BB%93%E6%9E%84/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/face1.png">
+      <meta itemprop="name" content="之乎泽野">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="泽野之乡">
+      <meta itemprop="description" content="积跬步，至千里">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 泽野之乡">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2024/06/02/Java-%E9%80%89%E6%8B%A9%E7%BB%93%E6%9E%84/" class="post-title-link" itemprop="url">Java 选择结构</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2024-06-02 21:55:01" itemprop="dateCreated datePublished" datetime="2024-06-02T21:55:01+08:00">2024-06-02</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2024-06-12 23:00:10" itemprop="dateModified" datetime="2024-06-12T23:00:10+08:00">2024-06-12</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">学习笔记</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="流程控制语句"><a href="#流程控制语句" class="headerlink" title="流程控制语句"></a>流程控制语句</h2><ol>
+<li>三大流程控制语句：顺序、选择、循环<ul>
+<li>顺序结构，从上往下依次执行</li>
+<li>选择结构，根据条件执行对应的内容</li>
+<li>循环结构，循环执行，反复执行</li>
+</ul>
+</li>
+</ol>
+<h2 id="选择结构"><a href="#选择结构" class="headerlink" title="选择结构"></a>选择结构</h2><ol>
+<li>if 结构 ，if - else 结构</li>
+<li>多重 if </li>
+<li>嵌套 if </li>
+<li>switch 结构</li>
+<li>if 和 switch 的区别<ul>
+<li>if 结构<ul>
+<li>判断条件是布尔类型</li>
+<li>判断条件是一个范围</li>
+</ul>
+</li>
+<li>switch 结构<ul>
+<li>判断条件是常量值<br>JDK 7.0 以后表达式的值可以是基本数据类型的，byte，short，int，char，以及 String 类型。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="循环结构"><a href="#循环结构" class="headerlink" title="循环结构"></a>循环结构</h2><ol>
+<li>while<ul>
+<li>如果循环体只有一条语句，大括号可以省略</li>
+<li>为避免死循环，小括号后面不要加分号</li>
+<li>语法格式  while(条件){ &lt;语句&gt; }</li>
+</ul>
+</li>
+<li>do-while<ul>
+<li>注意事项<ul>
+<li>do-while 循环至少执行一次</li>
+<li>循环条件后的分号不能丢</li>
+<li>局部变量使用前必须初始化</li>
+</ul>
+</li>
+<li>语法格式  do{ &lt;语句&gt;} while(循环条件);</li>
+<li>Math.random() 得到 [0,1) 之间的随机数</li>
+</ul>
+</li>
+<li>for<ul>
+<li>语法格式：for(表达式1;表达式2;表达式3){ &lt;语句&gt;}</li>
+<li>注意事项：break 语句表示跳出当前循环</li>
+</ul>
+</li>
+<li>循环嵌套</li>
+<li>break 语句<ul>
+<li>break 语句可以结束当前循环的执行</li>
+<li>执行完 break 语句后，循环体中位于 break 语句后面的语句就不会被执行</li>
+<li>在多重循环中，break 语句只向外跳一层</li>
+<li>注意：<strong>break 跳出当前循环</strong></li>
+</ul>
+</li>
+<li>continue 语句<ul>
+<li>continue 语句只能用在循环里</li>
+<li>continue 语句可以结束当前循环的执行，但是要继续执行下一次循环的执行</li>
+</ul>
+</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://zhihuzeye.github.io/2024/05/31/Java-%E8%BF%90%E7%AE%97%E7%AC%A6/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/face1.png">
+      <meta itemprop="name" content="之乎泽野">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="泽野之乡">
+      <meta itemprop="description" content="积跬步，至千里">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 泽野之乡">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2024/05/31/Java-%E8%BF%90%E7%AE%97%E7%AC%A6/" class="post-title-link" itemprop="url">Java 运算符</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2024-05-31 23:17:31" itemprop="dateCreated datePublished" datetime="2024-05-31T23:17:31+08:00">2024-05-31</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2024-06-12 23:00:10" itemprop="dateModified" datetime="2024-06-12T23:00:10+08:00">2024-06-12</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">学习笔记</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="表达式"><a href="#表达式" class="headerlink" title="表达式"></a>表达式</h2><ol>
+<li>表达式由运算符和操作数组成</li>
+<li>如：5、num1、num1 + num2</li>
+</ol>
+<h2 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h2><ol>
+<li>算数运算符<ul>
+<li>算数运算符主要用于进行基本的算数运算，如加法、减法、乘法和除法等。</li>
+<li>加法 +</li>
+<li>减法 - </li>
+<li>乘法 * </li>
+<li>除法 &#x2F;  <strong>在除法运算中，如果除数和被除数都是整数，则做整除运算</strong></li>
+<li>求余数 %</li>
+<li>自增1 ++</li>
+<li>自减1 –</li>
+</ul>
+</li>
+<li>赋值运算符<ul>
+<li>格式：变量 &#x3D; 表达式;</li>
+<li><strong>注意：赋值运算符是从右往左运算！</strong> </li>
+<li><strong>赋值运算符的左边不能是常量，必须是常量</strong></li>
+<li>复合赋值运算符<ul>
+<li>+&#x3D; 代码示例：x+&#x3D;5 , x &#x3D; x + 5</li>
+<li>-&#x3D;</li>
+<li>*&#x3D;</li>
+<li>&#x2F;&#x3D;</li>
+<li>%&#x3D;</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>关系运算符<ul>
+<li>比较运算符用于判断两个数据的大小，如大于</li>
+<li>比较的结果是一个 布尔值</li>
+<li>大于 &gt;<ul>
+<li>‘A’ &gt; ‘’B  结果为 false , 比较的是两个字符的 ASCll 值</li>
+</ul>
+</li>
+<li>小于 &lt;</li>
+<li>大于等于 &gt;&#x3D;</li>
+<li>小于等于 &lt;&#x3D;</li>
+<li>等于 &#x3D;&#x3D;<ul>
+<li>float  f &#x3D; 5.0f; long l &#x3D;5; f&#x3D;&#x3D;l;  结果为true，浮点数与整数进行比较，只要值相等就返回true</li>
+</ul>
+</li>
+<li>不等于 !&#x3D;</li>
+<li>作用与功能<ul>
+<li>数据比较<ul>
+<li>关系运算符主要用于条件和循环语句中的判断条件</li>
+<li>条件结构就是根据不同的条件去执行不同的操作</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>逻辑运算符<ul>
+<li>逻辑运算符是用来连接一个或多个条件，判断这些条件是否成立 </li>
+<li>逻辑运算符的结果是布尔类型</li>
+<li>与<ul>
+<li>&amp;&amp; 或 &amp;<ul>
+<li>&amp;&amp; 运算符又叫短路运算符，如果第一个表达式的值就能决定表达式最后的结果，运算符右边的表达式就不再运算了</li>
+<li>&amp; 不论第一个表达式 true 还是 false，都要执行右边的表达式</li>
+</ul>
+</li>
+<li>operator1 &amp;&amp; operator2</li>
+</ul>
+</li>
+<li>或<ul>
+<li>|| 或 |<ul>
+<li>|| 和  &amp;&amp; 运算符一样</li>
+<li>| 和 &amp; 一样</li>
+</ul>
+</li>
+<li>operator1 || operator2</li>
+</ul>
+</li>
+<li>非<ul>
+<li>!<ul>
+<li>对原条件进行取反</li>
+</ul>
+</li>
+<li>!operator1</li>
+</ul>
+</li>
+<li>注意：<strong>逻辑运算符的操作数都是布尔类型的</strong></li>
+</ul>
+</li>
+<li>条件运算符<ul>
+<li>三元运算符 ? :</li>
+</ul>
+</li>
+<li>Java 中的条件运算符是三目运算符<ul>
+<li>++ 单目运算符</li>
+<li>双目运算符，需要对两个数进行操作 + - * &#x2F; </li>
+<li><strong>语法：布尔表达式 ? 表达式1 : 表达式2</strong></li>
+<li>当布尔表达式的值为 true , 则返回表达式 1 的值，否则 返回表达式 2 的值</li>
+</ul>
+</li>
+<li>位运算符<ul>
+<li>按位与（&amp;）：逐位进行与操作，只有当对应位都为 1 时，结果位才为 1。 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="variable">a</span> <span class="operator">=</span> <span class="number">5</span>; <span class="comment">// 二进制为 0101</span></span><br><span class="line"><span class="type">int</span> <span class="variable">b</span> <span class="operator">=</span> <span class="number">3</span>; <span class="comment">// 二进制为 0011</span></span><br><span class="line"><span class="type">int</span> <span class="variable">c</span> <span class="operator">=</span> a &amp; b; <span class="comment">// 结果为 1 (二进制为 0001)</span></span><br></pre></td></tr></table></figure></li>
+<li>按位或（|）：逐位进行或操作，只要有一个对应位为 1，结果位就为 1。 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="variable">a</span> <span class="operator">=</span> <span class="number">5</span>; <span class="comment">// 二进制为 0101</span></span><br><span class="line"><span class="type">int</span> <span class="variable">b</span> <span class="operator">=</span> <span class="number">3</span>; <span class="comment">// 二进制为 0011</span></span><br><span class="line"><span class="type">int</span> <span class="variable">c</span> <span class="operator">=</span> a | b; <span class="comment">// 结果为 7 (二进制为 0111)</span></span><br></pre></td></tr></table></figure></li>
+<li>按位异或（^）：逐位进行异或操作，当对应位不同时，结果位为 1。 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="variable">a</span> <span class="operator">=</span> <span class="number">5</span>; <span class="comment">// 二进制为 0101</span></span><br><span class="line"><span class="type">int</span> <span class="variable">b</span> <span class="operator">=</span> <span class="number">3</span>; <span class="comment">// 二进制为 0011</span></span><br><span class="line"><span class="type">int</span> <span class="variable">c</span> <span class="operator">=</span> a ^ b; <span class="comment">// 结果为 6 (二进制为 0110)</span></span><br></pre></td></tr></table></figure></li>
+<li>按位取反（~）：逐位进行取反操作，0 变 1，1 变 0。 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="variable">a</span> <span class="operator">=</span> <span class="number">5</span>; <span class="comment">// 二进制为 0101</span></span><br><span class="line"><span class="type">int</span> <span class="variable">b</span> <span class="operator">=</span> ~a; <span class="comment">// 结果为 -6 (二进制为 1010)</span></span><br></pre></td></tr></table></figure></li>
+<li>左移（&lt;&lt;）：将二进制位向左移动指定的位数，相当于乘以 2 的指定次方。 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="variable">a</span> <span class="operator">=</span> <span class="number">5</span>; <span class="comment">// 二进制为 0101</span></span><br><span class="line"><span class="type">int</span> <span class="variable">b</span> <span class="operator">=</span> a &lt;&lt; <span class="number">1</span>; <span class="comment">// 结果为 10 (二进制为 1010)</span></span><br></pre></td></tr></table></figure></li>
+<li>右移（&gt;&gt;）：将二进制位向右移动指定的位数，相当于除以 2 的指定次方。 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="variable">a</span> <span class="operator">=</span> <span class="number">5</span>; <span class="comment">// 二进制为 0101</span></span><br><span class="line"><span class="type">int</span> <span class="variable">b</span> <span class="operator">=</span> a &gt;&gt; <span class="number">1</span>; <span class="comment">// 结果为 2 (二进制为 0010)</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li>运算符优先级<table>
+<thead>
+<tr>
+<th>运算符</th>
+<th>描述</th>
+<th>权重</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>()</td>
+<td>圆括号</td>
+<td>0</td>
+</tr>
+<tr>
+<td>!，++，–</td>
+<td>逻辑非，自增，自减</td>
+<td>1</td>
+</tr>
+<tr>
+<td>*，&#x2F;，%</td>
+<td>乘法，除法，取余</td>
+<td>2</td>
+</tr>
+<tr>
+<td>+，-</td>
+<td>加法，减法</td>
+<td>3</td>
+</tr>
+<tr>
+<td>&lt;，&lt;&#x3D;，&gt;，&gt;&#x3D;</td>
+<td>小于，小于等于，大于，大于等于</td>
+<td>4</td>
+</tr>
+<tr>
+<td>&#x3D;&#x3D;，!&#x3D;</td>
+<td>等于，不等于</td>
+<td>5</td>
+</tr>
+<tr>
+<td>&amp;&amp;</td>
+<td>逻辑与</td>
+<td>6</td>
+</tr>
+<tr>
+<td>||</td>
+<td>逻辑或</td>
+<td>7</td>
+</tr>
+<tr>
+<td>&#x3D;，+&#x3D;，*&#x3D;，&#x2F;&#x3D;，%&#x3D;，-&#x3D;</td>
+<td>赋值运算符，复合赋值运算符</td>
+<td>8</td>
+</tr>
+</tbody></table>
+</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://zhihuzeye.github.io/2024/05/31/Java-%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/face1.png">
+      <meta itemprop="name" content="之乎泽野">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="泽野之乡">
+      <meta itemprop="description" content="积跬步，至千里">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 泽野之乡">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2024/05/31/Java-%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" class="post-title-link" itemprop="url">Java 开发环境搭建</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2024-05-31 22:37:32" itemprop="dateCreated datePublished" datetime="2024-05-31T22:37:32+08:00">2024-05-31</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2024-06-12 23:00:10" itemprop="dateModified" datetime="2024-06-12T23:00:10+08:00">2024-06-12</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" itemprop="url" rel="index"><span itemprop="name">环境搭建</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <ol>
+<li>安装 JDK </li>
+<li>安装 Navicat 数据库工具</li>
+<li>安装 IntelliJ IDEA 编译器</li>
+<li>安装 Redis <a target="_blank" rel="noopener" href="https://blog.csdn.net/antma/article/details/79225084">Redis安装（Windows环境下Redis安装）</a> </li>
+<li>maven3.6.3 安装 <a target="_blank" rel="noopener" href="https://blog.csdn.net/kenkao/article/details/128842266">Windows系统Maven3.6.3下载与安装</a><ul>
+<li>apache-maven-3.6.1&#x2F;conf  目录下配置  settingsapplication.xml 文件 <strong>主要用于配置 Maven 的行为和外部依赖</strong></li>
+<li>apache-maven-3.6.1 目录下创建 repo 文件夹</li>
+</ul>
+</li>
+<li>安装 IntelliJ IDEA  插件<br><img src="/images/874811934.png" alt="插件"><br><img src="/images/94823832832.png" alt="插件"></li>
+<li>项目 .idea 目录下 misc.xml 文件配置 Yapi <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">component</span> <span class="attr">name</span>=<span class="string">&quot;yapi&quot;</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">option</span> <span class="attr">name</span>=<span class="string">&quot;projectToken&quot;</span>&gt;</span>your yapiToken<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">option</span> <span class="attr">name</span>=<span class="string">&quot;projectId&quot;</span>&gt;</span>789<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">option</span> <span class="attr">name</span>=<span class="string">&quot;yapiUrl&quot;</span>&gt;</span>your yapiUrl<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">option</span> <span class="attr">name</span>=<span class="string">&quot;projectType&quot;</span>&gt;</span>api<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">component</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+<li>安装 Xshell </li>
+<li>安装 XFTP</li>
+</ol>
+<p>友情链接：</p>
+<ol>
+<li><a target="_blank" rel="noopener" href="https://plugins.jetbrains.com/plugin/index?xmlId=cn.wuzhizhan.plugin.mybatis">Free MyBatis plugin</a></li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://zhihuzeye.github.io/2024/05/31/Java-%E5%B8%B8%E9%87%8F%E4%B8%8E%E5%8F%98%E9%87%8F/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/face1.png">
+      <meta itemprop="name" content="之乎泽野">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="泽野之乡">
+      <meta itemprop="description" content="积跬步，至千里">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 泽野之乡">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2024/05/31/Java-%E5%B8%B8%E9%87%8F%E4%B8%8E%E5%8F%98%E9%87%8F/" class="post-title-link" itemprop="url">Java 常量与变量</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2024-05-31 21:40:25" itemprop="dateCreated datePublished" datetime="2024-05-31T21:40:25+08:00">2024-05-31</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2024-06-12 23:00:10" itemprop="dateModified" datetime="2024-06-12T23:00:10+08:00">2024-06-12</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">学习笔记</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="标识符"><a href="#标识符" class="headerlink" title="标识符"></a>标识符</h2><ol>
+<li>如 类 的名字</li>
+<li>标识符命名规则<ul>
+<li>可以由 字母、数字、下划线 ( _ ) 和美元 ( $ ) 符组成，不能以数字开头</li>
+<li>标识符严格区分大小写</li>
+<li>不能是Java的关键字和保留字</li>
+<li>标志符的命名最好能反映出作用</li>
+</ul>
+</li>
+</ol>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2024/05/31/Java-%E5%B8%B8%E9%87%8F%E4%B8%8E%E5%8F%98%E9%87%8F/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://zhihuzeye.github.io/2024/05/31/5%E6%9C%88%E7%9A%84%E6%9C%80%E5%90%8E%E4%B8%80%E5%A4%A9%EF%BC%8C%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%E5%88%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/face1.png">
+      <meta itemprop="name" content="之乎泽野">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="泽野之乡">
+      <meta itemprop="description" content="积跬步，至千里">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 泽野之乡">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2024/05/31/5%E6%9C%88%E7%9A%84%E6%9C%80%E5%90%8E%E4%B8%80%E5%A4%A9%EF%BC%8C%E5%BC%80%E6%BA%90%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%E5%88%B0/" class="post-title-link" itemprop="url">5月最后一天，我开源了一个数据可视化大屏项目</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2024-05-31 10:55:42" itemprop="dateCreated datePublished" datetime="2024-05-31T10:55:42+08:00">2024-05-31</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2024-06-12 23:00:10" itemprop="dateModified" datetime="2024-06-12T23:00:10+08:00">2024-06-12</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/" itemprop="url" rel="index"><span itemprop="name">开源项目</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>设计原型：<br><img src="/images/design.png" alt="大屏设计"><br>项目成果：<br><img src="/images/20240531110200.png" alt="项目成果"></p>
+<p><strong>以上大屏数据为模拟数据</strong></p>
+<p>脚手架命令：pnpm create vite my-react-app –template react-ts</p>
+<h2 id="一、项目描述"><a href="#一、项目描述" class="headerlink" title="一、项目描述"></a>一、项目描述</h2><ul>
+<li><p>一个基于 React、TypeScript、Vite、Redux、DataV、ECharts 框架的 “ <strong>数据大屏项目</strong> “。支持数据动态刷新渲染、屏幕适配、数据请求模拟、局部样式、图表自由替换&#x2F;复用等功能。</p>
+</li>
+<li><p>项目全屏展示点击右上角全屏按钮或（按 F11）。</p>
+</li>
+<li><p>项目环境：<a href="mailto:&#x72;&#x65;&#97;&#99;&#x74;&#x40;&#x31;&#56;&#46;&#50;&#46;&#x30;">&#x72;&#x65;&#97;&#99;&#x74;&#x40;&#x31;&#56;&#46;&#50;&#46;&#x30;</a>、<a href="mailto:&#x74;&#121;&#112;&#101;&#115;&#x63;&#x72;&#105;&#112;&#116;&#64;&#x35;&#46;&#x32;&#x2e;&#x32;">&#x74;&#121;&#112;&#101;&#115;&#x63;&#x72;&#105;&#112;&#116;&#64;&#x35;&#46;&#x32;&#x2e;&#x32;</a>、<a href="mailto:&#118;&#105;&#116;&#x65;&#64;&#x35;&#x2e;&#50;&#x2e;&#x30;">&#118;&#105;&#116;&#x65;&#64;&#x35;&#x2e;&#50;&#x2e;&#x30;</a>、<a href="mailto:&#101;&#x63;&#104;&#x61;&#114;&#x74;&#115;&#x40;&#x35;&#46;&#53;&#46;&#x30;">&#101;&#x63;&#104;&#x61;&#114;&#x74;&#115;&#x40;&#x35;&#46;&#53;&#46;&#x30;</a>、<a href="mailto:&#112;&#110;&#112;&#109;&#x40;&#55;&#46;&#50;&#55;&#x2e;&#48;">&#112;&#110;&#112;&#109;&#x40;&#55;&#46;&#50;&#55;&#x2e;&#48;</a>、<a href="mailto:&#110;&#111;&#100;&#101;&#64;&#x76;&#49;&#54;&#46;&#x31;&#x38;&#46;&#x31;">&#110;&#111;&#100;&#101;&#64;&#x76;&#49;&#54;&#46;&#x31;&#x38;&#46;&#x31;</a>。</p>
+</li>
+</ul>
+<p>友情链接：</p>
+<ol>
+<li><a target="_blank" rel="noopener" href="https://react.docschina.org/docs/introducing-jsx.html">React 官方文档</a></li>
+<li><a target="_blank" rel="noopener" href="https://geohub.amap.com/mapstyle/index">高德 自定义地图</a></li>
+<li><a target="_blank" rel="noopener" href="http://mockjs.com/">Mockjs 官方文档</a></li>
+<li><a target="_blank" rel="noopener" href="http://datav-react.jiaminghi.com/guide/">DataV 官方文档</a></li>
+<li><a target="_blank" rel="noopener" href="https://echarts.apache.org/examples/zh/index.html">echarts 实例</a>，<a target="_blank" rel="noopener" href="https://echarts.apache.org/zh/api.html#echarts">echarts API文档</a></li>
+</ol>
+<h2 id="二、文件目录介绍"><a href="#二、文件目录介绍" class="headerlink" title="二、文件目录介绍"></a>二、文件目录介绍</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">Project</span><br><span class="line">├─.eslintrc.cjs ----------- // eslint 配置</span><br><span class="line">├─.gitignore -------------- // git 控制文件</span><br><span class="line">├─custom.d.ts ------------- // 自定义类型声明</span><br><span class="line">├─index.html -------------- // 主页面</span><br><span class="line">├─mock -------------------- // 模拟数据</span><br><span class="line">├─package.json ------------ // 项目信息+依赖包</span><br><span class="line">├─pnpm-lock.yaml ---------- // 锁定依赖包</span><br><span class="line">├─README.md --------------- // 说明文档</span><br><span class="line">├─src </span><br><span class="line">│ ├─App.module.css </span><br><span class="line">│ ├─App.tsx --------------- // App 入口</span><br><span class="line">│ ├─assets ---------------- // 静态资源</span><br><span class="line">│ ├─components </span><br><span class="line">│ │ ├─AutoScale ----------- // 自动缩放 HOC</span><br><span class="line">│ │ ├─index.ts </span><br><span class="line">│ │ └─ScaleContainer ------ // 缩放容器 HOC</span><br><span class="line">│ ├─hooks </span><br><span class="line">│ │ └─useFullscreen.ts ---- // 控制全屏 Hooks</span><br><span class="line">│ ├─index.css </span><br><span class="line">│ ├─main.tsx -------------- // 主入口</span><br><span class="line">│ ├─redux ----------------- // redux 相关</span><br><span class="line">│ ├─services -------------- // 服务端相关配置文件</span><br><span class="line">│ ├─utils ----------------- // 工具函数</span><br><span class="line">│ ├─views ----------------- // 页面</span><br><span class="line">│ └─vite-env.d.ts </span><br><span class="line">├─tsconfig.json ----------- // ts 配置文件</span><br><span class="line">├─tsconfig.node.json ------ // node ts 配置文件</span><br><span class="line">└─vite.config.ts ---------- // vite 配置文件</span><br></pre></td></tr></table></figure>
+
+<h2 id="三、详情介绍"><a href="#三、详情介绍" class="headerlink" title="三、详情介绍"></a>三、详情介绍</h2><h3 id="启动项目"><a href="#启动项目" class="headerlink" title="启动项目"></a>启动项目</h3><p>需要提前安装好 <code>nodejs</code> 与 <code>pnpm</code>，下载项目后在项目主目录下运行 <code>pnpm install</code> 拉取依赖包，使用命令 <code>pnpm dev</code> 启动项目。</p>
+<h3 id="数据请求模拟"><a href="#数据请求模拟" class="headerlink" title="数据请求模拟"></a>数据请求模拟</h3><p>项目采用 Mockjs 模拟数据方式，配置在 <code>mock</code> 文件夹中，Mockjs 使用方法请查阅 <a target="_blank" rel="noopener" href="http://mockjs.com/">Mockjs文档</a>，主入口文件 main.tsx 引入 mock 文件。</p>
+<p>接口 API 请求地址写在 <code>services/api.service.ts</code> 中，由 <code>@reduxjs/toolkit createAsyncThunk</code> 创建异步 Thunk 发起请求。</p>
+<p>页面通过 <code>useDispatch</code> 发起请求，<code>useSelector</code> 接收数据。</p>
+<h3 id="图表组件"><a href="#图表组件" class="headerlink" title="图表组件"></a>图表组件</h3><p>图表组件主要使用了 ECharts 和 DataV 可视化框架来进行开发。图表配置文件在 <code>views/components/*/options.ts</code> 中，数据由各个组件请求后导入。ECharts 渲染函数统一封装在了 <code>utils/chart.js</code> 中。</p>
+<h3 id="样式编写"><a href="#样式编写" class="headerlink" title="样式编写"></a>样式编写</h3><p>样式编写使用了 <code>CSS in JS (JSS)</code> ，使样式具有组件级别的作用域，避免了全局样式污染的问题。<br>使用示例：</p>
+<ol>
+<li>将 css 文件名修改为 xxx.module.css</li>
+<li>导入样式文件 import styles from ‘.&#x2F;xxx.module.css’</li>
+<li>使用 styles.className</li>
+<li>定义 ts 类型文件<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// custom.d.ts</span></span><br><span class="line"> declare <span class="variable language_">module</span> <span class="string">&quot;*.css&quot;</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> <span class="attr">css</span>: &#123; [<span class="attr">key</span>: string]: string &#125;</span><br><span class="line">    <span class="keyword">export</span> <span class="keyword">default</span> css</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>vscode 安装插件：typescript-plugin-css-modules<ul>
+<li>作用：解析 css 文件，并生成 ts 对应的类型</li>
+<li>使用：在 tsconfig.json 配置 plugins 字段 [{“typescript-plugin-css-modules”}]</li>
+<li>在 项目根目录创建 .vscode 文件夹  创建 settings.json 文件<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// settings.json</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="string">&quot;typescript.tsdk&quot;</span>: <span class="string">&quot;node_modules/typescript/lib&quot;</span>,</span><br><span class="line">    <span class="string">&quot;typescript.enablePromptUseWorkspaceTsdk&quot;</span>: <span class="literal">true</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ol>
+<h3 id="屏幕适配"><a href="#屏幕适配" class="headerlink" title="屏幕适配"></a>屏幕适配</h3><p>本项目借助 HOC 高阶组件包裹，将大屏限制在 1920x1080 尺寸。通过动态计算缩放比例，实时控制容器缩放大小，具体代码请参阅。<code>components/AutoScale</code> 和 <code>components/ScaleContainer</code> 组件。</p>
+<p>在编写大屏代码时，样式无需转换，按照设计稿 1920x1080 <strong>1:1</strong> 编写即可。</p>
+<h2 id="四、全屏控制"><a href="#四、全屏控制" class="headerlink" title="四、全屏控制"></a>四、全屏控制</h2><p>自定义 Hook（高阶组件）useFullscreen，用于控制页面全屏显示的功能，具体代码请参阅 <code>hooks/useFullscreen</code> 自定义钩子。</p>
+<h2 id="五、其它"><a href="#五、其它" class="headerlink" title="五、其它"></a>五、其它</h2><p>这个项目是个人的作品，难免会有问题和 BUG。如果您发现任何问题，欢迎提出反馈和建议。我会尽力去更新和修复，并持续学习前端知识。非常感谢您的支持和理解！我很乐意与您交流，共同进步。</p>
+<p><strong>GitHub 地址</strong><br><a target="_blank" rel="noopener" href="https://github.com/zhihuzeye/react-screen-demo.git">GitHub 地址</a>：<a target="_blank" rel="noopener" href="https://github.com/zhihuzeye/react-screen-demo.git">https://github.com/zhihuzeye/react-screen-demo.git</a></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://zhihuzeye.github.io/2024/05/14/%E8%AE%B0%E5%BD%95%E4%B8%80%E6%AC%A1%E7%B2%BE%E5%BA%A6%E4%B8%A2%E5%A4%B1%E9%97%AE%E9%A2%98/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/face1.png">
+      <meta itemprop="name" content="之乎泽野">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="泽野之乡">
+      <meta itemprop="description" content="积跬步，至千里">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 泽野之乡">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2024/05/14/%E8%AE%B0%E5%BD%95%E4%B8%80%E6%AC%A1%E7%B2%BE%E5%BA%A6%E4%B8%A2%E5%A4%B1%E9%97%AE%E9%A2%98/" class="post-title-link" itemprop="url">记录一次精度丢失问题</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2024-05-14 15:35:22" itemprop="dateCreated datePublished" datetime="2024-05-14T15:35:22+08:00">2024-05-14</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2024-06-12 23:00:10" itemprop="dateModified" datetime="2024-06-12T23:00:10+08:00">2024-06-12</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <blockquote>
+<p>在使用 Antd Select 组件的时候，请求详情回显 显示了一个错误的 value 值，不显示 label。</p>
+</blockquote>
+<p><img src="/images/20240514153755.png" alt="图片"></p>
+<h2 id="为什么"><a href="#为什么" class="headerlink" title="为什么"></a>为什么</h2><ul>
+<li>后端给前端传了一个 1293435817355730946（19位） 大数值类型，前端通过 ‘’ + 、toString() 等方式进行类型转换，得到 1293435817355731000（精度丢失），Select 列表没有对应上 [类型和数值]，所以绑定不上。</li>
+</ul>
+<p>因为 JavaScript 中的数字类型 (Number) 有一定的精度限制。在JavaScript中,数字类型使用 IEEE 754 标准,采用 64位 浮点数表示。这种表示方式存在一些局限性:</p>
+<ol>
+<li>整数的精确表示范围为-2^53 + 1 到 2^53 - 1,即 -9007199254740991 到 9007199254740991（16位） 。超出这个范围的整数将丢失精度。</li>
+<li>浮点数的表示也有误差,无法精确表示某些十进制小数，比如0.1。</li>
+</ol>
+<h2 id="如何解决"><a href="#如何解决" class="headerlink" title="如何解决"></a>如何解决</h2><ol>
+<li>与后端开发沟通，通过字符串传递</li>
+<li>使用 ES2020 BigInt 类型 </li>
+<li>使用 bignumber.js、decimal.js 等第三方库解决</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -232,7 +1050,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-06-06 14:04:09" itemprop="dateModified" datetime="2024-06-06T14:04:09+08:00">2024-06-06</time>
+      <time title="修改时间：2024-06-12 23:00:10" itemprop="dateModified" datetime="2024-06-12T23:00:10+08:00">2024-06-12</time>
     </span>
 
   
@@ -260,7 +1078,7 @@
 
 <h1 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h1><ol>
 <li>npm uninstall -g @tarojs&#x2F;cli  # 卸载 Trao</li>
-<li>npm install -g @tarojs&#x2F;<a href="mailto:&#99;&#x6c;&#x69;&#64;&#x33;&#46;&#x30;&#x2e;&#x32;&#x39;">&#99;&#x6c;&#x69;&#64;&#x33;&#46;&#x30;&#x2e;&#x32;&#x39;</a>  # 安装指定版本 Trao</li>
+<li>npm install -g @tarojs&#x2F;<a href="mailto:&#x63;&#x6c;&#x69;&#x40;&#x33;&#46;&#x30;&#x2e;&#x32;&#57;">&#x63;&#x6c;&#x69;&#x40;&#x33;&#46;&#x30;&#x2e;&#x32;&#57;</a>  # 安装指定版本 Trao</li>
 <li>也有可能 nodejs 版本过低和 taro&#x2F;cli 不兼容，nvm 切换 16.x 以上版本试试</li>
 </ol>
 
@@ -325,7 +1143,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-06-06 14:04:09" itemprop="dateModified" datetime="2024-06-06T14:04:09+08:00">2024-06-06</time>
+      <time title="修改时间：2024-06-12 23:00:10" itemprop="dateModified" datetime="2024-06-12T23:00:10+08:00">2024-06-12</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -423,7 +1241,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-06-06 14:04:09" itemprop="dateModified" datetime="2024-06-06T14:04:09+08:00">2024-06-06</time>
+      <time title="修改时间：2024-06-12 23:00:10" itemprop="dateModified" datetime="2024-06-12T23:00:10+08:00">2024-06-12</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -557,7 +1375,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-06-06 14:04:09" itemprop="dateModified" datetime="2024-06-06T14:04:09+08:00">2024-06-06</time>
+      <time title="修改时间：2024-06-12 23:00:10" itemprop="dateModified" datetime="2024-06-12T23:00:10+08:00">2024-06-12</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -615,103 +1433,8 @@
 
 
 
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://zhihuzeye.github.io/2024/04/14/hexo-%E6%B7%BB%E5%8A%A0-Disqus-%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/face1.png">
-      <meta itemprop="name" content="之乎泽野">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="泽野之乡">
-      <meta itemprop="description" content="积跬步，至千里">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 泽野之乡">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2024/04/14/hexo-%E6%B7%BB%E5%8A%A0-Disqus-%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F/" class="post-title-link" itemprop="url">Hexo 添加 Disqus 评论系统</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2024-04-14 00:26:00" itemprop="dateCreated datePublished" datetime="2024-04-14T00:26:00+08:00">2024-04-14</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-06-06 14:04:09" itemprop="dateModified" datetime="2024-06-06T14:04:09+08:00">2024-06-06</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Hexo/" itemprop="url" rel="index"><span itemprop="name">Hexo</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h3 id="登录-Disqus"><a href="#登录-Disqus" class="headerlink" title="登录 Disqus"></a>登录 Disqus</h3><p><img src="https://raw.githubusercontent.com/zhihuzeye/zhihuzeye.github.io/main/images/20240414002939.png" alt="图片" title="disqus登录"></p>
-<h3 id="选择-在我的网站上安装-Disqus"><a href="#选择-在我的网站上安装-Disqus" class="headerlink" title="选择 在我的网站上安装 Disqus"></a>选择 在我的网站上安装 Disqus</h3><p><img src="/images/20240414003055.png" alt="图片" title="disqus登录"></p>
-<h3 id="创建一个新站点"><a href="#创建一个新站点" class="headerlink" title="创建一个新站点"></a>创建一个新站点</h3><p>注意：Website Name 这个字段非常重要，后续需要在 _config.yml 中用到<br>点击 Create Site 按钮即可</p>
-<p><img src="/images/20240414003325.png" alt="图片" title="disqus登录"></p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2024/04/14/hexo-%E6%B7%BB%E5%8A%A0-Disqus-%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
   <nav class="pagination">
-    <a class="extend prev" rel="prev" title="上一页" aria-label="上一页" href="/page/2/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span>
+    <a class="extend prev" rel="prev" title="上一页" aria-label="上一页" href="/page/2/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" title="下一页" aria-label="下一页" href="/page/4/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 </div>
