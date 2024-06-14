@@ -151,7 +151,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">32</span>
+          <span class="site-state-item-count">35</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -162,7 +162,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-count">13</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -187,6 +187,437 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://zhihuzeye.github.io/2024/06/06/%E8%A1%A8%E5%8D%95%E5%85%83%E7%B4%A0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/face1.png">
+      <meta itemprop="name" content="之乎泽野">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="泽野之乡">
+      <meta itemprop="description" content="积跬步，至千里">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 泽野之乡">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2024/06/06/%E8%A1%A8%E5%8D%95%E5%85%83%E7%B4%A0/" class="post-title-link" itemprop="url">表单元素</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2024-06-06 13:57:01" itemprop="dateCreated datePublished" datetime="2024-06-06T13:57:01+08:00">2024-06-06</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2024-06-14 19:55:03" itemprop="dateModified" datetime="2024-06-14T19:55:03+08:00">2024-06-14</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">学习笔记</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="input"><a href="#input" class="headerlink" title="input"></a>input</h2><ol>
+<li>type<ul>
+<li>color 颜色选择控件</li>
+<li>date、time 日期时间选择控件</li>
+<li>email 电子邮件输入控件</li>
+<li>file 文件选择控件</li>
+<li>number 数字输入控件</li>
+<li>range 拖拽条</li>
+<li>search 搜索框</li>
+<li>url 网址输入控件</li>
+<li>button 按钮</li>
+<li>submit 提交，在外层为 form 情况下有效</li>
+<li>reset 重置</li>
+<li>password 密码</li>
+<li>radio 单选按钮需要名称设置为一样的</li>
+<li>checkbox 多选按钮需要名称设置为一样的</li>
+<li>hidden 对用户不可见，隐藏字段</li>
+</ul>
+</li>
+<li>placeholder 提示符</li>
+<li>value 值 是否禁用</li>
+<li>disabled 是否必填，在外层是form表单情况下有效</li>
+<li>required</li>
+<li>name</li>
+<li>id</li>
+<li>list<ul>
+<li>设置预选项（list&#x3D;”province-list”）<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">datalist</span> <span class="attr">id</span>=<span class="string">&quot;province-list&quot;</span>&gt;</span></span><br><span class="line">         <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">&quot;浙江杭州&quot;</span>&gt;</span></span><br><span class="line">         <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">&quot;河北石家庄&quot;</span>&gt;</span></span><br><span class="line">         <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">&quot;浙江温州&quot;</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;/<span class="name">datalist</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ol>
+<h2 id="textarea"><a href="#textarea" class="headerlink" title="textarea"></a>textarea</h2><ol>
+<li>name</li>
+<li>id</li>
+<li>cols 一行显示多少字符</li>
+<li>rows 一列显示多少字符</li>
+<li>placeholder 提示符</li>
+</ol>
+<h2 id="select-option"><a href="#select-option" class="headerlink" title="select&#x2F;option"></a>select&#x2F;option</h2><ol>
+<li>select</li>
+</ol>
+<ul>
+<li>name</li>
+<li>id</li>
+<li>disable 是否禁用</li>
+<li>multiple 选项是否支持多选</li>
+<li>required 是否必填</li>
+<li>autofocus 自动获取焦点</li>
+<li>autocomplete 自动完成</li>
+</ul>
+<h2 id="fieldset-legend"><a href="#fieldset-legend" class="headerlink" title="fieldset&#x2F;legend"></a>fieldset&#x2F;legend</h2><ol>
+<li>即输入区加有文字的边框。</li>
+<li>定义域的标题，即边框上的文字。</li>
+</ol>
+<h2 id="button"><a href="#button" class="headerlink" title="button"></a>button</h2><ol>
+<li>定义一个按钮。</li>
+</ol>
+<h2 id="label"><a href="#label" class="headerlink" title="label"></a>label</h2><ol>
+<li>定义一个控制的标签。如输入框前的文字，用以关联用户的选择。</li>
+<li>for</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://zhihuzeye.github.io/2024/06/06/%E8%BE%B9%E6%A1%86%E4%B8%8E%E5%9C%86%E8%A7%92/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/face1.png">
+      <meta itemprop="name" content="之乎泽野">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="泽野之乡">
+      <meta itemprop="description" content="积跬步，至千里">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 泽野之乡">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2024/06/06/%E8%BE%B9%E6%A1%86%E4%B8%8E%E5%9C%86%E8%A7%92/" class="post-title-link" itemprop="url">边框与圆角</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2024-06-06 13:52:45" itemprop="dateCreated datePublished" datetime="2024-06-06T13:52:45+08:00">2024-06-06</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2024-06-14 19:55:03" itemprop="dateModified" datetime="2024-06-14T19:55:03+08:00">2024-06-14</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">学习笔记</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="盒子阴影"><a href="#盒子阴影" class="headerlink" title="盒子阴影"></a>盒子阴影</h2><ol>
+<li><code>box-shadow: 10px 20px 30px rgba(0, 0, 0, .4);</code></li>
+<li>inset（内阴影，可选），x偏移，y偏移，模糊量，阴影延展（可选），颜色</li>
+<li>可以用逗号隔开多个阴影<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box1</span> &#123;</span><br><span class="line">       <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">       <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">       <span class="attribute">box-shadow</span>: inset <span class="number">10px</span> <span class="number">20px</span> <span class="number">30px</span> <span class="number">40px</span> <span class="built_in">rgba</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, .<span class="number">4</span>),<span class="number">10px</span> <span class="number">20px</span> <span class="number">30px</span> <span class="number">#ff0000</span>;</span><br><span class="line">       <span class="attribute">border</span>: <span class="number">1px</span> solid <span class="number">#333</span>;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h2 id="边框"><a href="#边框" class="headerlink" title="边框"></a>边框</h2><ol>
+<li><code>border-top</code></li>
+<li><code>border-bottom</code></li>
+<li><code>border-left</code></li>
+<li><code>border-right</code></li>
+<li><code>border-方向-style 边框线形</code></li>
+<li><code>border-方向-width 边框宽度</code></li>
+<li><code>border-方向-color 边框颜色</code></li>
+<li><code>border-方向:none 去掉边框</code></li>
+<li><code>利用border制作三角形</code><ul>
+<li><code>width: 0; height: 0; border: 20px solid transparent; margin-top: 50px; border-top-color: #ff0000;</code></li>
+</ul>
+</li>
+<li><code>边框的三要素</code><ul>
+<li><em><strong>线宽度、线型、线颜色</strong></em><ul>
+<li>solid 实线</li>
+<li>dotted 虚线（圆）</li>
+<li>double 双边</li>
+<li>dashed 虚线（矩形）</li>
+</ul>
+</li>
+<li><code>border:1px solid #ff0</code></li>
+</ul>
+</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://zhihuzeye.github.io/2024/06/06/%E8%83%8C%E6%99%AF%E5%92%8C%E6%B8%90%E5%8F%98/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/face1.png">
+      <meta itemprop="name" content="之乎泽野">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="泽野之乡">
+      <meta itemprop="description" content="积跬步，至千里">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 泽野之乡">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2024/06/06/%E8%83%8C%E6%99%AF%E5%92%8C%E6%B8%90%E5%8F%98/" class="post-title-link" itemprop="url">背景和渐变</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2024-06-06 13:42:30" itemprop="dateCreated datePublished" datetime="2024-06-06T13:42:30+08:00">2024-06-06</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2024-06-14 19:55:03" itemprop="dateModified" datetime="2024-06-14T19:55:03+08:00">2024-06-14</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">学习笔记</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="背景基础知识"><a href="#背景基础知识" class="headerlink" title="背景基础知识"></a>背景基础知识</h2><ol>
+<li>背景颜色基础知识<ul>
+<li><code>background-color: ;</code></li>
+<li>背景颜色可以用十六进制，rgba,rgb,表示</li>
+<li>padding 是有背景颜色的</li>
+</ul>
+</li>
+<li>背景图片基础知识<ul>
+<li>用来设置背景图片。 background-image: url();</li>
+<li>可以是相对路径，绝对路径，网络图片</li>
+</ul>
+</li>
+</ol>
+<h2 id="背景图片高级属性"><a href="#背景图片高级属性" class="headerlink" title="背景图片高级属性"></a>背景图片高级属性</h2><ol>
+<li>背景图片的重复模式<ul>
+<li>background-repeat 属性可以用来设置背景的重复模式</li>
+<li>repeat x,y均平铺（默认）</li>
+<li>repeat-x x轴平铺</li>
+<li>repeat-y y轴平铺</li>
+<li>no-repeat 不平铺</li>
+</ul>
+</li>
+<li>背景尺寸<ul>
+<li>background-size: 100px 100px; 宽，高</li>
+<li>设置背景图片尺寸，兼容到IE9</li>
+<li>值也可以用百分比来表示，表示盒子宽高分别百分之多少。</li>
+<li>需要等比例设置的值，可以设置auto</li>
+<li>contain和cover<ul>
+<li>background-size: contain; 表示将背景图片只能改变尺寸以容纳到盒子里</li>
+<li>cover表示将背景图片智能改变尺寸以撑满盒子</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>背景裁切<ul>
+<li>background-clip 属性用来设置元素的背景裁切到哪个盒子。兼容到IE9<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box5</span>&#123;</span><br><span class="line">        <span class="attribute">margin</span>: <span class="number">50px</span> <span class="number">0</span>;</span><br><span class="line">        <span class="attribute">width</span>: <span class="number">300px</span>;</span><br><span class="line">        <span class="attribute">height</span>: <span class="number">300px</span>;</span><br><span class="line">        <span class="attribute">border</span>: <span class="number">10px</span> dotted <span class="number">#000</span>;</span><br><span class="line">        <span class="attribute">background-image</span>: <span class="built_in">url</span>(<span class="string">&#x27;./images/niaochao.jpg&#x27;</span>);</span><br><span class="line">        <span class="attribute">padding</span>: <span class="number">24px</span>;</span><br><span class="line">        <span class="attribute">background-clip</span>: border-box;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>border-box 背景延伸至边框（默认值）</li>
+<li>padding-box  背景延伸至内边（padding)，不会绘制边框处（仅在dotted、dashed边框可察觉）</li>
+<li>content-box 背景被裁剪至内容区</li>
+</ul>
+</li>
+<li>背景固定<ul>
+<li>background-attachment 属性决定背景图像的位置是在视口内固定，或者随着包含它的区块滚动<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box4</span>&#123;</span><br><span class="line">       <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">       <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">       <span class="attribute">background-attachment</span>: fixed;</span><br><span class="line">       <span class="attribute">background-image</span>: <span class="built_in">url</span>(<span class="string">&#x27;./images/gugong.jpg&#x27;</span>);</span><br><span class="line">       <span class="attribute">overflow-y</span>: scroll;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>fixed 自己滚动条不动，外部滚动条不动</li>
+<li>local 自己滚动条动，外部滚动条动</li>
+<li>scroll 自己滚动条不动，外部滚动条动（默认值）</li>
+</ul>
+</li>
+<li>用途：视差滚动特效</li>
+</ul>
+</li>
+<li>背景图片位置<ul>
+<li><code>background-position: 100px 200px;</code></li>
+<li>设置背景图片在盒子的位置</li>
+<li>可以用位置描述符  top left right bottom</li>
+</ul>
+</li>
+<li>background综合属性<ul>
+<li><code>background: white url(&quot;images/goblin.png&quot;) no-repeat center center;</code></li>
+<li>背景颜色，背景图片，背景重复，背景位置</li>
+</ul>
+</li>
+</ol>
+<h2 id="渐变背景"><a href="#渐变背景" class="headerlink" title="渐变背景"></a>渐变背景</h2><ol>
+<li>线性渐变<ul>
+<li><code>background-image: linear-gradient(to right, blue, red);</code></li>
+<li>渐变方向，开始颜色，结束颜色</li>
+<li>渐变方向可以写成度数，比如45deg</li>
+<li>可以有多个颜色值，并且可以用百分数定义它们出现的位置  <code>linear-gradient(to bottom,blue,yellow 20%,red)</code></li>
+<li>浏览器私有前缀<ul>
+<li>Chrome -webkit-</li>
+<li>Firefox -moz-</li>
+<li>IE、Edge  -ms-</li>
+<li>欧朋  -o-</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>径向渐变<ul>
+<li>盒子可以使用 background-image: radial-gradient(50% 50%,red,blue); 创建径向渐变</li>
+<li>参数：圆心坐标，颜色，颜色，颜色</li>
+</ul>
+</li>
+</ol>
+<h2 id="CSS精灵（雪碧图，前端优化方案之一）"><a href="#CSS精灵（雪碧图，前端优化方案之一）" class="headerlink" title="CSS精灵（雪碧图，前端优化方案之一）"></a>CSS精灵（雪碧图，前端优化方案之一）</h2><ol>
+<li>CSS精灵：将多个小图标合并制作到一张图片上，使用background-position属性单独展示其中一个，这样的技术叫做CSS精灵技术，也叫做CSS雪碧图</li>
+<li>减少HTTP请求数，加快网页速度，缺点：不方便测量，后期修改不方便</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -232,7 +663,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-06-13 23:57:41" itemprop="dateModified" datetime="2024-06-13T23:57:41+08:00">2024-06-13</time>
+      <time title="修改时间：2024-06-14 19:55:03" itemprop="dateModified" datetime="2024-06-14T19:55:03+08:00">2024-06-14</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -473,7 +904,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-06-13 23:57:41" itemprop="dateModified" datetime="2024-06-13T23:57:41+08:00">2024-06-13</time>
+      <time title="修改时间：2024-06-14 19:55:03" itemprop="dateModified" datetime="2024-06-14T19:55:03+08:00">2024-06-14</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -574,7 +1005,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-06-13 23:57:41" itemprop="dateModified" datetime="2024-06-13T23:57:41+08:00">2024-06-13</time>
+      <time title="修改时间：2024-06-14 19:55:03" itemprop="dateModified" datetime="2024-06-14T19:55:03+08:00">2024-06-14</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -824,7 +1255,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-06-13 23:57:41" itemprop="dateModified" datetime="2024-06-13T23:57:41+08:00">2024-06-13</time>
+      <time title="修改时间：2024-06-14 19:55:03" itemprop="dateModified" datetime="2024-06-14T19:55:03+08:00">2024-06-14</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1001,7 +1432,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-06-13 23:57:41" itemprop="dateModified" datetime="2024-06-13T23:57:41+08:00">2024-06-13</time>
+      <time title="修改时间：2024-06-14 19:55:03" itemprop="dateModified" datetime="2024-06-14T19:55:03+08:00">2024-06-14</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1133,7 +1564,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-06-13 23:57:41" itemprop="dateModified" datetime="2024-06-13T23:57:41+08:00">2024-06-13</time>
+      <time title="修改时间：2024-06-14 19:55:03" itemprop="dateModified" datetime="2024-06-14T19:55:03+08:00">2024-06-14</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1356,7 +1787,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-06-13 23:57:41" itemprop="dateModified" datetime="2024-06-13T23:57:41+08:00">2024-06-13</time>
+      <time title="修改时间：2024-06-14 19:55:03" itemprop="dateModified" datetime="2024-06-14T19:55:03+08:00">2024-06-14</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1526,797 +1957,6 @@
 </ul>
 </li>
 </ol>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://zhihuzeye.github.io/2024/06/03/Java-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A12/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/face1.png">
-      <meta itemprop="name" content="之乎泽野">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="泽野之乡">
-      <meta itemprop="description" content="积跬步，至千里">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 泽野之乡">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2024/06/03/Java-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A12/" class="post-title-link" itemprop="url">Java 面向对象2</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2024-06-03 21:51:29" itemprop="dateCreated datePublished" datetime="2024-06-03T21:51:29+08:00">2024-06-03</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-06-13 23:57:41" itemprop="dateModified" datetime="2024-06-13T23:57:41+08:00">2024-06-13</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">学习笔记</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h2><ol>
-<li>概念<ul>
-<li>一种类与类之间的关系</li>
-<li>使用已存在的类定义作为基础建立新类</li>
-<li>新类的定义可以增加新的数据或新的功能，也可以用父类的功能，但 <em><strong>不能选择性地继承父类</strong></em></li>
-<li><strong>满足 “A is a B”的关系就可以形成继承关系</strong></li>
-<li>子类可以访问父类非私有成员</li>
-<li>父类不可以访问子类特有成员</li>
-</ul>
-</li>
-<li>方法重写<ul>
-<li>语法规则<ul>
-<li>在子类中定义，去重写父类的方法</li>
-<li>方法名相同，参数列表相同（参数顺序、个数、类型）<ul>
-<li><strong>方法名、参数列表都要与父类继承的方法相同</strong></li>
-</ul>
-</li>
-<li>访问修饰符<ul>
-<li>允许改变，但是访问范围需要大于等于父类的访问范围</li>
-</ul>
-</li>
-<li><strong>与方法的参数名无关</strong></li>
-<li>方法返回值<ul>
-<li>当方法返回值是void 或基本数据类型时，必须相同；当返回值是引用类型时，可以是父类或其子类</li>
-</ul>
-</li>
-<li><em><strong>方法的返回值和访问修饰符是可以允许有变化的（有条件的）</strong></em></li>
-</ul>
-</li>
-<li>当子类重写父类方法后，子类对象调用的是重写后的方法。</li>
-<li>super：父类对象的引用  super.父类方法名()</li>
-<li>父类的构造不允许被继承；不允许被重写，但是会影响子类的实例化过程</li>
-</ul>
-</li>
-<li>特点<ul>
-<li>利于代码复用</li>
-<li>缩短开发周期</li>
-</ul>
-</li>
-<li>语法<ul>
-<li>使用 extends 实现封装</li>
-<li>单一继承，只能有一个父类</li>
-<li>名词解释<ul>
-<li>父类（基类）</li>
-<li>子类（派生类）</li>
-</ul>
-</li>
-<li>继承后的初始化顺序<ul>
-<li><em><strong>父类静态成员 -&gt; 子类静态成员 -&gt; 父类对象构造 -&gt; 子类对象构造</strong></em></li>
-<li>访问修饰符不影响成员加载顺序，跟书写位置有关</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><strong>super</strong><ul>
-<li>代表父类引用<ul>
-<li>访问父类成员方法<ul>
-<li>super.print();</li>
-</ul>
-</li>
-<li>访问父类属性<ul>
-<li>super.name;</li>
-</ul>
-</li>
-<li>访问父类构造方法<ul>
-<li>super()</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>子类的构造的过程中必须调用其父类的构造方法</li>
-<li>如果子类的构造方法中没有显式标注，则系统默认调用父类无参的构造方法</li>
-<li>如果子类构造方法中既没有显式标注，且父类中没有无参的构造方法，则编译错误。</li>
-<li>子类构造默认调用父类无参构造方法，可以通过 super() 调用父类的允许被访问的其他构造方法，super() 必须放在子类构造函数有效代码的第一行。</li>
-<li>构造方法调用时，super 和 this 不能同时出现</li>
-</ul>
-</li>
-<li>Object 类<ul>
-<li>概念<ul>
-<li>Object 类是所有类的父类</li>
-<li>一个类没有使用 extends 关键字明确标识继承关系，则默认继承 Object 类（包括数组）</li>
-<li>Java 中的每个类都可以使用 Object 中定义的方法</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>final 关键字<ul>
-<li>final class<ul>
-<li>该类没有子类</li>
-<li>public final class | final public class 写法都行</li>
-</ul>
-</li>
-<li>final 方法<ul>
-<li>该方法不允许被子类重写，但是可以正常被子类继承使用</li>
-</ul>
-</li>
-<li>final 变量<ul>
-<li>方法内局部变量<ul>
-<li>只要在具体使用之前进行赋值即可，一旦赋值不允许修改</li>
-</ul>
-</li>
-<li>类中成员属性<ul>
-<li>赋值过程<ul>
-<li>定义的时候直接初始化</li>
-<li>构造方法中</li>
-<li>构造代码块</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>基本数据类型的变量<ul>
-<li>初始赋值之后不能更改</li>
-</ul>
-</li>
-<li>引用类型的变量<ul>
-<li>初始化之后不能再指向另一个对象，但对象的内容是可变的</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>final +  static 定义后，在程序运行中不允许二次修改。<ul>
-<li>可以修饰方法和变量</li>
-<li>修饰配置信息 public static final String URL &#x3D; “<a target="_blank" rel="noopener" href="http://www.xxx.com/">www.xxx.com</a>“</li>
-</ul>
-</li>
-<li>final 不允许加载构造方法前面</li>
-<li>使用 final 修饰可以提高性能，但会降低可扩展性</li>
-</ul>
-</li>
-<li>注解<ul>
-<li>JDK1.5 版本引入的一个特性</li>
-<li>可以声明在包、类、属性、方法、局部变量、方法参数等的前面，用来对这些元素进行说明、注释</li>
-<li>一种特殊的标记</li>
-<li>常用注解<ul>
-<li>@Override 针对父类方法进行重写的形式</li>
-</ul>
-</li>
-<li>分类<ul>
-<li>按照运行机制分<ul>
-<li>源码注解<ul>
-<li>注解只在源码阶段保留，在编译阶段会被丢弃。例如：@Overide</li>
-</ul>
-</li>
-<li>编译时注解<ul>
-<li>注解会在编译时期保留，在加载 class 文件时会被丢弃。例如：@NotNull</li>
-</ul>
-</li>
-<li>运行时注解<ul>
-<li>在运行阶段还起作用，甚至会影响运行逻辑的注解。@Autowired</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>按照来源分<ul>
-<li>来自 JDK 的注解<ul>
-<li>@Override</li>
-</ul>
-</li>
-<li>来自第三方的注解<ul>
-<li>框架的注解</li>
-</ul>
-</li>
-<li>我们自定义的注解</li>
-</ul>
-</li>
-<li>元注解<ul>
-<li>对注解进行注解<ul>
-<li>对注解进行标注</li>
-</ul>
-</li>
-<li>@Target 限定注解可以用在什么地方</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ol>
-<h2 id="访问修饰符"><a href="#访问修饰符" class="headerlink" title="访问修饰符"></a>访问修饰符</h2><ol>
-<li>公有的 ：public<ul>
-<li>允许在任意位置访问</li>
-</ul>
-</li>
-<li>私有的：private<ul>
-<li>只允许在本类中进行访问</li>
-</ul>
-</li>
-<li>受保护的：protected<ul>
-<li>允许在当前类、同包子类&#x2F;非子类、跨包子类调用、跨包非子类不允许</li>
-</ul>
-</li>
-<li>默认<ul>
-<li>允许在当前类、同包子类&#x2F;非子类调用；跨包子类&#x2F;非子类不允许调用</li>
-</ul>
-</li>
-</ol>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://zhihuzeye.github.io/2024/06/02/Java-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A11/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/face1.png">
-      <meta itemprop="name" content="之乎泽野">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="泽野之乡">
-      <meta itemprop="description" content="积跬步，至千里">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 泽野之乡">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2024/06/02/Java-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A11/" class="post-title-link" itemprop="url">Java 面向对象1</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2024-06-02 22:39:17" itemprop="dateCreated datePublished" datetime="2024-06-02T22:39:17+08:00">2024-06-02</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-06-13 23:57:41" itemprop="dateModified" datetime="2024-06-13T23:57:41+08:00">2024-06-13</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">学习笔记</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="类和对象"><a href="#类和对象" class="headerlink" title="类和对象"></a>类和对象</h2><ol>
-<li>面向对象<ul>
-<li><strong>关注现实存在的事物的各方面信息，从对象的角度出发，根据事物的特征进行程序设计</strong></li>
-<li>对象：用来描述客观事物的一个实体</li>
-<li>类：具有相同属性和方法的一组对象的集合</li>
-</ul>
-</li>
-<li>属性<ul>
-<li>对象具有的各种静态特征</li>
-<li>“对象有什么”</li>
-</ul>
-</li>
-<li>方法<ul>
-<li>对象具有的各种</li>
-<li>“对象能做什么”</li>
-<li>在方法中通过对象作为参数，传递的是它的引用，可以通过引用获取该对象的所有信息。</li>
-</ul>
-</li>
-<li>类<ul>
-<li>抽象的概念</li>
-<li>模板</li>
-<li>类是模子，确定对象将会拥有的特征（属性）和行为（方法）</li>
-<li>类是对象的类型</li>
-<li>构造方法<ul>
-<li>注意事项<ul>
-<li><em><strong>构造方法与类同名且没有返回值（必须与类名相同）</strong></em><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 构造方法的语法格式：</span></span><br><span class="line"><span class="comment">// 没有返回值类型 , 构造方法名 与类名相同 </span></span><br><span class="line"><span class="keyword">public</span> 构造方法名()&#123;</span><br><span class="line">  <span class="comment">// 初始化代码</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li>只能在对象实例化的时候调用</li>
-</ul>
-</li>
-<li>特点<ul>
-<li><em><strong>当没有指定构造方法时，系统会自动添加无参的构造方法</strong></em></li>
-<li><em><strong>当有指定构造方法，无论是有参、无参的构造方法，都不会自动添加无参的构造方法</strong></em></li>
-<li>一个类中可以有多个构造方法</li>
-<li>this();  访问其它无参或带参 构造方法</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>this 关键字<ul>
-<li>this：当前对象的默认引用</li>
-<li>this 的使用<ul>
-<li>调用成员属性，解决成员属性的局部变量同名冲突</li>
-<li>调用成员方法</li>
-<li>调用重载的构造方法 this();<ul>
-<li><em><strong>通过 this() 调用构造方法，必须放在方法体内的第一行！！！</strong></em></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>对象<ul>
-<li>基本概念<ul>
-<li>一个看得到、摸着着的具体实体</li>
-<li>对象是类的实例表现</li>
-<li>万物皆对象</li>
-<li>对象是特定的类型数据</li>
-</ul>
-</li>
-<li>对象实例化<ul>
-<li>实例化对象过程可以分为两部分<ul>
-<li>声明对象 Class 对象名称<ul>
-<li><strong>在内存的栈中开辟一个空间，此时栈空间的数据是空的</strong></li>
-</ul>
-</li>
-<li>实例化对象 new Class<ul>
-<li><strong>经过实例化的环节，会在内存的堆中开辟一块空间，在此完成具体属性赋值等相关操作</strong><br><em><strong>声明对象和实例化对象通过 &#x3D; 赋值符号完成。经过赋值操作，将内存的堆地址，传递到栈当中的内存空间里。</strong></em></li>
-</ul>
-</li>
-</ul>
-</li>
-<li>内存分配 栈[局部变量] ，堆[动态数据]</li>
-</ul>
-</li>
-<li>注意事项<ul>
-<li>需要多次访问同一对象时，必须进行声明</li>
-<li>同一作用范围内，不能定义同名对象</li>
-<li>可以同时声明多个引用，用逗号分割<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Cat one,two;</span><br><span class="line">one = <span class="keyword">new</span> <span class="title class_">Cat</span>();</span><br><span class="line">two = <span class="keyword">new</span> <span class="title class_">Cat</span>();</span><br><span class="line"><span class="type">Cat</span> <span class="variable">three</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Cat</span>();four = <span class="keyword">new</span> <span class="title class_">Cat</span>();</span><br></pre></td></tr></table></figure></li>
-</ul>
-</li>
-</ul>
-</li>
-</ol>
-<h2 id="封装"><a href="#封装" class="headerlink" title="封装"></a>封装</h2><ol>
-<li>将类的某些信息隐藏在类的内部，不允许外部程序直接访问，通过该类提供的方法来实现对隐藏信息的操作和访问<ul>
-<li>隐藏对象的信息</li>
-<li>留出访问的接口</li>
-</ul>
-</li>
-<li>特点<ul>
-<li>只能通过规定的方法访问数据</li>
-<li>隐藏类的实例细节，方便修改和实现</li>
-</ul>
-</li>
-<li>实现步骤<ul>
-<li>1、修改属性的可见性 ，设为 private</li>
-<li>2、创建 getter&#x2F;setter 方法 ，设为 public 用户属性的读写</li>
-<li>3、在 getter&#x2F;setter 方法中加入属性控制语句，对属性的合法性进行判断</li>
-</ul>
-</li>
-<li>包（类似文件夹）<ul>
-<li>作用<ul>
-<li><strong>管理 Java 文件</strong></li>
-<li><strong>解决同名文件冲突</strong></li>
-</ul>
-</li>
-<li>定义包<ul>
-<li>语法 package 包名;例：package com.zje.animal;</li>
-<li>注意<ul>
-<li><em><strong>一个 Java 源文件只能有一个 package 语句，必须放在 Java 源文件中的第一行</strong></em></li>
-<li>包名全部英文小写</li>
-<li>建议每个包内存储信息功能单一</li>
-<li>包命名规则：域名倒序+模块+功能</li>
-<li>Java 中一个包不能存在同名类</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>导入包<ul>
-<li>语法 import 包名.类名;</li>
-<li>导入包中全部类 import com.xxx.*; 导入包中指定类 import com.xxx.animal.Cat;</li>
-</ul>
-</li>
-<li>常用系统包<ul>
-<li>java.lang<ul>
-<li>包含 Java 语言基础的类，该包系统加载时 默认导入。如 System、String、Math</li>
-</ul>
-</li>
-<li>java.util<ul>
-<li>包含 Java 语言中常用工具。如 Scanner、Random</li>
-</ul>
-</li>
-<li>java.io<ul>
-<li>包含输入、输出相关功能的类。如File、InputStream</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>问题<ul>
-<li>如何实现跨包的类调用？<ul>
-<li>建议采用“import 包名.类名;” 的方式加载，提高效率</li>
-<li>加载类的顺序跟 import 导入语句的位置无关</li>
-<li>“import 包名.*”; 无法访问指定包名下的类，无法访问子包下的类</li>
-</ul>
-</li>
-<li>有几种调用形式？<ol>
-<li>使用 import 语句导入目标类:这种方式可以直接在代码中使用 TargetClass 而无需指定完整的包路径。</li>
-</ol>
-<pre><code class="Java">import com.example.targetpackage.TargetClass;
-</code></pre>
-<ol start="2">
-<li>使用完整的包路径访问目标类:这种方式需要在代码中完整地指定目标类的包路径。</li>
-</ol>
-<pre><code class="Java">com.example.targetpackage.TargetClass targetObject = new com.example.targetpackage.TargetClass();
-</code></pre>
-<ol start="3">
-<li>使用 static import 导入目标类的静态成员:这种方式可以直接访问目标类的静态成员,无需指定类名。</li>
-</ol>
-<pre><code class="Java">import static com.example.targetpackage.TargetClass.staticMethod;
-staticMethod(); // 直接调用静态方法
-</code></pre>
-<ol start="4">
-<li>使用 default 访问修饰符允许同一个包下的类进行访问:这种方式需要将目标类的方法声明为 default 访问修饰符,这样同包下的其他类就可以访问该方法。</li>
-</ol>
-<pre><code class="Java">// com.example.targetpackage.TargetClass
-default void defaultMethod() &#123;
-  // 此方法可被同包下的其他类访问
-&#125;
-</code></pre>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><strong>static 关键字</strong><ul>
-<li><strong>1、类对象共享</strong></li>
-<li><strong>2、类加载时产生，销毁时释放，生命周期长</strong></li>
-<li>注意事项<ul>
-<li>在成员方法中，可以直接访问类中的静态成员</li>
-<li>静态方法中不能直接访问非静态成员，只能直接调用静态成员</li>
-<li>只能通过对象实例化后，对象.成员方法的方式访问非静态成员</li>
-<li>静态方法中不能使用 this</li>
-</ul>
-</li>
-<li>静态成员访问方式<ul>
-<li>1、对象.成员</li>
-<li>2、类.成员</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>代码块<ul>
-<li>普通代码块：每此调用方法 顺序执行，先出现，先执行。</li>
-<li>构造代码块：在类中定义，创建对象时调用，优先于构造方法执行。可以有多个</li>
-<li>静态代码块<ul>
-<li>static { &lt;语句&gt; }</li>
-<li>类加载时调用，优先于构造代码块执行</li>
-<li>无论产生多少类实例，静态代码块只执行一次，构造代码块在每次对象构造的时候调用</li>
-</ul>
-</li>
-</ul>
-</li>
-</ol>
-<h2 id="成员属性的初始值"><a href="#成员属性的初始值" class="headerlink" title="成员属性的初始值"></a>成员属性的初始值</h2><table>
-<thead>
-<tr>
-<th>数据类型</th>
-<th>默认值</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>byte</td>
-<td>0</td>
-</tr>
-<tr>
-<td>short</td>
-<td>0</td>
-</tr>
-<tr>
-<td>int</td>
-<td>0</td>
-</tr>
-<tr>
-<td>long</td>
-<td>0L</td>
-</tr>
-<tr>
-<td>float</td>
-<td>0.0f</td>
-</tr>
-<tr>
-<td>double</td>
-<td>0.0d</td>
-</tr>
-<tr>
-<td>char</td>
-<td>‘\u0000’</td>
-</tr>
-<tr>
-<td>boolean</td>
-<td>false</td>
-</tr>
-<tr>
-<td>引用类型对象的初始值</td>
-<td>null</td>
-</tr>
-</tbody></table>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://zhihuzeye.github.io/2024/06/02/Java-%E6%96%B9%E6%B3%95/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/face1.png">
-      <meta itemprop="name" content="之乎泽野">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="泽野之乡">
-      <meta itemprop="description" content="积跬步，至千里">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 泽野之乡">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2024/06/02/Java-%E6%96%B9%E6%B3%95/" class="post-title-link" itemprop="url">Java 方法</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2024-06-02 22:20:39" itemprop="dateCreated datePublished" datetime="2024-06-02T22:20:39+08:00">2024-06-02</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-06-13 23:57:41" itemprop="dateModified" datetime="2024-06-13T23:57:41+08:00">2024-06-13</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">学习笔记</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="什么是方法？"><a href="#什么是方法？" class="headerlink" title="什么是方法？"></a>什么是方法？</h2><p>所谓方法，就是用来解决一类问题的代码的有序组合，是一个功能模块。</p>
-<h2 id="方法的声明和调用"><a href="#方法的声明和调用" class="headerlink" title="方法的声明和调用"></a>方法的声明和调用</h2><ol>
-<li>方法声明<ul>
-<li>语法格式<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">访问修饰符 返回类型 方法名(参数列表)&#123;</span><br><span class="line">  方法体</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li>访问修饰符<ul>
-<li>public</li>
-<li>privete</li>
-<li>protected</li>
-<li>默认</li>
-</ul>
-</li>
-<li><strong>方法是在类的内部中定义</strong></li>
-</ul>
-</li>
-<li>方法调用<ul>
-<li>语法格式 <ul>
-<li>类名 实例名 &#x3D; new 类名(); 实例名.方法名();</li>
-<li>对于静态方法 static , 直接调用 方法名();</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>方法分类<ul>
-<li>根据方法是否带参数、是否返回值，可以分为四类：</li>
-<li>无参无返回值方法</li>
-<li>无参带返回值方法</li>
-<li>带参带返回值方法</li>
-<li>带参无返回值方法</li>
-</ul>
-</li>
-</ol>
-<h2 id="方法重载"><a href="#方法重载" class="headerlink" title="方法重载"></a>方法重载</h2><ol>
-<li>同一个类中</li>
-<li><strong>方法名相同，参数列表不同</strong></li>
-<li>方法返回值、访问修饰符任意</li>
-<li>与方法参数名无关</li>
-</ol>
-<h2 id="可变参数列表"><a href="#可变参数列表" class="headerlink" title="可变参数列表"></a>可变参数列表</h2><ol>
-<li>public void sum(int… n) { &lt;语句块&gt; }<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">  	<span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">sum</span><span class="params">(<span class="type">int</span>... n)</span> &#123;</span><br><span class="line">	</span><br><span class="line">	<span class="type">int</span> <span class="variable">sum</span> <span class="operator">=</span><span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i:n) </span><br><span class="line">		sum+=i;</span><br><span class="line">	</span><br><span class="line">	System.out.println(<span class="string">&quot;sum=&quot;</span>+sum);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li><em><strong>参数列表中如果有两个以上的参数，可变参数一定是在最后的！</strong></em></li>
-<li><em><strong>可以将数组传递给可变参数列表，反之不行</strong></em></li>
-<li>数组作为参数时，是不能将多个值传递给数组的！</li>
-<li><strong>一个方法中，只能有一个可变参数</strong></li>
-<li>可变参数列表所在的方法是最后被访问的。</li>
-</ol>
-<h2 id="方法的传值问题"><a href="#方法的传值问题" class="headerlink" title="方法的传值问题"></a>方法的传值问题</h2><ol>
-<li>基本数据类型传值<ul>
-<li>方法中对参数的修改，不会对主方法传来的变量值产生影响</li>
-</ul>
-</li>
-<li>引用数据类型传值<ul>
-<li>方法中对数组的改变，会印象主方法中传来的数组</li>
-</ul>
-</li>
-</ol>
-<h2 id="访问修饰符"><a href="#访问修饰符" class="headerlink" title="访问修饰符"></a>访问修饰符</h2><table>
-<thead>
-<tr>
-<th>访问修饰符</th>
-<th>本类</th>
-<th>同包</th>
-<th>子类</th>
-<th>其他</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>private</td>
-<td>√</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>默认（不写）</td>
-<td>√</td>
-<td>√</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>protected</td>
-<td>√</td>
-<td>√</td>
-<td>√</td>
-<td></td>
-</tr>
-<tr>
-<td>private</td>
-<td>√</td>
-<td>√</td>
-<td>√</td>
-<td>√</td>
-</tr>
-</tbody></table>
 
       
     </div>
