@@ -151,7 +151,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">38</span>
+          <span class="site-state-item-count">39</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -187,6 +187,183 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://zhihuzeye.github.io/2024/06/04/CSS3%E6%B5%AE%E5%8A%A8%E5%AE%9A%E4%BD%8D%E4%B8%8E%E8%83%8C%E6%99%AF%E6%A0%B7%E5%BC%8F/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/face1.png">
+      <meta itemprop="name" content="之乎泽野">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="泽野之乡">
+      <meta itemprop="description" content="积跬步，至千里">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 泽野之乡">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2024/06/04/CSS3%E6%B5%AE%E5%8A%A8%E5%AE%9A%E4%BD%8D%E4%B8%8E%E8%83%8C%E6%99%AF%E6%A0%B7%E5%BC%8F/" class="post-title-link" itemprop="url">CSS3浮动定位与背景样式</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2024-06-04 20:44:32" itemprop="dateCreated datePublished" datetime="2024-06-04T20:44:32+08:00">2024-06-04</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2024-06-17 21:53:20" itemprop="dateModified" datetime="2024-06-17T21:53:20+08:00">2024-06-17</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">学习笔记</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="浮动"><a href="#浮动" class="headerlink" title="浮动"></a>浮动</h2><ol>
+<li>浮动的基本概念<ul>
+<li><em><strong>垂直显示的浮动，不要设置浮动，只有并排显示的盒子才要设置浮动！</strong></em></li>
+<li>“大盒子带着小盒子跑”，一个大盒子中，又是一个小天地，内部可以继续使用浮动</li>
+<li>超市售卖的塑料袋0.3元一个，div是免费的！不要节约盒子</li>
+<li><strong>本质</strong><ul>
+<li>浮动的最本质的功能：实现并排</li>
+<li>浮动的要点：要浮动，并排的盒子都要设置浮动</li>
+<li>父盒子要有足够的宽度，否则子盒子会掉下去</li>
+<li>浮动的顺序贴靠特性<ul>
+<li><strong>子盒子会按顺序贴靠，如果没有足够的空间，则会寻找再前一个兄弟元素</strong></li>
+</ul>
+</li>
+<li>浮动的元素一定能设置宽高<ul>
+<li>浮动元素不在区分块级元素、行内元素，已经脱离了标准的文档流，一律能够设置宽度和高度，即使它是span标签或者标签等</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>使用浮动实现网页布局</li>
+<li>BFC规范和浏览器差异<ul>
+<li>BFC（ Box formatting Context）块级格式化上下文 是页面上的一个隔离的独立容器，容器里面的子元素不会影响到外面的元素，反之亦然</li>
+<li>从一个现象开始说起<ul>
+<li><strong>一个盒子不设置height，当内容的子元素都浮动时，无法撑起自身</strong></li>
+<li>这个盒子没有形成BFC</li>
+<li><em><strong>如何形成BFC</strong></em><ul>
+<li>1、float的值不是none</li>
+<li>2、position的值不是static或者relative</li>
+<li>3、display的值是inline-block、flex或者inline-flex</li>
+<li>4、overflow:hidden<ul>
+<li>溢出隐藏，溢出盒子边框会隐藏</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>BFC的其他作用<ul>
+<li>BFC可以取消盒子的margin塌陷</li>
+<li>BFC可以阻止元素被浮动的元素覆盖</li>
+</ul>
+</li>
+<li>浏览器差异<ul>
+<li>IE6、IE7浏览器使用haslayout机制，和BFC规范略有差异，比如IE浏览器可以使用zoom:1属性，“让壳子拥有layout”</li>
+<li>如果要兼容IE6、IE7网页时，尽量让网页设计的简单。内部有浮动的盒子要设置height属性，规范编程，不要“玩杂技”</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>清除浮动<ul>
+<li>clear: both;</li>
+<li>overflow:hidden</li>
+</ul>
+</li>
+</ol>
+<h2 id="定位"><a href="#定位" class="headerlink" title="定位"></a>定位</h2><ol>
+<li>相对定位<ul>
+<li>相对定位：盒子可以相对自己原来的位置进行调整，称为”相对定位“</li>
+<li><strong>position: relative;</strong></li>
+<li>值可以是负数，即往相反的位置移动</li>
+<li>相对定位的元素，会在“老家留坑”，本质上任然是在原来的位置，只不过渲染在新的地方而已，渲染的图形可以比如成“影子”，不会对其他元素产生任何影响</li>
+<li>相对定位的用途：用来微调元素位置。可以当做绝对定位的参考盒子。</li>
+</ul>
+</li>
+<li>绝对定位<ul>
+<li>盒子可以在浏览器中，以坐标进行位置精准描述，拥有自己的绝对位置</li>
+<li><strong>position: absolute;</strong></li>
+<li>left 到左边的距离，right 到右边的距离，top 到上边的距离，bottom到下边的距离</li>
+<li>绝对定位元素脱离标准文档流，将释放自己的位置，对其他元素不会产生任何干扰，而是对它进行压盖</li>
+<li><em><strong>脱离标准文档流的方法：浮动、绝对定位、固定定位</strong></em></li>
+<li>绝对定位的参考盒子：绝对定位的盒子会以自己祖先元素中，离自己最近的拥有定位属性的盒子，当做基准点，这个盒子通常是相对定位的，所以这个性质也叫作 <strong>“子绝父相”</strong></li>
+<li>绝对定位的盒子并不是永远以浏览器作为基点</li>
+<li><strong>绝对定位的盒子垂直居中</strong><ul>
+<li>position:absolute; top:50%; margin-top:-自己高度的一半</li>
+</ul>
+</li>
+<li>堆叠顺序 z-index<ul>
+<li>没有单位，数值大的就能压盖住小的</li>
+</ul>
+</li>
+<li>绝对定位用途：“压盖”、“遮罩”效果，结合JS实现动画效果，“雪碧图”</li>
+</ul>
+</li>
+<li>固定定位<ul>
+<li>position: fixed;</li>
+<li>固定定位只能以页面为参考点，没有“子固父相”这个性质</li>
+<li>固定定位脱离标准文档流</li>
+<li>用途：返回顶部，楼层导航等</li>
+</ul>
+</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -232,7 +409,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-06-15 23:23:03" itemprop="dateModified" datetime="2024-06-15T23:23:03+08:00">2024-06-15</time>
+      <time title="修改时间：2024-06-17 21:53:20" itemprop="dateModified" datetime="2024-06-17T21:53:20+08:00">2024-06-17</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -364,7 +541,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-06-15 23:23:03" itemprop="dateModified" datetime="2024-06-15T23:23:03+08:00">2024-06-15</time>
+      <time title="修改时间：2024-06-17 21:53:20" itemprop="dateModified" datetime="2024-06-17T21:53:20+08:00">2024-06-17</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -587,7 +764,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-06-15 23:23:03" itemprop="dateModified" datetime="2024-06-15T23:23:03+08:00">2024-06-15</time>
+      <time title="修改时间：2024-06-17 21:53:20" itemprop="dateModified" datetime="2024-06-17T21:53:20+08:00">2024-06-17</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -819,7 +996,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-06-15 23:23:03" itemprop="dateModified" datetime="2024-06-15T23:23:03+08:00">2024-06-15</time>
+      <time title="修改时间：2024-06-17 21:53:20" itemprop="dateModified" datetime="2024-06-17T21:53:20+08:00">2024-06-17</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1099,7 +1276,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-06-15 23:23:03" itemprop="dateModified" datetime="2024-06-15T23:23:03+08:00">2024-06-15</time>
+      <time title="修改时间：2024-06-17 21:53:20" itemprop="dateModified" datetime="2024-06-17T21:53:20+08:00">2024-06-17</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1432,7 +1609,7 @@ default void defaultMethod() &#123;
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-06-15 23:23:03" itemprop="dateModified" datetime="2024-06-15T23:23:03+08:00">2024-06-15</time>
+      <time title="修改时间：2024-06-17 21:53:20" itemprop="dateModified" datetime="2024-06-17T21:53:20+08:00">2024-06-17</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1610,7 +1787,7 @@ default void defaultMethod() &#123;
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-06-15 23:23:03" itemprop="dateModified" datetime="2024-06-15T23:23:03+08:00">2024-06-15</time>
+      <time title="修改时间：2024-06-17 21:53:20" itemprop="dateModified" datetime="2024-06-17T21:53:20+08:00">2024-06-17</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1789,7 +1966,7 @@ default void defaultMethod() &#123;
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-06-15 23:23:03" itemprop="dateModified" datetime="2024-06-15T23:23:03+08:00">2024-06-15</time>
+      <time title="修改时间：2024-06-17 21:53:20" itemprop="dateModified" datetime="2024-06-17T21:53:20+08:00">2024-06-17</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1936,7 +2113,7 @@ default void defaultMethod() &#123;
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-06-15 23:23:03" itemprop="dateModified" datetime="2024-06-15T23:23:03+08:00">2024-06-15</time>
+      <time title="修改时间：2024-06-17 21:53:20" itemprop="dateModified" datetime="2024-06-17T21:53:20+08:00">2024-06-17</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -2120,109 +2297,6 @@ default void defaultMethod() &#123;
 </tr>
 </tbody></table>
 </li>
-</ol>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://zhihuzeye.github.io/2024/05/31/Java-%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/face1.png">
-      <meta itemprop="name" content="之乎泽野">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="泽野之乡">
-      <meta itemprop="description" content="积跬步，至千里">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 泽野之乡">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2024/05/31/Java-%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" class="post-title-link" itemprop="url">Java 开发环境搭建</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2024-05-31 22:37:32" itemprop="dateCreated datePublished" datetime="2024-05-31T22:37:32+08:00">2024-05-31</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-06-15 23:23:03" itemprop="dateModified" datetime="2024-06-15T23:23:03+08:00">2024-06-15</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" itemprop="url" rel="index"><span itemprop="name">环境搭建</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <ol>
-<li>安装 JDK </li>
-<li>安装 Navicat 数据库工具</li>
-<li>安装 IntelliJ IDEA 编译器</li>
-<li>安装 Redis <a target="_blank" rel="noopener" href="https://blog.csdn.net/antma/article/details/79225084">Redis安装（Windows环境下Redis安装）</a> </li>
-<li>maven3.6.3 安装 <a target="_blank" rel="noopener" href="https://blog.csdn.net/kenkao/article/details/128842266">Windows系统Maven3.6.3下载与安装</a><ul>
-<li>apache-maven-3.6.1&#x2F;conf  目录下配置  settingsapplication.xml 文件 <strong>主要用于配置 Maven 的行为和外部依赖</strong></li>
-<li>apache-maven-3.6.1 目录下创建 repo 文件夹</li>
-</ul>
-</li>
-<li>安装 IntelliJ IDEA  插件<br><img src="/images/874811934.png" alt="插件"><br><img src="/images/94823832832.png" alt="插件"></li>
-<li>项目 .idea 目录下 misc.xml 文件配置 Yapi <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">component</span> <span class="attr">name</span>=<span class="string">&quot;yapi&quot;</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">option</span> <span class="attr">name</span>=<span class="string">&quot;projectToken&quot;</span>&gt;</span>your yapiToken<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">option</span> <span class="attr">name</span>=<span class="string">&quot;projectId&quot;</span>&gt;</span>789<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">option</span> <span class="attr">name</span>=<span class="string">&quot;yapiUrl&quot;</span>&gt;</span>your yapiUrl<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">option</span> <span class="attr">name</span>=<span class="string">&quot;projectType&quot;</span>&gt;</span>api<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">component</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
-<li>安装 Xshell </li>
-<li>安装 XFTP</li>
-</ol>
-<p>友情链接：</p>
-<ol>
-<li><a target="_blank" rel="noopener" href="https://plugins.jetbrains.com/plugin/index?xmlId=cn.wuzhizhan.plugin.mybatis">Free MyBatis plugin</a></li>
 </ol>
 
       
